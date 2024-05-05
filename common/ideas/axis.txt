@@ -1,0 +1,70 @@
+ideas = {
+
+	country = {
+		JAP_ai_vs_china = {
+
+			name = JAP_ai_vs_china
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			
+			removal_cost = -1
+	
+
+			modifier = {
+				industrial_capacity_factory = -0.85
+			}
+		}
+		state_shintoism = {
+
+			name = state_shintoism
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			
+			removal_cost = -1
+	
+
+			modifier = {
+				political_power_factor = 0.1
+				industry_air_damage_factor = -0.1
+				army_morale_factor = 0.1
+				global_building_slots_factor = 0.30
+			}
+		}
+		JAP_reduced_grinding = {	 
+
+			name = JAP_JAP_reduced_grinding
+
+			allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+            
+            removal_cost = -1
+
+            picture = jap_intervene_in_china
+
+			modifier = {
+				experience_gain_army_factor = -0.6
+			}
+		}
+	}
+}	

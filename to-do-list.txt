@@ -1,0 +1,5 @@
+-localisation
+-autoclicking of china war decision
+-navy theater icon fix
+-manchu annex decision
+-new zealand annex decision

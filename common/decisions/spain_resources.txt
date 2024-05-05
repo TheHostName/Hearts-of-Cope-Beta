@@ -1,0 +1,39 @@
+economy_decisions = {
+	spain_resource_right_portugal = { 
+
+		icon = aluminium
+		
+		allowed = {
+			SPR_scw_in_progress = no
+			tag = SPR
+		}
+
+		available = {
+            SPR_scw_in_progress = no
+			tag = SPR
+		}
+
+		visible = {
+			tag = SPR
+            date > 01.01.1939
+		}
+
+		fire_only_once = yes
+
+		cost = 150
+		days_remove = 0
+
+		modifier = {
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		complete_effect = {
+			POR = {give_resource_rights = { receiver = SPR state = 181 } }
+			POR = {give_resource_rights = { receiver = SPR state = 112 } }
+			POR = {give_resource_rights = { receiver = SPR state = 795 } }
+		}
+	}
+}	

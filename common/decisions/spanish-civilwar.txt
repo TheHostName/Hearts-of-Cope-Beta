@@ -1,0 +1,104 @@
+political_actions = {
+	spain_surrender = { 
+
+		icon = aluminium
+		
+		allowed = {
+			SPR_scw_in_progress = yes
+			tag = SPR
+		}
+
+		available = {
+            SPR_scw_in_progress = yes
+			tag = SPR
+            surrender_progress > 0.60
+		}
+
+		visible = {
+			tag = SPR
+            
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+		days_remove = 0
+
+		modifier = {
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		complete_effect = {
+            SPR = { 
+				annex_country = { target = D01 transfer_troops = no }
+				remove_ideas = SPR_death_before_surrender
+			
+				add_ideas = SPA_recovering_from_civil_war
+			
+			delete_unit_template_and_units = {
+				division_template = "Guarnición Republicana"
+				disband = yes
+			}
+			delete_unit_template_and_units = {
+				division_template = "División de la Guardia de Asalto"
+				disband = yes
+			}	
+			delete_unit_template_and_units = {
+				division_template = "Brigada de Juventudes Sindicales"
+				disband = yes
+			}	
+			delete_unit_template_and_units = {
+				division_template = "Guarnición Nacionalista"
+				disband = yes
+			}
+			delete_unit_template_and_units = {
+				division_template = "Requeté Carlista"
+				disband = yes
+			}
+			delete_unit_template_and_units = {
+				division_template = "Brigada da la Guardia Civil"
+				disband = yes
+			}
+			delete_unit_template_and_units = {
+				division_template = "Brigada de la Guardia Civil"
+				disband = yes
+			}
+		}
+            set_global_flag = scw_over
+
+			every_state = {
+				limit = {
+					OR = {
+						state = 41
+						state = 165
+						state = 166
+						state = 167
+						state = 168
+						state = 169
+						state = 170
+						state = 171
+						state = 172
+						state = 173
+						state = 174
+						state = 175
+						state = 176
+						state = 788
+						state = 789
+						state = 790
+						state = 791
+						state = 792
+						state = 793
+						state = 794
+					}
+				}
+				clr_state_flag = SPR_unplanned_offensive_flag
+				remove_dynamic_modifier = {
+					modifier = unplanned_offensive
+				}
+			}
+		}	
+	}
+}
