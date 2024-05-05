@@ -12,3 +12,4 @@
 -canada resources. Maybe trade buff with usa
 -convoys to nations
 -trains to commenwealth
+-force attack value change
