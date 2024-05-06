@@ -1126,9 +1126,6 @@
 				annex_country = { target = SIK transfer_troops = yes }
 				annex_country = { target = YUN transfer_troops = yes }
 			}
-			MAN = { 
-				annex_country = { target = MEN transfer_troops = yes }
-			}
 		}
 	}
 
