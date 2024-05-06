@@ -1,15 +1,22 @@
--localisation
--autoclicking of china war decision
+Max Prio
+-swissgoldtrade
+High prio
+-ethiopia
+-trains to commenwealth
 -navy theater icon fix
+-tank losses
+-convoys to nations
+Medium prio
+-early game germany buff (mefo?)
+-operation torch
+-canada resources. Maybe trade buff with usa and 5 civs from UK
+-italian navy balance
+-supply in northafrica?
+low prio
+-autoclicking of china war decision
 -manchu annex decision
 -new zealand annex decision
--swissgoldtrade
--italian navy balance
--early game germany buff (mefo?)
--tank losses
+lowest prio
+-localisation
 -menkuko removed?
--supply in northafrica?
--canada resources. Maybe trade buff with usa
--convoys to nations
--trains to commenwealth
--operation torch
+
