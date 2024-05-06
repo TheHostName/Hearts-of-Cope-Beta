@@ -1,6 +1,7 @@
 ﻿capital = 43
-
+set_convoys = 50
 oob = "HUN_1936"
+starting_train_buffer = 2
 if = {
 	limit = { has_dlc = "By Blood Alone" }
 		set_air_oob = "HUN_1936_air_bba"

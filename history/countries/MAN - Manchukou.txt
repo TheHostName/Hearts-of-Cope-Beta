@@ -1,7 +1,7 @@
 ﻿capital = 328
 
 oob = "MAN_1936"
-
+starting_train_buffer = 2
 set_technology = {
 	infantry_weapons = 1
 	gw_artillery = 1
@@ -44,7 +44,7 @@ if = {
 	}
 }
 
-set_convoys = 5
+set_convoys = 100
 
 328 = { #Kirin
 	add_dynamic_modifier = { modifier = dense_rural_infrastructure }

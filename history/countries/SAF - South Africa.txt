@@ -1,5 +1,7 @@
 ﻿capital = 275
 add_ideas = asia_matters
+starting_train_buffer = 2
+set_convoys = 100
 oob = "SAF_1936"
 if = {
 	limit = { has_dlc = "By Blood Alone" }

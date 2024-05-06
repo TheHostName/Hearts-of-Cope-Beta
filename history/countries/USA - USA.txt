@@ -307,7 +307,7 @@ give_guarantee = URG
 
 
 
-set_convoys = 700
+set_convoys = 1000
 
 
 set_politics = {

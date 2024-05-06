@@ -4,7 +4,7 @@
 
 set_stability = 0.2 #baseline, THE EMPEROR PROTECTS
 set_war_support = 0.8
-
+starting_train_buffer = 2
 set_research_slots = 4
 set_fuel_ratio = 1.0
 add_ideas = {
@@ -378,7 +378,7 @@ create_import = {
 	}
 }
 
-set_convoys = 400
+set_convoys = 600
 
 if = {
 	limit = {
