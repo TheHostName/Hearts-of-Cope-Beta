@@ -1,5 +1,6 @@
 ﻿capital = 361
 add_ideas = asia_matters
+add_ideas = north_american_trade_treaty
 oob = "USA_1936"
 
 starting_train_buffer = 5
