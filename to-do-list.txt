@@ -1,15 +1,9 @@
 Max Prio
--swissgoldtrade
 High prio
--ethiopia
--trains to commenwealth
 -navy theater icon fix
 -tank losses
--convoys to nations
+mefo bill fix
 Medium prio
--early game germany buff (mefo?)
--operation torch
--canada resources. Maybe trade buff with usa and 5 civs from UK
 -italian navy balance
 -supply in northafrica?
 low prio
@@ -18,5 +12,5 @@ low prio
 -new zealand annex decision
 lowest prio
 -localisation
--menkuko removed?k
+
 
