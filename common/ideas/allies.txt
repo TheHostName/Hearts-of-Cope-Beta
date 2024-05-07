@@ -1,5 +1,8 @@
 ideas = {
-		north_american_trade_treaty= {
+
+	country = {
+		north_american_trade_treaty = {
+			
 			allowed = {
 				always = no
 			}
@@ -11,20 +14,18 @@ ideas = {
 			removal_cost = -1
 
 			picture = generic_pp_unity_bonus
-			
+			targeted_modifier = {
+				tag = USA
+				trade_cost_for_target_factor = -0.50
+			}
+			targeted_modifier = {
+				tag = CAN
+				trade_cost_for_target_factor = -0.50
+			}
 			modifier = {
-				country = {
-					targeted_modifier = {
-						tag = USA
-						trade_cost_for_target_factor = -0.5
-					}
-					targeted_modifier = {
-						tag = CAN
-						trade_cost_for_target_factor = -0.5
-					}
+
 			}
 		}
-
 		ai_country= {
 			allowed = {
 				always = no
