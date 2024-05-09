@@ -1,11 +1,8 @@
 Max Prio
 High prio
--navy theater icon fix
--tank losses
 mefo bill fix
 Medium prio
 -italian navy balance
--supply in northafrica?
 low prio
 -autoclicking of china war decision
 -manchu annex decision
