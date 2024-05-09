@@ -23,17 +23,17 @@ sub_units = {
 		combat_width = 2
 
 		need = {
-			light_tank_artillery_chassis = 50
+			light_tank_artillery_chassis = 40
 		}
 		manpower = 500
 		max_organisation = 0
 		default_morale = 0.1
-		max_strength = 0.6
+		max_strength = 15
 		training_time = 180
 		weight = 1
 		supply_consumption = 0.42
 
-		breakthrough = -0.42
+		breakthrough = -0.50
 
 		suppression = 1.25
 
@@ -87,17 +87,17 @@ sub_units = {
 		combat_width = 2
 
 		need = {
-			medium_tank_artillery_chassis = 50
+			medium_tank_artillery_chassis = 40
 		}
 		manpower = 500
 		max_organisation = 0
 		default_morale = 0.1
-		max_strength = 0.6
+		max_strength = 15
 		training_time = 180
 		weight = 1.25
 		supply_consumption = 0.46
 
-		breakthrough = -0.25
+		breakthrough = -0.50
 
 		suppression = 1.5
 
@@ -156,16 +156,16 @@ sub_units = {
 		combat_width = 2
 
 		need = {
-			heavy_tank_artillery_chassis = 50
+			heavy_tank_artillery_chassis = 40
 		}
 		manpower = 500
 		max_organisation = 0
 		default_morale = 0.1
-		max_strength = 0.6
+		max_strength = 15
 		weight = 1.5
 		supply_consumption = 0.6
 
-		breakthrough = -0.25
+		breakthrough = -0.50
 
 		suppression = 1.5
 
