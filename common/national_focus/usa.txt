@@ -117,6 +117,9 @@ focus_tree = {
 
 		available = {
 			has_government = democratic
+			NOT = {
+				has_global_flag = No_Asia_flag
+			}
 		}
 		
 		bypass = {
@@ -3035,6 +3038,9 @@ focus_tree = {
 			NOT = {
 				has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
 			}
+			NOT = {
+				has_global_flag = No_Asia_flag
+			}
 		}
 		
 		bypass = {
@@ -4761,7 +4767,9 @@ focus_tree = {
 		}
 
 		available = {
-
+			NOT = {
+				has_global_flag = No_Asia_flag
+			}
 		}
 		
 		bypass = {
@@ -5514,7 +5522,9 @@ focus_tree = {
 		}
 
 		available = {
-
+			NOT = {
+				has_global_flag = No_Asia_flag
+			}
 		}
 		
 		bypass = {

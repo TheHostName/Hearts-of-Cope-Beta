@@ -84,6 +84,9 @@ focus_tree = {
 				}
 				is_subject = no
 			}
+			NOT = {
+				has_global_flag = No_Asia_flag
+			}
 		}
 
 		bypass = {
@@ -1712,7 +1715,9 @@ focus_tree = {
 		}
 
 		available = {
-
+			NOT = {
+				has_global_flag = No_Asia_flag
+			}
 		}
 
 		bypass = {
@@ -2623,6 +2628,9 @@ focus_tree = {
 			has_full_control_of_state = 428
 			has_full_control_of_state = 443
 			has_full_control_of_state = 433
+			NOT = {
+				has_global_flag = No_Asia_flag
+			}
 		}
 
 		bypass = {

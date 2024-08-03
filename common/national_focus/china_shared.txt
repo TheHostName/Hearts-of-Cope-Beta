@@ -60,7 +60,9 @@ shared_focus = {
 	}
 
 	available = {
-
+		NOT = {
+			has_global_flag = No_Asia_flag
+		}
 	}
 
 	bypass = {

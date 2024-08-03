@@ -1,0 +1,30 @@
+country_event = {
+	id = noasia.1
+	title = noasia.1.t
+	desc = noasia.1.d
+	picture = GFX_report_event_german_speech
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 		hidden_effect = {
+
+ 		}
+ 	}
+
+	option = {
+		name = noasia.1.a
+		848 = {
+			add_state_modifier = {
+				modifier = { }
+			}
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = GER
+			}
+		}
+		hidden_effect = {
+			news_event = { hours = 6 id = news.36 }
+		}
+	}
+}

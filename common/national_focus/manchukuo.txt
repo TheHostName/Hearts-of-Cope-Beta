@@ -64,7 +64,9 @@
 		}
 
 		available = {
-
+			NOT = {
+				has_global_flag = No_Asia_flag
+			}
 		}
 
 		bypass = {

@@ -2,13 +2,14 @@ Max Prio
 High prio
 mefo bill fix
 Medium prio
--italian navy balance
 low prio
 -autoclicking of china war decision
 -manchu annex decision
 -new zealand annex decision
+-canada navy mio
 lowest prio
 -look at low manpower countries to see how they could get more
+-balticum all 3 annex in one click
 -localisation
 
 

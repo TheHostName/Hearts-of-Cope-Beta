@@ -51,7 +51,9 @@
 		}
 
 		available = {
-
+			NOT = {
+				has_global_flag = No_Asia_flag
+			}
 		}
 
 		bypass = {
@@ -1026,7 +1028,9 @@
 		}
 
 		available = {
-
+			NOT = {
+				has_global_flag = No_Asia_flag
+			}
 		}
 
 		bypass = {
@@ -2726,7 +2730,9 @@
 		}
 
 		available = {
-
+			NOT = {
+				has_global_flag = No_Asia_flag
+			}
 		}
 
 		bypass = {
@@ -3611,7 +3617,9 @@
 		}
 
 		available = {
-
+			NOT = {
+				has_global_flag = No_Asia_flag
+			}
 		}
 
 		bypass = {
@@ -4466,6 +4474,9 @@
 
 		available = {
 			MAN = { is_subject_of = ROOT }
+			NOT = {
+				has_global_flag = No_Asia_flag
+			}
 		}
 
 		bypass = {
@@ -4845,7 +4856,9 @@
 		}
 
 		available = {
-
+			NOT = {
+				has_global_flag = No_Asia_flag
+			}
 		}
 
 		bypass = {
@@ -5392,7 +5405,9 @@
 		}
 
 		available = {
-
+			NOT = {
+				has_global_flag = No_Asia_flag
+			}
 		}
 
 		bypass = {
