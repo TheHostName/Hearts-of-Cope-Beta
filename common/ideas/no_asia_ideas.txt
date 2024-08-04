@@ -1,26 +1,49 @@
 ideas = {
 
 	country = {
-	ai_country= {
-	allowed = {
-		always = no
-	}
+		ai_country= {
+			allowed = {
+			always = no
+			}
 
-	allowed_civil_war = {
+			allowed_civil_war = {
 		
-	}
+			}
 	
-	removal_cost = -1
+			removal_cost = -1
 
-	picture = generic_pp_unity_bonus
+			picture = generic_pp_unity_bonus
 	
-	modifier = {
-		political_power_factor = -10
-		industrial_capacity_factory = -1000
-		industrial_capacity_dockyard = -1000
-		research_speed_factor = -1000
-		production_speed_buildings_factor = -1000
+			modifier = {
+				political_power_factor = -10
+				industrial_capacity_factory = -1000
+				industrial_capacity_dockyard = -1000
+				research_speed_factor = -1000
+				production_speed_buildings_factor = -1000
+			}
+		}
+		NO_ASIA_attache_idea = { # LW tyvm
+			
+		allowed = {
+			always = no
+		}
+	
+		cancel = {
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
+		}
+	
+		removal_cost = -1
+	
+		picture = generic_infantry_bonus
+		
+		modifier = {
+			experience_gain_army = 0.3
+			war_support_factor = 0.1
+			experience_gain_air = 0.1
+		}
+		}
 	}
-}
-}
+
 }

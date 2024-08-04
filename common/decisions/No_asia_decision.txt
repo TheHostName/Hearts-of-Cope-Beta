@@ -1,17 +1,18 @@
-economy_decisions = {
+No_Asia_Game = {
 	No_asia_game = { 
 
 		icon = aluminium
 		
 		allowed = {
 			tag = GER
-			date = 1.1.1939
+
 			JAP = { is_ai = yes} 
 			GER = { is_ai = no}
 		}
 
 		available = {
 			tag = GER
+			date < 1936.1.2
 		}
 
 		visible = {
@@ -54,44 +55,425 @@ economy_decisions = {
 				annex_country = { target = SIK transfer_troops = yes }
 				annex_country = { target = YUN transfer_troops = yes }
 			}
-			JAP = {
-				if = {
-					limit = {
-						any_state = {
-							is_owned_by = JAP
-						}
-
-				}
-				add_core = JAP
-				}
+			894 = { 
+			add_core_of = CAN
 			}
-			RAJ = {
-				if = {
-					limit = {
-						any_state = {
-							is_owned_by = RAJ
-						}
-
-				}
-				add_core = RAJ
-				}
+			541 = { 
+				add_core_of = CAN
 			}
-			CAN = {
-				if = {
-					limit = {
-						any_state = {
-							is_owned_by = CAN
-						}
-
-				}
-				add_core = CAN
-				}
+			893 = { 
+				add_core_of = CAN
 			}
-
-
+			681 = { 
+				add_core_of = CAN
+			}
+			275 = { 
+				add_core_of = CAN
+			}
+			719 = { 
+				add_core_of = CAN
+			}
+			611 = { 
+				add_core_of = JAP
+			}
+			612 = { 
+				add_core_of = CAN
+			}
+			610 = { 
+				add_core_of = CAN
+			}
+			715 = { 
+				add_core_of = CAN
+			}
+			716 = { 
+				add_core_of = CAN
+			}
+			717 = { 
+				add_core_of = CAN
+			}
+			328 = { 
+				add_core_of = CAN
+			}
+			714 = { 
+				add_core_of = CAN
+			}
+			761 = { 
+				add_core_of = CAN
+			}
 
 
 			set_global_flag = No_Asia_flag
+		}
+	}
+	
+	NO_ASIA_attache = {
+        cost = 100
+
+        fire_only_once = yes
+
+        available = {
+			date > 1938.1.1
+			NOT = {
+				GER = {
+					has_completed_focus = GER_danzig_or_war
+				}
+			}
+			has_global_flag = No_Asia_flag
+        }
+
+        visible = {
+
+		}
+
+        complete_effect = {
+			add_political_power = -100
+			add_ideas = NO_ASIA_attache_idea
+		}
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	NO_ASIA_china_war_tension = {
+
+        fire_only_once = yes
+
+		allowed = { 
+			tag = JAP 
+		}
+
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			tag = JAP
+			date = 1938.1.1
+			has_global_flag = No_Asia_flag
+		}
+
+        visible = {
+
+		}
+
+        complete_effect = {
+			add_named_threat = { threat = 10 name = JAP_intervene_in_china }
+		}
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	NO_ASIA_china_war_end_tension = {
+
+        fire_only_once = yes
+
+		allowed = { 
+			tag = JAP 
+		}
+
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			tag = JAP
+			date = 1939.6.1
+			has_global_flag = No_Asia_flag
+		}
+
+        visible = {
+
+		}
+
+        complete_effect = {
+			add_named_threat = { threat = 18 name = JAP_intervene_in_china }
+		}
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	Strike_south_occupations_1 = {
+		fire_only_once = yes
+		allowed = { 
+			tag = JAP 
+		}
+
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			tag = JAP
+			date = 1941.1.1
+			has_global_flag = No_Asia_flag
+		}
+
+		cancel_trigger = {
+		}
+
+		days_remove = 30
+
+		remove_effect = {
+			336 = {
+				add_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			286 = {
+				add_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			671 = {
+				add_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			288 = {
+				add_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	Strike_south_occupations_2 = {
+		fire_only_once = yes
+		allowed = { 
+			tag = JAP 
+		}
+
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			tag = JAP
+			date = 1941.3.1
+			has_global_flag = No_Asia_flag
+		}
+
+		cancel_trigger = {
+		}
+
+		days_remove = 30
+
+		remove_effect = {
+			672 = {
+				add_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			334 = {
+				add_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			671 = {
+				add_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	Strike_south_occupations_3 = {
+		fire_only_once = yes
+		allowed = { 
+			tag = JAP 
+		}
+
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			tag = JAP
+			date = 1941.6.1
+			has_global_flag = No_Asia_flag
+		}
+
+		cancel_trigger = {
+		}
+
+		days_remove = 30
+
+		remove_effect = {
+			673 = {
+				add_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			335 = {
+				add_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			667 = {
+				add_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	Strike_south_occupations_reversed_1 = {
+		fire_only_once = yes
+
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			has_global_flag = No_Asia_flag
+			tag = JAP
+			date = 1943.9.1
+		}
+
+		cancel_trigger = {
+		}
+
+		days_remove = 30
+
+		remove_effect = {
+			667 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+
+			335 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			673 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	Strike_south_occupations_reversed_2 = {
+		fire_only_once = yes
+
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			has_global_flag = No_Asia_flag
+			tag = JAP
+			date = 1944.2.1
+		}
+
+		cancel_trigger = {
+		}
+
+		days_remove = 30
+
+		remove_effect = {
+			671 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+
+			334 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			672 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	Strike_south_occupations_reversed_3 = {
+		fire_only_once = yes
+
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			has_global_flag = No_Asia_flag
+			tag = JAP
+			date = 1944.7.1
+		}
+
+		cancel_trigger = {
+		}
+
+		days_remove = 30
+
+		remove_effect = {
+			336 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+
+			286 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			671 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			288 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	Strike_south_occupations_reversed_4 = {
+		fire_only_once = yes
+
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			has_global_flag = No_Asia_flag
+			tag = JAP
+			date = 1944.12.1
+		}
+
+		cancel_trigger = {
+		}
+
+		days_remove = 30
+
+		remove_effect = {
+			667 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+
+			289 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 999
 		}
 	}
 }	

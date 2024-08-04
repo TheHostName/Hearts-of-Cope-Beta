@@ -1,0 +1,8 @@
+No_Asia_Game = {
+	icon = generic_propaganda
+
+	visible = {
+
+	}
+}
+
