@@ -40,6 +40,7 @@ No_Asia_Game = {
 			SIA = { add_ideas = ai_country}
 			IND = { add_ideas = ai_country}
 			MAL = { add_ideas = ai_country}
+			CAN = { add_ideas = NO_asia_building_space_buff}
 			JAP = { 
 				annex_country = { target = MAN transfer_troops = yes }
 			}
@@ -77,30 +78,37 @@ No_Asia_Game = {
 				add_core_of = JAP
 			}
 			612 = { 
-				add_core_of = CAN
+				add_core_of = JAP
 			}
 			610 = { 
-				add_core_of = CAN
+				add_core_of = JAP
 			}
 			715 = { 
-				add_core_of = CAN
+				add_core_of = JAP
 			}
 			716 = { 
-				add_core_of = CAN
+				add_core_of = JAP
 			}
 			717 = { 
-				add_core_of = CAN
+				add_core_of = JAP
 			}
 			328 = { 
-				add_core_of = CAN
+				add_core_of = JAP
 			}
 			714 = { 
-				add_core_of = CAN
+				add_core_of = JAP
 			}
 			761 = { 
-				add_core_of = CAN
+				add_core_of = JAP
 			}
-
+			USA = { 
+				if = {
+					limit = {
+						NOT = { has_idea = export_focus }
+					}
+					add_ideas = export_focus
+			}
+			}
 
 			set_global_flag = No_Asia_flag
 		}
@@ -323,6 +331,9 @@ No_Asia_Game = {
 	Strike_south_occupations_reversed_1 = {
 		fire_only_once = yes
 
+		allowed = { 
+			tag = JAP 
+		}
 		visible = {
 			has_global_flag = No_Asia_flag
 		}
@@ -361,7 +372,9 @@ No_Asia_Game = {
 	}
 	Strike_south_occupations_reversed_2 = {
 		fire_only_once = yes
-
+		allowed = { 
+			tag = JAP 
+		}
 		visible = {
 			has_global_flag = No_Asia_flag
 		}
@@ -400,7 +413,9 @@ No_Asia_Game = {
 	}
 	Strike_south_occupations_reversed_3 = {
 		fire_only_once = yes
-
+		allowed = { 
+			tag = JAP 
+		}
 		visible = {
 			has_global_flag = No_Asia_flag
 		}
@@ -444,7 +459,9 @@ No_Asia_Game = {
 	}
 	Strike_south_occupations_reversed_4 = {
 		fire_only_once = yes
-
+		allowed = { 
+			tag = JAP 
+		}
 		visible = {
 			has_global_flag = No_Asia_flag
 		}
@@ -471,6 +488,154 @@ No_Asia_Game = {
 					modifier = SWE_blown_up_mines
 				}
 			}
+		}
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	US_Lend_Lease_CAN = {
+		fire_only_once = yes
+		allowed = { 
+			tag = JAP 
+		}
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			has_global_flag = No_Asia_flag
+			tag = JAP
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
+		}
+
+		cancel_trigger = {
+		}
+
+		days_remove = 1
+
+		remove_effect = {
+			CAN = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = 30
+					instant_build = yes 
+				}
+				add_offsite_building = {
+					type = arms_factory
+					level = 30
+					instant_build = yes 
+				}
+			}
+			469 = { 
+			add_resource = {
+				type = steel
+				amount = 50
+			}
+			}
+		}
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	
+	US_entry_to_war_CAN_supoort = {
+		fire_only_once = yes
+		allowed = { 
+			tag = JAP 
+		}
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			has_global_flag = No_Asia_flag
+			tag = JAP
+			date = 1941.1.1
+		}
+
+		cancel_trigger = {
+		}
+
+		days_remove = 1
+
+		remove_effect = {
+
+			CAN = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = 23
+					instant_build = yes 
+				}
+				add_offsite_building = {
+					type = arms_factory
+					level = 65
+					instant_build = yes 
+				}
+				add_offsite_building = {
+					type = dockyard
+					level = 11
+					instant_build = yes 
+				}
+			}
+			CAN = {
+				transfer_state = 357
+				transfer_state = 358
+				transfer_state = 360
+				transfer_state = 361
+				transfer_state = 359
+				transfer_state = 362
+				transfer_state = 816
+				transfer_state = 261
+				transfer_state = 393
+				set_technology = {
+					improved_airplane_launcher = 1
+					sonar = 1
+					improved_sonar = 1
+					radio_detection = 1
+					decimetric_radar = 1
+					improved_decimetric_radar = 1
+					centimetric_radar = 1
+				}
+				add_research_slot = 1
+			}
+			357 = { 
+				add_core_of = CAN
+			}
+			358 = { 
+				add_core_of = CAN
+			}
+			359 = { 
+				add_core_of = CAN
+			}
+			360 = { 
+				add_core_of = CAN
+			}
+			361 = { 
+				add_core_of = CAN
+			}
+			362 = { 
+				add_core_of = CAN
+			}
+			816 = { 
+				add_core_of = CAN
+			}
+			261 = { 
+				add_core_of = CAN
+			}
+			393 = { 
+				add_core_of = CAN
+			}
+			469 = { 
+				add_resource = {
+					type = oil
+					amount = 320
+				}
+				add_resource = {
+					type = aluminium
+					amount = 100
+				}
+			}
+
 		}
 		ai_will_do = {
 			factor = 999

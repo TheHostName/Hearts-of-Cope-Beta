@@ -44,6 +44,23 @@ ideas = {
 			experience_gain_air = 0.1
 		}
 		}
+		NO_asia_building_space_buff= {
+			allowed = {
+			always = no
+			}
+
+			allowed_civil_war = {
+		
+			}
+	
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+	
+			modifier = {
+				global_building_slots_factor = 1
+			}
+		}
 	}
 
 }
