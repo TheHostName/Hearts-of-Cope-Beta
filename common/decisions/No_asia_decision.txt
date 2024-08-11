@@ -32,6 +32,13 @@ No_Asia_Game = {
 		}
 
 		complete_effect = {
+				ENG = {
+					add_manpower = 1000000
+					load_oob = "ENG_RAJ_Support_oob"
+				}
+			
+				
+			
 			JAP = { add_ideas = ai_country}
 			CHI = { add_ideas = ai_country}
 			USA = { add_ideas = ai_country}
@@ -46,9 +53,6 @@ No_Asia_Game = {
 			JAP = { 
 				annex_country = { target = MAN transfer_troops = yes }
 			}
-			CAN = { 
-				annex_country = { target = SAF transfer_troops = yes }
-			}
 			CHI = { 
 				annex_country = { target = GXC transfer_troops = yes }
 				annex_country = { target = SHX transfer_troops = yes }
@@ -57,27 +61,6 @@ No_Asia_Game = {
 				annex_country = { target = TNG transfer_troops = yes }
 				annex_country = { target = SIK transfer_troops = yes }
 				annex_country = { target = YUN transfer_troops = yes }
-			}
-			895 = { 
-				add_core_of = CAN
-				}
-			894 = { 
-			add_core_of = CAN
-			}
-			541 = { 
-				add_core_of = CAN
-			}
-			893 = { 
-				add_core_of = CAN
-			}
-			681 = { 
-				add_core_of = CAN
-			}
-			275 = { 
-				add_core_of = CAN
-			}
-			719 = { 
-				add_core_of = CAN
 			}
 			611 = { 
 				add_core_of = JAP
@@ -114,11 +97,75 @@ No_Asia_Game = {
 					add_ideas = export_focus
 			}
 			}
-
+			JAP = {
+				send_embargo = ENG
+				send_embargo = FRA
+				send_embargo = CAN
+				send_embargo = SAF
+				}
 			set_global_flag = No_Asia_flag
 		}
 	}
+		No_asia_game_No_SAF = { 
 	
+			icon = aluminium
+			
+			allowed = {
+				tag = GER
+	
+				JAP = { is_ai = yes} 
+				GER = { is_ai = no}
+			}
+	
+			available = {
+				tag = GER
+				date < 1936.1.2
+			}
+	
+			visible = {
+				tag = GER
+			}
+	
+			fire_only_once = yes
+	
+			cost = 0
+			days_remove = 0
+	
+			modifier = {
+			}
+	
+			ai_will_do = {
+				factor = 1000
+			}
+	
+			complete_effect = {
+				CAN = { 
+					annex_country = { target = SAF transfer_troops = yes }
+				}
+
+				895 = { 
+					add_core_of = CAN
+					}
+				894 = { 
+					add_core_of = CAN
+				}
+				541 = { 
+					add_core_of = CAN
+				}
+				893 = { 
+					add_core_of = CAN
+				}
+				681 = { 
+					add_core_of = CAN
+				}
+				275 = { 
+					add_core_of = CAN
+				}
+				719 = { 
+					add_core_of = CAN
+				}
+			}
+		}
 	NO_ASIA_attache = {
         cost = 100
 
@@ -201,6 +248,167 @@ No_Asia_Game = {
 			factor = 999
 		}
 	}
+	NO_ASIA_USA_excavation_1 = {
+
+        fire_only_once = yes
+
+		allowed = { 
+			tag = JAP 
+		}
+
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			tag = JAP
+			date = 1939.1.1
+			has_global_flag = No_Asia_flag
+		}
+
+        visible = {
+
+		}
+
+        complete_effect = {
+		USA = {
+				set_technology = {
+					excavation1= 1
+				}
+		}
+
+	}
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	NO_ASIA_USA_excavation_2 = {
+
+        fire_only_once = yes
+
+		allowed = { 
+			tag = JAP 
+		}
+
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			tag = JAP
+			date = 1939.6.1
+			has_global_flag = No_Asia_flag
+		}
+
+        visible = {
+
+		}
+
+        complete_effect = {
+		USA = {
+				set_technology = {
+					excavation2= 1
+				}
+		}
+		}
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	NO_ASIA_USA_excavation_3 = {
+
+        fire_only_once = yes
+
+		allowed = { 
+			tag = JAP 
+		}
+
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			tag = JAP
+			date = 1940.1.1
+			has_global_flag = No_Asia_flag
+		}
+
+        visible = {
+
+		}
+
+        complete_effect = {
+		USA = {
+				set_technology = {
+					excavation3= 1
+				}
+		}
+		}
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	NO_ASIA_USA_excavation_4 = {
+
+        fire_only_once = yes
+
+		allowed = { 
+			tag = JAP 
+		}
+
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			tag = JAP
+			date = 1941.1.1
+			has_global_flag = No_Asia_flag
+		}
+
+        visible = {
+
+		}
+
+        complete_effect = {
+		USA = {
+				set_technology = {
+					excavation4= 1
+				}
+		}
+		}
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	NO_ASIA_USA_excavation_5 = {
+
+        fire_only_once = yes
+
+		allowed = { 
+			tag = JAP 
+		}
+
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			tag = JAP
+			date = 1942.1.1
+			has_global_flag = No_Asia_flag
+		}
+
+        visible = {
+
+		}
+
+        complete_effect = {
+		USA = {
+				set_technology = {
+					excavation5= 1
+				}
+		}
+		}
+		ai_will_do = {
+			factor = 999
+		}
+	}
 	Strike_south_occupations_1 = {
 		fire_only_once = yes
 		allowed = { 
@@ -222,11 +430,12 @@ No_Asia_Game = {
 		days_remove = 30
 
 		remove_effect = {
-			336 = {
-				add_dynamic_modifier = {
-					modifier = SWE_blown_up_mines
-				}
+			JAP = {
+				transfer_state = 336
 			}
+			336 = { 
+				add_core_of = JAP
+				}
 			333 = {
 				add_dynamic_modifier = {
 					modifier = SWE_blown_up_mines
@@ -440,10 +649,8 @@ No_Asia_Game = {
 		days_remove = 30
 
 		remove_effect = {
-			336 = {
-				remove_dynamic_modifier = {
-					modifier = SWE_blown_up_mines
-				}
+			MAL = {
+				transfer_state = 336
 			}
 			333 = {
 				remove_dynamic_modifier = {
