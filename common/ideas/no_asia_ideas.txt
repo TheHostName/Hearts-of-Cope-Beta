@@ -37,8 +37,8 @@ ideas = {
 			picture = generic_pp_unity_bonus
 			
 			modifier = {
-				production_speed_synthetic_refinery_factor = -0.75
-				production_speed_rubber_refinery_factor = -0.75
+				production_speed_synthetic_refinery_factor = -0.5
+				production_speed_rubber_refinery_factor = -0.5
 			}
 		}
 		NO_ASIA_attache_idea = { # LW tyvm
@@ -58,7 +58,7 @@ ideas = {
 		picture = generic_infantry_bonus
 		
 		modifier = {
-			experience_gain_army = 0.3
+			experience_gain_army = 0.1
 			war_support_factor = 0.1
 			experience_gain_air = 0.1
 		}
