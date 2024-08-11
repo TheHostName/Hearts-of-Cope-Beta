@@ -22,6 +22,25 @@ ideas = {
 				production_speed_buildings_factor = -1000
 			}
 		}
+		NO_asia_asia_matters_can = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				production_speed_synthetic_refinery_factor = -0.75
+				production_speed_rubber_refinery_factor = -0.75
+			}
+		}
 		NO_ASIA_attache_idea = { # LW tyvm
 			
 		allowed = {

@@ -41,6 +41,8 @@ No_Asia_Game = {
 			IND = { add_ideas = ai_country}
 			MAL = { add_ideas = ai_country}
 			CAN = { add_ideas = NO_asia_building_space_buff}
+			CAN = { add_ideas = NO_asia_asia_matters_can}
+			CAN = { remove_ideas = asia_matters }
 			JAP = { 
 				annex_country = { target = MAN transfer_troops = yes }
 			}
@@ -56,6 +58,9 @@ No_Asia_Game = {
 				annex_country = { target = SIK transfer_troops = yes }
 				annex_country = { target = YUN transfer_troops = yes }
 			}
+			895 = { 
+				add_core_of = CAN
+				}
 			894 = { 
 			add_core_of = CAN
 			}
@@ -134,7 +139,6 @@ No_Asia_Game = {
 		}
 
         complete_effect = {
-			add_political_power = -100
 			add_ideas = NO_ASIA_attache_idea
 		}
 		ai_will_do = {
@@ -219,6 +223,11 @@ No_Asia_Game = {
 
 		remove_effect = {
 			336 = {
+				add_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			333 = {
 				add_dynamic_modifier = {
 					modifier = SWE_blown_up_mines
 				}
@@ -436,6 +445,11 @@ No_Asia_Game = {
 					modifier = SWE_blown_up_mines
 				}
 			}
+			333 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
 
 			286 = {
 				remove_dynamic_modifier = {
@@ -526,6 +540,7 @@ No_Asia_Game = {
 					level = 30
 					instant_build = yes 
 				}
+				OVERLORD = { set_autonomy = { target = CAN autonomy_state = autonomy_free } }
 			}
 			469 = { 
 			add_resource = {
@@ -533,6 +548,7 @@ No_Asia_Game = {
 				amount = 50
 			}
 			}
+
 		}
 		ai_will_do = {
 			factor = 999
