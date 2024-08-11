@@ -4005,7 +4005,6 @@ focus_tree = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
-				add_potential_special_forces_tree = yes
 				add_doctrine_cost_reduction = {
 					name = SOV_naval_infantry
 					cost_reduction = 0.25
@@ -6144,6 +6143,7 @@ focus_tree = {
 			custom_effect_tooltip = SOV_rehabilitated_military_ns_tt
 
 			add_ideas = SOV_rehabilitated_military_ns
+			add_potential_special_forces_tree = yes
 		}
 	}
 
