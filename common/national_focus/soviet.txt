@@ -6143,7 +6143,6 @@ focus_tree = {
 			custom_effect_tooltip = SOV_rehabilitated_military_ns_tt
 
 			add_ideas = SOV_rehabilitated_military_ns
-			add_potential_special_forces_tree = yes
 		}
 	}
 
