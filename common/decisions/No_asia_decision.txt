@@ -7,7 +7,7 @@ No_Asia_Game = {
 			tag = GER
 
 			JAP = { is_ai = yes} 
-			GER = { is_ai = no}
+			NOT = { GER = { is_ai = yes}} 
 		}
 
 		available = {
