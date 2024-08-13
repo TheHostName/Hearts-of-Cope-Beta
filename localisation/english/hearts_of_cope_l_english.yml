@@ -20,7 +20,7 @@
  usa_rearmament:0 "US-Rearmament"
  industrial_mobilization:0 "Industrial Mobilization"
 
-SOV_ilyushin_organization: "$ilyushin_cas_design_bureau$"
+ SOV_ilyushin_organization: "$ilyushin_cas_design_bureau$"
 
  DOD_romania.164.t: "Germany asks for our Oil rights"
  DOD_romania.164.desc: "Romania has the decided on our Oil rights request"
