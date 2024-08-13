@@ -4137,7 +4137,7 @@ country_event = { #Germany wants resource rights for Muntania
 		ai_chance = {
 			base = 100
 		}
-		name = AAT_germany.1.b
+		name = DOD_romania.164.b
 
 		give_resource_rights = {
 			receiver = FROM 

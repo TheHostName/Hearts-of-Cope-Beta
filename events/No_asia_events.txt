@@ -10,3 +10,45 @@ country_event = {
 		
 	}	
 }
+news_event = {
+	id = noasia_news.1
+	title = noasia_news.1.t
+	desc = noasia_news.1.desc
+	picture = GFX_news_event_ger_civil_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noasia_news.1.a
+	}
+}
+news_event = {
+	id = noasia_news.2
+	title = noasia_news.2.t
+	desc = noasia_news.2.desc
+	picture = GFX_news_event_ger_civil_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noasia_news.2.a
+	}
+}
+news_event = {
+	id = noasia_news.3
+	title = noasia_news.3.t
+	desc = noasia_news.3.desc
+	picture = GFX_news_event_ger_civil_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noasia_news.3.a
+	}
+}

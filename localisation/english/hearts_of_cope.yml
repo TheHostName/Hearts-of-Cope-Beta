@@ -1,0 +1,41 @@
+﻿l_english:
+
+ JAP_develop_shaanxi_steel_deposits:1 "Develop Shaanxi Iron Ore Deposits"
+ develop_shaanxi_steel_deposits:0 "Develop shaanxi Iron Ore Deposits"
+
+ JAP_develop_xian_steel_deposits:1 "Develop Xian Iron Ore Deposits"
+ develop_xian_steel_deposits:0 "Develop Xian Iron Ore Deposits"
+
+ JAP_develop_hubei_steel_deposits:1 "Develop Hubei Iron Ore Deposits"
+ develop_hubei_steel_deposits:0 "Develop Hubei Iron Ore Deposits"
+
+ JAP_develop_jiangxi_deposits:1 "Develop Jiangxi Iron Ore Deposits"
+ develop_jiangxi_deposits:0 "Develop Jiangxi Iron Ore Deposits"
+
+ ai_country:0 "AI Country"
+ USA_scramble_to_avenge_pearl_harbor:0 "Scrambling to avenge Pearl Harbor"
+ USA_scramble_to_avenge_pearl_harbor_desc:0 "We must avenge Pearl Harbor. We shall therefore put all our efforts in getting the upper hand."
+ asia_matters:0 "Asia Matters"
+ asia_matters_UK:0 "Asia Matters"
+ usa_rearmament:0 "US-Rearmament"
+ industrial_mobilization:0 "Industrial Mobilization"
+
+SOV_ilyushin_organization: "$ilyushin_cas_design_bureau$"
+
+ DOD_romania.164.t: "Germany asks for our Oil rights"
+ DOD_romania.164.desc: "Romania has the decided on our Oil rights request"
+ DOD_romania.164.a: "Keep our Oil"
+ DOD_romania.164.b: "Give Germany our Oil rights"
+
+ noasia_news.1.t:0 "Japanese Invasian of Indonesia"
+ noasia_news.1.desc:0 "Japan has invaded Singapore and Malaya. More islands will soon fall"
+ noasia_news.1.a:0 "Bye bye sweet Rubber."
+
+ noasia_news.2.t:0 "Fall of Indonesia"
+ noasia_news.2.desc:0 "Japan has invaded the last Rubber islands of Indonesia"
+ noasia_news.2.a:0 "I hope Canada has build some Refineries."
+
+ noasia_news.3.t:0 "Allies start liberation of Indoesia"
+ noasia_news.3.desc:0 "The first Rubber islands have been liberated"
+ noasia_news.3.a:0 "Finally some good fucking Rubber."
+

@@ -430,6 +430,9 @@ No_Asia_Game = {
 		days_remove = 30
 
 		remove_effect = {
+			hidden_effect = {
+				news_event = { hours = 6 id = noasia_news.1 }
+			}
 			JAP = {
 				transfer_state = 336
 			}
@@ -525,6 +528,9 @@ No_Asia_Game = {
 		days_remove = 30
 
 		remove_effect = {
+			hidden_effect = {
+				news_event = { hours = 6 id = noasia_news.2 }
+			}
 			673 = {
 				add_dynamic_modifier = {
 					modifier = SWE_blown_up_mines
@@ -567,6 +573,9 @@ No_Asia_Game = {
 		days_remove = 30
 
 		remove_effect = {
+			hidden_effect = {
+				news_event = { hours = 6 id = noasia_news.3 }
+			}
 			667 = {
 				remove_dynamic_modifier = {
 					modifier = SWE_blown_up_mines
