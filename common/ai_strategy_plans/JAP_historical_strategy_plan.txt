@@ -59,14 +59,16 @@ JAP_historical_plan = {
 		JAP_annexiation_siam
 		JAP_non_aggression_pact_with_the_soviet_union
 		JAP_bypass_the_philippines
+		JAP_expand_the_snlf
+		JAP_cruiser_modernization #November 30 1938	
+		JAP_long_lance_torpedoes #February 10 1939	
+		JAP_small_arms_modernization #June 30 1939	
 		JAP_strike_on_the_southern_resource_area
 		
 		 #August 10 1942	
 		#1939
 		 #October 20 1942	
 		JAP_small_arms_modernization #June 30 1939	
-		JAP_cruiser_modernization #November 30 1938	
-		JAP_long_lance_torpedoes #February 10 1939	
 		JAP_bicycle_battalions #April 20 1939	
 		#1940
 		JAP_torpedo_cruisers #September 10 1939	
