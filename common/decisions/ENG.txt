@@ -9290,10 +9290,11 @@ operations = {
 			has_war_with = GER
 			D05= { exists = yes }
 			NOT = { is_in_faction_with = D05 }
+			NOT = { is_in_faction_with = D06 }
 			FRA = { has_capitulated = yes }
 			is_in_faction_with = FRA
 			OR = {
-				date > 1.1.1943
+				date > 1.7.1942
 				controls_state = 448
 			}
 		}
@@ -9314,6 +9315,7 @@ operations = {
 		
 		complete_effect = {
 			declare_war_on = { target = D05 type = annex_everything }
+			declare_war_on = { target = D06 type = annex_everything }
 		}
 	}
 

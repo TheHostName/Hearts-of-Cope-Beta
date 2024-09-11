@@ -1239,11 +1239,11 @@ technologies = {
 
 		infantry = {
 			defense = 0.05
-			breakthrough = 0.1
+			breakthrough = 0.15
 		}
 		bicycle_battalion = {
 			defense = 0.05
-			breakthrough = 0.1
+			breakthrough = 0.15
 		}
 		cavalry = {
 			defense = 0.02
@@ -1251,15 +1251,15 @@ technologies = {
 		}		
 		mountaineers = {
 			defense = 0.03
-			breakthrough = 0.1
+			breakthrough = 0.15
 		}
 		paratrooper = {
 			defense = 0.03
-			breakthrough = 0.1
+			breakthrough = 0.15
 		}
 		marine = {
 			defense = 0.03
-			breakthrough = 0.1
+			breakthrough = 0.15
 		}
 		motorized = {
 			defense = 0.05
@@ -1267,11 +1267,11 @@ technologies = {
 		}
 		mechanized = {
 			defense = 0.05
-			breakthrough = 0.1
+			breakthrough = 0.15
 		}
 		amphibious_mechanized = {
 			defense = 0.05
-			breakthrough = 0.1
+			breakthrough = 0.15
 		}
 		
 		path = {
@@ -1330,11 +1330,11 @@ technologies = {
 
 		infantry = {
 			defense = 0.05
-			breakthrough = 0.1
+			breakthrough = 0.15
 		}
 		bicycle_battalion = {
 			defense = 0.05
-			breakthrough = 0.1
+			breakthrough = 0.15
 		}
 		cavalry = {
 			defense = 0.02
@@ -1342,27 +1342,27 @@ technologies = {
 		}		
 		mountaineers = {
 			defense = 0.03
-			breakthrough = 0.1
+			breakthrough = 0.15
 		}
 		paratrooper = {
 			defense = 0.03
-			breakthrough = 0.1
+			breakthrough = 0.15
 		}
 		marine = {
 			defense = 0.03
-			breakthrough = 0.1
+			breakthrough = 0.15
 		}
 		motorized = {
 			defense = 0.05
-			breakthrough = 0.1
+			breakthrough = 0.15
 		}
 		mechanized = {
 			defense = 0.05
-			breakthrough = 0.1
+			breakthrough = 0.15
 		}
 		amphibious_mechanized = {
 			defense = 0.05
-			breakthrough = 0.1
+			breakthrough = 0.15
 		}
 		
 		path = {
@@ -1427,11 +1427,11 @@ technologies = {
 
 		infantry = {
 			defense = 0.05
-			breakthrough = 0.1
+			breakthrough = 0.15
 		}
 		bicycle_battalion = {
 			defense = 0.05
-			breakthrough = 0.1
+			breakthrough = 0.15
 		}
 		cavalry = {
 			defense = 0.02
@@ -1439,27 +1439,27 @@ technologies = {
 		}		
 		mountaineers = {
 			defense = 0.03
-			breakthrough = 0.1
+			breakthrough = 0.15
 		}
 		paratrooper = {
 			defense = 0.03
-			breakthrough = 0.1
+			breakthrough = 0.15
 		}
 		marine = {
 			defense = 0.03
-			breakthrough = 0.1
+			breakthrough = 0.15
 		}
 		motorized = {
 			defense = 0.05
-			breakthrough = 0.1
+			breakthrough = 0.15
 		}
 		mechanized = {
 			defense = 0.05
-			breakthrough = 0.1
+			breakthrough = 0.15
 		}
 		amphibious_mechanized = {
 			defense = 0.05
-			breakthrough = 0.1
+			breakthrough = 0.15
 		}
 		
 		path = {
@@ -1511,11 +1511,11 @@ technologies = {
 
 		infantry = {
 			defense = 0.05
-			breakthrough = 0.1
+			breakthrough = 0.15
 		}
 		bicycle_battalion = {
 			defense = 0.05
-			breakthrough = 0.1
+			breakthrough = 0.15
 		}
 		cavalry = {
 			defense = 0.02
@@ -1523,27 +1523,27 @@ technologies = {
 		}		
 		mountaineers = {
 			defense = 0.03
-			breakthrough = 0.1
+			breakthrough = 0.15
 		}
 		paratrooper = {
 			defense = 0.03
-			breakthrough = 0.1
+			breakthrough = 0.15
 		}
 		marine = {
 			defense = 0.03
-			breakthrough = 0.1
+			breakthrough = 0.15
 		}
 		motorized = {
 			defense = 0.05
-			breakthrough = 0.1
+			breakthrough = 0.15
 		}
 		mechanized = {
 			defense = 0.05
-			breakthrough = 0.1
+			breakthrough = 0.15
 		}
 		amphibious_mechanized = {
 			defense = 0.05
-			breakthrough = 0.1
+			breakthrough = 0.15
 		}
 		
 		research_cost = 1.5

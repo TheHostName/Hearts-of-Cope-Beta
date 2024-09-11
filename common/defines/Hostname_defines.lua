@@ -75,6 +75,12 @@ NDefines.NProduction.DEFAULT_MAX_NAV_FACTORIES_PER_LINE = 20
 NDefines.NProduction.BASE_NAVAL_EQUIPMENT_CONVERSION_IC_COST_FACTOR = 0.00
 NDefines.NProduction.CONVOY_MAX_NAV_FACTORIES_PER_LINE = 50
 NDefines.NProduction.BASE_FACTORY_SPEED_NAV = 2.5
+NDefines.NProduction.BASE_LICENSE_IC_COST = 0							-- Base IC cost for lended license
+NDefines.NProduction.LICENSE_IC_COST_YEAR_INCREASE = 1					-- IC cost equipment for every year of equipment after 1936
+NDefines.NProduction.LICENSE_EQUIPMENT_TECH_SPEED_MAX_YEARS = 5			-- Maximum years for MIC speed modifier
+NDefines.NProduction.LICENSE_EQUIPMENT_SPEED_NOT_FACTION = -0.10		-- MIC speed modifier for licensed equipment for not being in faction
+NDefines.NProduction.LICENSE_EQUIPMENT_TECH_SPEED_PER_YEAR = -0.075		-- MIC speed modifier for licensed equipment for each year of difference between actual and latest equipment
+NDefines.NProduction.LICENSE_EQUIPMENT_BASE_SPEED = 0					-- base MIC speed modifier for licensed equipment
 -- Buildings
 NDefines.NBuildings.AIRBASE_CAPACITY_MULT = 100
 NDefines.SUPPLY_PORT_LEVEL_THROUGHPUT = 5
@@ -175,6 +181,10 @@ NDefines.NAir.NAVAL_STRIKE_BASE_STR_TO_PLANES_RATIO = 0.2		-- Max airbombers to 
 NDefines.NAir.NAVAL_COMBAT_EXTERNAL_PLANES_JOIN_RATIO = 0.2		-- Max planes that can join a combat comparing to the total strength of the ships
 NDefines.NAir.NAVAL_COMBAT_EXTERNAL_PLANES_JOIN_RATIO_PER_DAY = 0.3 -- max extra plane % that can join every day
 NDefines.NAir.NAVAL_COMBAT_EXTERNAL_PLANES_MIN_CAP = 20			-- Min cap for planes that can join naval combat
+NDefines.NAir.AIR_NAVAL_KAMIKAZE_DAMAGE_MULT = 20.0				-- Balancing value to increase usual damage to Strength for Kamikaze
+NDefines.NAir.AIR_NAVAL_KAMIKAZE_LOSSES_MULT = 4.0          			-- Balancing value to increase usual losses if Kamikaze participating in the battle
+NDefines.NAir.BASE_KAMIKAZE_DAMAGE = 2.0                    				-- Base Kamikaze death rate
+NDefines.NAir.BASE_KAMIKAZE_TARGETING = 2.0			        		-- Kamikaze can't be a bad target
 -- Navy
 NDefines.NNavy.MAX_SUBMARINES_PER_AUTO_TASK_FORCE = 10	
 NDefines.NNavy.CARRIER_STACK_PENALTY = 4										-- The most efficient is 4 carriers in combat. 5+ brings the penalty to the amount of wings in battle.

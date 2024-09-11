@@ -518,7 +518,7 @@ No_Asia_Game = {
 		}
 		available = {
 			tag = JAP
-			date = 1941.6.1
+			date = 1941.7.1
 			has_global_flag = No_Asia_flag
 		}
 
@@ -746,6 +746,7 @@ No_Asia_Game = {
 
 		remove_effect = {
 			CAN = {
+				add_research_slot = 1
 				add_offsite_building = {
 					type = industrial_complex
 					level = 30
@@ -827,8 +828,12 @@ No_Asia_Game = {
 					decimetric_radar = 1
 					improved_decimetric_radar = 1
 					centimetric_radar = 1
+					improved_depth_charges = 1
+					basic_ship_hull_carrier = 1
+					basic_ship_hull_cruiser = 1
+					basic_ship_hull_heavy = 1			
 				}
-				add_research_slot = 1
+
 			}
 			357 = { 
 				add_core_of = CAN
