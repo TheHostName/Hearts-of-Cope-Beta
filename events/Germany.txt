@@ -3228,20 +3228,9 @@ country_event = {
 			state = 46 #Muntania
 		}
 	}
-		HUN = { country_event = germany.56 }
+		ROM = { country_event = germany.56 }
 		ROM = { country_event = DOD_romania.164 }
-		154 = { 
-			add_core_of = ROM
-		}
-		155 = { 
-			add_core_of = ROM
-		}
-		43 = { 
-			add_core_of = ROM
-		}
-		664 = { 
-			add_core_of = ROM
-		}
+
 		add_war_support = 0.1
 		if = {
 			limit = {
