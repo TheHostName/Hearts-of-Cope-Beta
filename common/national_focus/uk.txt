@@ -112,7 +112,6 @@ focus_tree = {
 	}
 	focus = {
 		id = maud_focus
-		available = { is_in_faction_with = USA }
 		prerequisite = { focus = tizard_mission_focus }
 		icon = GFX_focus_wonderweapons
 		x = 0
