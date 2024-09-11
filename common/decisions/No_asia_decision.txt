@@ -436,8 +436,24 @@ No_Asia_Game = {
 				transfer_state = 670
 				transfer_state = 741
 				transfer_state = 286
+
+			}
+			JAP = { 
+				annex_country = { target = SIA transfer_troops = yes }
 			}
 			671 = { 
+				add_core_of = JAP
+			}
+			868 = { 
+				add_core_of = JAP
+			}
+			869 = { 
+				add_core_of = JAP
+			}
+			724 = { 
+				add_core_of = JAP
+			}
+			289 = { 
 				add_core_of = JAP
 			}
 			670 = { 
@@ -600,6 +616,11 @@ No_Asia_Game = {
 					modifier = SWE_blown_up_mines
 				}
 			}
+			422 = { 
+				add_resource = {
+					type = runner
+					amount = 20
+				}
 		}
 
 		ai_will_do = {
@@ -801,16 +822,7 @@ No_Asia_Game = {
 		remove_effect = {
 			CAN = {
 				add_research_slot = 1
-				add_offsite_building = {
-					type = industrial_complex
-					level = 30
-					instant_build = yes 
-				}
-				add_offsite_building = {
-					type = arms_factory
-					level = 30
-					instant_build = yes 
-				}
+
 				OVERLORD = { set_autonomy = { target = CAN autonomy_state = autonomy_free } }
 			}
 			469 = { 
@@ -826,6 +838,86 @@ No_Asia_Game = {
 		}
 	}
 	
+	US_Lend_Lease_CAN_2 = {
+		allowed = { 
+			tag = JAP 
+		}
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			has_global_flag = No_Asia_flag
+			tag = JAP
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
+			NOT = { date= 1941.1.1} 
+		}
+
+		cancel_trigger = {
+		}
+
+		days_remove = 30
+
+		remove_effect = {
+			CAN = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes 
+				}
+				add_offsite_building = {
+					type = arms_factory
+					level = 2
+					instant_build = yes 
+				}
+
+			}
+
+		}
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	US_entry_to_war_CAN_supoort = {
+
+		allowed = { 
+			tag = JAP 
+		}
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			has_global_flag = No_Asia_flag
+			tag = JAP
+			NOT ={date = 1944.1.1}
+			
+		}
+
+		cancel_trigger = {
+		}
+
+		days_remove = 30
+
+		remove_effect = {
+
+			CAN = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes 
+				}
+				add_offsite_building = {
+					type = arms_factory
+					level = 4
+					instant_build = yes 
+				}
+
+		}
+		ai_will_do = {
+			factor = 999
+		}
+	}
 	US_entry_to_war_CAN_supoort = {
 		fire_only_once = yes
 		allowed = { 
@@ -847,24 +939,13 @@ No_Asia_Game = {
 
 		remove_effect = {
 
+
 			CAN = {
-				add_offsite_building = {
-					type = industrial_complex
-					level = 23
-					instant_build = yes 
-				}
-				add_offsite_building = {
-					type = arms_factory
-					level = 65
-					instant_build = yes 
-				}
 				add_offsite_building = {
 					type = dockyard
 					level = 11
 					instant_build = yes 
 				}
-			}
-			CAN = {
 				transfer_state = 357
 				transfer_state = 358
 				transfer_state = 360
