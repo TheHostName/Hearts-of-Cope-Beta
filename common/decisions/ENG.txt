@@ -9171,7 +9171,10 @@ operations = {
 		}
 		
 		complete_effect = {
-			ICE = { country_event = { id = britain.25 days = 1} }
+			ENG = { 
+				annex_country = { target = ICE transfer_troops = yes }
+				transfer_state = 101
+			}
 			add_popularity = { ideology = democratic popularity = -0.05 }
 		}
 	}
