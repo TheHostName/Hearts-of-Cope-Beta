@@ -9291,9 +9291,6 @@ operations = {
 			tag = ENG
 			has_government = democratic
 			has_war_with = GER
-			D05= { exists = yes }
-			NOT = { is_in_faction_with = D05 }
-			NOT = { is_in_faction_with = D06 }
 			FRA = { has_capitulated = yes }
 			is_in_faction_with = FRA
 			OR = {
@@ -9302,7 +9299,7 @@ operations = {
 			}
 		}
 
-		cost = 50
+		cost = 100
 		
 		fire_only_once = yes
 
@@ -9317,8 +9314,18 @@ operations = {
 		}
 		
 		complete_effect = {
-			declare_war_on = { target = D05 type = annex_everything }
-			declare_war_on = { target = D06 type = annex_everything }
+			random_other_country = {
+				limit = {
+					original_tag = FRA
+					has_government = fascism
+					OR = {
+						is_subject_of = GER
+						has_focus_tree = vichy_french_focus
+					}
+				}
+				declare_war_on = { target = ENG type = annex_everything }
+				declare_war_on = { target = CAN type = annex_everything }
+			}
 		}
 	}
 
