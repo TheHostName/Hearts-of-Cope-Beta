@@ -4167,107 +4167,7 @@ focus_tree = {
 				uses = 2
 				category = armor
 			}
-			if = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				#T-34 tank template
-				if = {
-					limit = {
-						OR = {
-							has_tech = artillery3
-							has_tech = antitank3
-						}
-					}
-					create_equipment_variant = {
-						name = "T-34"
-						type = medium_tank_chassis_2
-						parent_version = 0
-						modules = {
-							main_armament_slot = tank_medium_cannon_2
-							turret_type_slot = tank_medium_two_man_tank_turret
-							suspension_type_slot = tank_christie_suspension
-							armor_type_slot = tank_welded_armor
-							engine_type_slot = tank_diesel_engine
-							special_type_slot_1 = sloped_armor
-						}
-						upgrades = {
-							tank_nsb_engine_upgrade = 10
-							tank_nsb_armor_upgrade = 7
-						}
-						icon = "GFX_SOV_improved_medium_tank_medium"
-					}
-				}
-				else_if = {
-					limit = {
-						OR = {
-							has_tech = artillery1
-							has_tech = antitank1
-						}
-					}
-					create_equipment_variant = {
-						name = "T-34"
-						type = medium_tank_chassis_2
-						parent_version = 0
-						modules = {
-							main_armament_slot = tank_medium_cannon
-							turret_type_slot = tank_medium_two_man_tank_turret
-							suspension_type_slot = tank_christie_suspension
-							armor_type_slot = tank_welded_armor
-							engine_type_slot = tank_diesel_engine
-							special_type_slot_1 = sloped_armor
-						}
-						upgrades = {
-							tank_nsb_engine_upgrade = 10
-							tank_nsb_armor_upgrade = 7
-						}
-						icon = "GFX_SOV_improved_medium_tank_medium"
-					}
-				}
-				else_if = { #Why? You ruined your T-34
-					limit = {
-						has_tech = interwar_artillery
-					}
-					create_equipment_variant = {
-						name = "T-34"
-						type = medium_tank_chassis_2
-						parent_version = 0
-						modules = {
-							main_armament_slot = tank_small_cannon_2
-							turret_type_slot = tank_medium_two_man_tank_turret
-							suspension_type_slot = tank_christie_suspension
-							armor_type_slot = tank_welded_armor
-							engine_type_slot = tank_diesel_engine
-							special_type_slot_1 = sloped_armor
-						}
-						upgrades = {
-							tank_nsb_engine_upgrade = 10
-							tank_nsb_armor_upgrade = 7
-						}
-						icon = "GFX_SOV_improved_medium_tank_medium"
-					}
-				}
-				else = { #Don't do this to yourself dude
-					create_equipment_variant = {
-						name = "T-34"
-						type = medium_tank_chassis_2
-						parent_version = 0
-						modules = {
-							main_armament_slot = tank_small_cannon
-							turret_type_slot = tank_medium_two_man_tank_turret
-							suspension_type_slot = tank_christie_suspension
-							armor_type_slot = tank_welded_armor
-							engine_type_slot = tank_diesel_engine
-							special_type_slot_1 = sloped_armor
-						}
-						upgrades = {
-							tank_nsb_engine_upgrade = 10
-							tank_nsb_armor_upgrade = 7
-						}
-						icon = "GFX_SOV_improved_medium_tank_medium"
-					}
-				}
-			}
+
 		}
 	}
 
@@ -13315,45 +13215,13 @@ ai_will_do = {
 		completion_reward = {
 			# Estonia
 			custom_effect_tooltip = SOV_estonian_claimed_states_tt
-			hidden_effect = {
-				EST = {
-					every_owned_state = {
-						limit = {
-							is_core_of = PREV
-						}
-						ROOT = { add_state_claim = PREV }
-					}
-				}
-			}
+			
 			# Latvia
 			custom_effect_tooltip = SOV_latvian_claimed_states_tt
-			hidden_effect = {
-				LAT = {
-					every_owned_state = {
-						limit = {
-							is_core_of = PREV
-						}
-						ROOT = { add_state_claim = PREV }
-					}
-				}
-			}
+			
 			# Lithuania
 			custom_effect_tooltip = SOV_lithuanian_claimed_states_tt
-			hidden_effect = {
-				LIT = {
-					every_owned_state = {
-						limit = {
-							is_core_of = PREV
-						}
-						ROOT = { add_state_claim = PREV }
-					}
-				}
-			}
-			#Activate targeted decisions
-			activate_targeted_decision = { target = EST decision = SOV_send_ultimatum_to_country_baltic }
-			activate_targeted_decision = { target = LAT decision = SOV_send_ultimatum_to_country_baltic }
-			activate_targeted_decision = { target = LIT decision = SOV_send_ultimatum_to_country_baltic }
-
+			
 			add_named_threat = { threat = 1 name = SOV_claims_in_baltic }
 		}
 	}

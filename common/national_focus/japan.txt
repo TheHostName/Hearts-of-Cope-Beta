@@ -1548,6 +1548,7 @@
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
+			add_timed_idea = { idea = JAP_tora_tora_tora_idea days = 270 }
 			JAP = {
 				if = {
 					limit = { 
@@ -1803,6 +1804,13 @@
 		completion_reward = {
 			JAP = { 
 				annex_country = { target = SIA transfer_troops = yes }
+			}
+			every_state = {
+				limit = {
+					is_core_of = SIA
+					is_controlled_by = ROOT
+				}
+				set_compliance = 79
 			}
 		}
 	}
@@ -5543,11 +5551,11 @@
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_doctrine_cost_reduction = {
+			add_tech_bonus = {
 				name = JAP_carrier_warfare_experiments
-				cost_reduction = 0.25
-				uses = 2
-				category = cat_base_strike
+				bonus = 1.0
+				uses = 1
+				category = cv_tech
 			}
 		}
 	}
