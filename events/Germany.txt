@@ -3223,11 +3223,11 @@ country_event = {
 		if = {
 			limit = { is_ai = ROM }
 
-		give_resource_rights = {
+			give_resource_rights = {
 			receiver = GER
 			state = 46 #Muntania
+			}
 		}
-	}
 		ROM = { country_event = germany.56 }
 		ROM = { country_event = DOD_romania.164 }
 

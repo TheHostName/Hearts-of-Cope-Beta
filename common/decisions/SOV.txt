@@ -5293,68 +5293,34 @@ SOV_diplomacy_baltic_decision_category = {
 			}
 		}
 
-		targets = { EST LAT LIT }
 
-		target_trigger = {
-			SOV_basic_ultimatum_triggers = yes
-		}
 
-		target_root_trigger = {
-			has_completed_focus = SOV_claims_in_baltic
-			is_subject = no
-		}
 
 		allowed = {
 			original_tag = SOV
+			has_completed_focus = SOV_claims_in_baltic
 		}
 
 		available = {
-			FROM = {
-				exists = yes
-				has_capitulated = no
-				NOT = { has_war_with = ROOT }
-				is_subject = no
-			}
+			original_tag = SOV
+			has_completed_focus = SOV_claims_in_baltic
 		}
 
 		visible = {
+			original_tag = SOV
+			has_completed_focus = SOV_claims_in_baltic
 		}
 
 		days_remove = SOV_ultimatum_days
 
-		cost = SOV_send_ultimatum_to_country_cost
+		cost = 200
 
 		remove_effect = {
-			if = {
-				limit = {
-					FROM = { tag = EST }
-				}
-				EST = {
-					set_country_flag = SOV_ultimatum_sent_flag
-					country_event = { id = baltic.1 hours = 16 random_hours = 8 }
-				}
+			SOV = { 
+				annex_country = { target = LIT  }
+				annex_country = { target = EST  }
+				annex_country = { target = LAT  }
 			}
-			else_if = {
-				limit = {
-					FROM = { tag = LAT }
-				}
-				LAT = {
-					set_country_flag = SOV_ultimatum_sent_flag
-					country_event = { id = baltic.2 hours = 16 random_hours = 8 }
-				}
-			}
-			else_if = {
-				limit = {
-					FROM = { tag = LIT }
-				}
-				LIT = {
-					set_country_flag = SOV_ultimatum_sent_flag
-					country_event = { id = baltic.3 hours = 16 random_hours = 8 }
-				}
-			}
-			custom_effect_tooltip = SOV_ultimatum_baltic_effects_tt
-
-			custom_effect_tooltip = SOV_decision_will_be_locked_tt
 		}
 	}
 
