@@ -153,7 +153,8 @@ ideas = {
 			picture = generic_navy_carrier_bonus
 			
 			modifier = {
-				sortie_efficiency = 0.2
+				air_carrier_night_penalty_reduction_factor = 0.33
+				carrier_night_traffic = 0.5
 			}
 		}
 
@@ -951,12 +952,20 @@ ideas = {
 			picture = generic_navy_carrier_bonus
 			
 			modifier = {
+				invasion_preparation = -0.5
+				naval_speed_factor = 0.2
+				naval_hit_chance = 0.1
+				naval_critical_score_chance_factor = 0.1
+				naval_damage_factor = 0.1
+				naval_defense_factor = 0.1
+				naval_hit_chance = 0.1
 				port_strike = 1
-				carrier_capacity_penalty_reduction = -0.2
-				sortie_efficiency = 0.2
-				naval_strike_attack_factor = 0.12
-				naval_strike_targetting_factor = 0.12
-				naval_strike_agility_factor = 0.12
+				navy_anti_air_attack_factor = 0.15
+				convoy_escort_efficiency = 0.2
+				convoy_retreat_speed = 0.3
+				naval_strike_attack_factor = 0.35
+				naval_strike_targetting_factor = 0.35
+				naval_strike_agility_factor = 0.35
 			}
 		}
 

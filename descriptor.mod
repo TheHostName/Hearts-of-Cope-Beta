@@ -5,5 +5,5 @@ tags={
 	"Fixes"
 }
 name="Hearts of Cope Beta"
-supported_version="1.14.9"
+supported_version="1.14.10"
 remote_file_id="3241847295"

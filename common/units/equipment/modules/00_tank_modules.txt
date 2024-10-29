@@ -329,7 +329,7 @@ equipment_modules = {
 		}
 
 		multiply_stats = {
-			breakthrough = -0.5
+			breakthrough = -0.8
 
 		}
 
@@ -434,7 +434,7 @@ equipment_modules = {
 		}
 
 		multiply_stats = {
-			breakthrough = -0.5
+			breakthrough = -0.8
 		}
 
 		can_convert_from = {
@@ -525,7 +525,7 @@ equipment_modules = {
 		}
 
 		multiply_stats = {
-			breakthrough = -0.5
+			breakthrough = -0.8
 		}
 
 		can_convert_from = {

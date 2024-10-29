@@ -9,6 +9,9 @@ MTG_naval_treaties = {
 				threat > 0.2
 				has_global_flag = MTG_second_london_conference
 			}
+			NOT = {
+				has_government = democratic
+			}
 		}
 	
 		cost = 150

@@ -9294,7 +9294,7 @@ operations = {
 			FRA = { has_capitulated = yes }
 			is_in_faction_with = FRA
 			OR = {
-				date > 1.7.1942
+				date > 7.1.1942
 				controls_state = 448
 			}
 		}

@@ -1,22 +1,52 @@
 No_Asia_Game = {
+	Tora_remove = { 
+
+		icon = aluminium
+		
+		allowed = {
+			tag = CUB
+		}
+
+		available = {
+			tag = CUB
+			date > 1942.1.1
+			date < 1943.1.1
+		}
+
+		visible = {
+			tag = CUB
+		}
+
+		fire_only_once = no
+
+		cost = 0
+		days_remove = 7
+
+		modifier = {
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		complete_effect = {
+			JAP = {	remove_ideas = JAP_tora_tora_tora_idea}
+
+
+	}
+}
 	No_asia_game = { 
 
 		icon = aluminium
 		
 		allowed = {
-			tag = GER
-
-			JAP = { is_ai = yes} 
-			NOT = { GER = { is_ai = yes}} 
 		}
 
 		available = {
-			tag = GER
 			date < 1936.1.2
 		}
 
 		visible = {
-			tag = GER
 		}
 
 		fire_only_once = yes
@@ -28,7 +58,7 @@ No_Asia_Game = {
 		}
 
 		ai_will_do = {
-			factor = 1000
+			factor = 0
 		}
 
 		complete_effect = {
@@ -111,19 +141,13 @@ No_Asia_Game = {
 			icon = aluminium
 			
 			allowed = {
-				tag = GER
-	
-				JAP = { is_ai = yes} 
-				GER = { is_ai = no}
 			}
 	
 			available = {
-				tag = GER
 				date < 1936.1.2
 			}
 	
 			visible = {
-				tag = GER
 			}
 	
 			fire_only_once = yes
@@ -135,7 +159,7 @@ No_Asia_Game = {
 			}
 	
 			ai_will_do = {
-				factor = 1000
+				factor = 0
 			}
 	
 			complete_effect = {
@@ -869,7 +893,7 @@ No_Asia_Game = {
 				}
 				add_offsite_building = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes 
 				}
 
@@ -958,6 +982,39 @@ No_Asia_Game = {
 				transfer_state = 816
 				transfer_state = 261
 				transfer_state = 393
+				add_corps_commander_role = {
+					character = "USA_george_s_patton"
+
+						traits={ trait_reckless armor_officer war_hero trickster panzer_leader }
+						skill=5
+						attack_skill=7
+						defense_skill=3
+						planning_skill=2
+						logistics_skill=4
+						legacy_id=0
+				}
+
+				add_field_marshal_role = {
+					character = "USA_dwight_d_eisenhower"
+						traits={ trait_cautious armor_officer politically_connected organizer logistics_wizard offensive_doctrine }
+						skill=5
+						attack_skill=3
+						defense_skill=3
+						planning_skill=5
+						logistics_skill=5
+						legacy_id=602
+					}
+				add_corps_commander_role = {
+						character = "USA_mark_clark"
+						traits={ trait_reckless infantry_officer }
+						skill=4
+						attack_skill=5
+						defense_skill=3
+						planning_skill=2
+						logistics_skill=3
+						legacy_id=0
+					}	
+				
 				set_technology = {
 					improved_airplane_launcher = 1
 					sonar = 1
@@ -1021,16 +1078,13 @@ No_Asia_Game = {
 		icon = aluminium
 		
 		allowed = {
-			tag = GER
 		}
 
 		available = {
-			tag = GER
 			date < 1936.1.2
 		}
 
 		visible = {
-			tag = GER
 		}
 
 		fire_only_once = yes
@@ -1066,16 +1120,13 @@ No_Asia_Game = {
 		icon = aluminium
 		
 		allowed = {
-			tag = GER
 		}
 
 		available = {
-			tag = GER
 			date < 1936.1.2
 		}
 
 		visible = {
-			tag = GER
 		}
 
 		fire_only_once = yes
@@ -1114,16 +1165,13 @@ No_Asia_Game = {
 		icon = aluminium
 		
 		allowed = {
-			tag = GER
 		}
 
 		available = {
-			tag = GER
 			date < 1936.1.2
 		}
 
 		visible = {
-			tag = GER
 		}
 
 		fire_only_once = yes

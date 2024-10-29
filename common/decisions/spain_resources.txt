@@ -4,18 +4,17 @@ economy_decisions = {
 		icon = aluminium
 		
 		allowed = {
-			SPR_scw_in_progress = no
 			tag = SPR
+			date > 01.01.1939
 		}
 
 		available = {
-            SPR_scw_in_progress = no
 			tag = SPR
+			date > 01.01.1939
 		}
 
 		visible = {
 			tag = SPR
-            date > 01.01.1939
 		}
 
 		fire_only_once = yes

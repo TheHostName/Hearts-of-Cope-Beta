@@ -2513,9 +2513,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = industrial_mobilization
-			ENG = {
-				add_to_faction = USA
-			}
+
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -2542,6 +2540,51 @@ focus_tree = {
 	}
 	
 
+	focus = {
+		id = USA_send_roosevelt_to_the_front
+		icon = GFX_focus_USA_sendroosevelt_goal
+		prerequisite = { focus = USA_wartime_industry }
+		x = 0
+		y = 1
+		relative_position_id = USA_wartime_industry
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		available_if_capitulated = yes
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+		}
+		completion_reward = {
+			add_manpower = 1
+			add_field_marshal_role = {
+				character = "USA_franklin_delano_roosevelt"
+				traits = { naval_invader } 
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 2
+			}
+		}
+	}
+
+	focus = {
+		id = USA_screw_it_send_alf_as_well
+		icon = GFX_focus_USA_sendalf_goal
+		prerequisite = { focus = USA_send_roosevelt_to_the_front }
+		x = 0
+		y = 1
+		relative_position_id = USA_send_roosevelt_to_the_front
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_manpower = 1
+		}
+	}
 	focus = {
 		id = USA_military_construction
 		icon = GFX_goal_generic_build_tank

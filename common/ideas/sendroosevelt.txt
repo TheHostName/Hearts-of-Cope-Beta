@@ -1,0 +1,17 @@
+ideas = {
+	country = {
+		USA_send_roosevelt_to_the_front_idea = {
+			picture = USA_sendroosevelt_idea
+			modifier = {
+				add_manpower = 1
+			}
+		}
+
+		USA_screw_it_send_alf_as_well_idea = {
+			picture = USA_sendalf_idea
+			modifier = {
+				add_manpower = 1
+			}
+		}
+	}
+}

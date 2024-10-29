@@ -1100,7 +1100,7 @@
 		y = 1
 		relative_position_id = JAP_liaison_conference
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -1142,7 +1142,7 @@
 		y = 1
 		relative_position_id = JAP_greater_east_asian_co_prosperity_sphere
 
-		cost = 10
+		cost = 5
 
 		available = { 
 			is_puppet = no 
@@ -1514,32 +1514,7 @@
 		}
 
 		bypass = {
-			OR = {			
-				has_wargoal_against = INS
-				has_war_with = INS
-			}
-			OR = {
-				has_wargoal_against = MAL
-				has_war_with = MAL
-			}
-			OR = {
-				AND = {
-					671 = {
-						NOT = { is_controlled_by = FRA }
-					}
-					670 = {
-						NOT = { is_controlled_by = FRA }
-					}
-					286 = {
-						NOT = { is_controlled_by = FRA }
-					}
-					741 = {
-						NOT = { is_controlled_by = FRA }
-					}
-				}
-				has_wargoal_against = FRA
-				has_war_with = FRA
-			}
+
 		}
 
 		cancel_if_invalid = yes
@@ -1548,7 +1523,10 @@
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			add_timed_idea = { idea = JAP_tora_tora_tora_idea days = 270 }
+			ENG = {
+				add_to_faction = USA
+			}
+			add_ideas = JAP_tora_tora_tora_idea
 			JAP = {
 				if = {
 					limit = { 
@@ -5221,32 +5199,11 @@
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			custom_effect_tooltip = JAP_the_zero_tt
-			hidden_effect = { 
-				if = {
-					limit = {
-						NOT = {
-							has_dlc = "By Blood Alone"
-						}
-					}
-					set_technology = { cv_fighter2 = 1 } 
-				}
-				else = {
-					create_equipment_variant = {
-						name = "A6M Zero-Sen"
-						type = cv_small_plane_airframe_2
-						allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
-						modules = {
-							fixed_main_weapon_slot = light_mg_2x
-							fixed_auxiliary_weapon_slot_1 = aircraft_cannon_1_2x
-							engine_type_slot = engine_3_1x
-							special_type_slot_1 = drop_tanks
-							special_type_slot_2 = fuel_tanks_small
-						}
-						icon = "GFX_JAP_cv_fighter2_medium"
-					}
-				}
-			}
+				set_technology = { 
+					aa_cannon_1 = 1 
+					improved_small_airframe = 1
+					engines_3 = 1
+				} 
 		}
 	}
 

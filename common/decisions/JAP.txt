@@ -245,6 +245,29 @@ JAP_interservice_rivalry = {
 		}		
 		
 	}
+	MAN_army_reform = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_army_experience > 50
+		}
+
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			original_tag = JAP
+		}
+		remove_effect = {
+		}
+		complete_effect = {
+			army_experience = -50				
+			MAN = 	{ army_experience = 50 }
+		}		
+		
+	}
 	JAP_steel_for_guns = {
 
 		icon = generic_tank
