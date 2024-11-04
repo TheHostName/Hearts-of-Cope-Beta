@@ -168,6 +168,11 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = rubber
+				amount = 2
+			 }
 			2 = { #ROME
 				if = {
 					limit = { is_controlled_by = ROOT }

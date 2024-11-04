@@ -23,6 +23,7 @@ set_research_slots = 4
 set_stability = 0.6
 set_war_support = 0.7
 add_ideas = {
+	Axis_Refinery_Tech
 	vittorio_emanuele
 	vittoria_mutilata
 	limited_exports

@@ -9295,7 +9295,7 @@ operations = {
 			is_in_faction_with = FRA
 			OR = {
 				date > 7.1.1942
-				controls_state = 448
+				controls_state = 450
 			}
 		}
 
@@ -9310,7 +9310,6 @@ operations = {
 		visible = {
 			tag = ENG
 			has_war_with = GER
-			D05 = { exists = yes }
 		}
 		
 		complete_effect = {
@@ -9326,6 +9325,45 @@ operations = {
 				declare_war_on = { target = ENG type = annex_everything }
 				declare_war_on = { target = CAN type = annex_everything }
 			}
+		}
+	}
+	
+	operation_take_syria = {
+
+		icon = generic_operation
+	
+		allowed = {
+			tag = ENG
+		}
+		
+		available = {
+			tag = ENG
+			has_government = democratic
+			has_war_with = GER
+			FRA = { has_capitulated = yes }
+			is_in_faction_with = FRA
+		}
+
+		cost = 0
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		visible = {
+			tag = ENG
+			has_war_with = GER
+		}
+		
+		complete_effect = {
+		FRA = 	{		transfer_state = 677
+		transfer_state = 680
+		transfer_state = 554
+		transfer_state = 553
+		}
+		TUR = {transfer_state = 799}
 		}
 	}
 

@@ -1,6 +1,30 @@
 ideas = {
 
 	country = {
+		Axis_Refinery_Tech = {
+
+			name = Axis_Refinery_Tech
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+			
+			removal_cost = -1
+	
+
+			modifier = {
+				modify_building_resources = {
+					building = synthetic_refinery
+					resource = rubber
+					amount = 2
+				 }
+			}
+		}
+
 		JAP_ai_vs_china = {
 
 			name = JAP_ai_vs_china
