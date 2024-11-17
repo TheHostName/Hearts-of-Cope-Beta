@@ -4,14 +4,12 @@ political_actions = {
 		icon = aluminium
 		
 		allowed = {
-			SPR_scw_in_progress = yes
 			tag = SPR
+			surrender_progress > 0.60
 		}
 
 		available = {
-            SPR_scw_in_progress = yes
 			tag = SPR
-            surrender_progress > 0.60
 		}
 
 		visible = {
@@ -68,6 +66,14 @@ political_actions = {
 			}
 		}
             set_global_flag = scw_over
+			SOV = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = 8
+					instant_build = yes 
+				}
+			}
+
 
 			every_state = {
 				limit = {

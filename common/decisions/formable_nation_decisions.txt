@@ -5945,6 +5945,9 @@ form_rattanakosin_kingdom_category = {
 			set_cosmetic_tag = RAT_UNIFIED
 			741 = { add_core_of = ROOT }
 			670 = { add_core_of = ROOT }
+			286 = { add_core_of = ROOT }
+			671 = { add_core_of = ROOT }
+			336 = { add_core_of = ROOT }
 			hidden_effect = {
 				news_event = { id = wtt_news.69 hours = 6 }
 				set_global_flag = form_rattanakosin_kingdom_flag

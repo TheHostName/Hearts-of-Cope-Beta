@@ -1342,6 +1342,42 @@ on_actions = {
 	#Not run on a specific country.
 	on_startup = {
 		effect = {
+			MON = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = 10
+					instant_build = yes 
+				}
+				add_offsite_building = {
+					type = arms_factory
+					level = 5
+					instant_build = yes 
+				}
+			}
+			MAN = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes 
+				}
+				add_offsite_building = {
+					type = arms_factory
+					level = 3
+					instant_build = yes 
+				}
+			}
+			SIA = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = 9
+					instant_build = yes 
+				}
+				add_offsite_building = {
+					type = arms_factory
+					level = 5
+					instant_build = yes 
+				}
+			}
 			CAN = {
 				add_offsite_building = {
 					type = industrial_complex

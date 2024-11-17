@@ -164,10 +164,9 @@ focus_tree = {
 
 		completion_reward = {
 			add_tech_bonus = {
-				name = motorized_bonus
-				ahead_reduction = 2
-				uses = 1
-				category = motorized_equipment
+				name = mech_army_bonus
+				bonus = 1.0
+				technology = mechanised_infantry
 			}
 		}
 	}
@@ -1707,38 +1706,6 @@ focus_tree = {
 		}
 	}	
 
-	focus = {
-		id = secret_weapons
-		icon = GFX_goal_generic_secret_weapon
-		prerequisite = { focus = infrastructure_effort_2 }
-		x = 2
-		y = 1
-		relative_position_id = infrastructure_effort_2
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_RESEARCH } 
-		
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = secret_bonus
-				bonus = 1.0
-				uses = 4
-				category = electronics
-				category = nuclear
-				category = rocketry
-			}
-		}
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0.25
-				always = yes
-			}
-		}
-	}
 
 	focus = {
 		id = political_effort
@@ -1958,8 +1925,8 @@ focus_tree = {
 	focus = {
 		id = militarism
 		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = nationalism_focus }
-		x = 0
+		prerequisite = { focus = nationalism_focus focus = internationalism_focus }
+		x = 1
 		y = 1
 		relative_position_id = nationalism_focus
 		cost = 10
@@ -1979,28 +1946,6 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = political_correctness
-		icon = GFX_goal_generic_dangerous_deal
-		prerequisite = { focus = internationalism_focus }
-		x = 0
-		y = 1
-		relative_position_id = internationalism_focus
-		cost = 10
-	
-		search_filters = { FOCUS_FILTER_POLITICAL  }
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			if = {
-				limit = { has_idea = neutrality_idea }
-				remove_ideas = neutrality_idea
-			}		
-			add_political_power = 200
-			add_ideas = idea_political_correctness
-		}
-	}
 
 	focus = {
 		id = neutrality_focus
@@ -2158,24 +2103,6 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = indoctrination_focus
-		icon = GFX_goal_generic_propaganda
-		prerequisite = { focus = political_correctness }
-		x = 0
-		y = 1
-		relative_position_id = political_correctness
-		cost = 10
-	
-		search_filters = { FOCUS_FILTER_POLITICAL  }
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_ideas = indoctrination_focus
-			add_political_power = 150
-		}
-	}
 
 	focus = {
 		id = foreign_expeditions
@@ -2229,46 +2156,12 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = political_commissars
-		icon = GFX_goal_generic_forceful_treaty
-		prerequisite = { focus = indoctrination_focus }
-		available = {
-		}
-		x = 0
-		y = 1
-		relative_position_id = indoctrination_focus
-		cost = 10
-	
-		search_filters = { FOCUS_FILTER_POLITICAL  }
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_ideas = political_commissars_focus
-			if = {
-				limit = { has_government = fascism }
-				add_popularity = {
-					ideology = fascism
-					popularity = 0.2
-				}
-			}
-			if = {
-				limit = { has_government = communism }
-				add_popularity = {
-					ideology = communism
-					popularity = 0.2
-				}
-			}
-			add_political_power = 200
-		}
-	}
 
 	focus = {
 		id = ideological_fanaticism
 		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = paramilitarism focus = political_commissars }
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = paramilitarism
 		cost = 10

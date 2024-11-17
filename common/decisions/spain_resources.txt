@@ -10,7 +10,7 @@ economy_decisions = {
 
 		available = {
 			tag = SPR
-			date > 01.01.1939
+			date > 1939.01.01
 		}
 
 		visible = {

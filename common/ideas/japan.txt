@@ -968,6 +968,24 @@ ideas = {
 				naval_strike_agility_factor = 0.35
 			}
 		}
+		JAP_strike_south_planing_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_navy_carrier_bonus
+			
+			modifier = {
+				naval_invasion_capacity = 20
+			}
+		}
 
 		JAP_german_rocketry = {
 			removal_cost = -1

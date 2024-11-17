@@ -1447,7 +1447,7 @@
 			factor = 3
 			modifier = {
 				factor = 100
-				date > 1941.4.1
+				date > 1941.1.1
 			}
 		}
 
@@ -1465,11 +1465,10 @@
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_tech_bonus = {
-				name = JAP_bypass_the_philippines
-				bonus = 1.0
-				uses = 1
-				category = tp_tech
+			add_ideas = JAP_strike_south_planing_idea
+				
+			set_technology = {
+				mtg_landing_craft = 1
 			}
 		}
 	}

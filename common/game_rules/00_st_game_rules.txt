@@ -48,12 +48,12 @@ use_new_tool = {
 	group = "State Transfer MP"
 	#icon = "GFX_release_nations"
 	default = {
+		name = "YES"
+		text = "Yes"
+	}
+	option = {
 		name = "NO"
 		text = "No"
 		allow_achievements = no	
-	}
-	option = {
-		name = "YES"
-		text = "Yes"
 	}
 }

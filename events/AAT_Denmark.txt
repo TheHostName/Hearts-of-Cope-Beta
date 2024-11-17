@@ -1163,50 +1163,6 @@ country_event = { #Someone attacked us :'(
 			SWE_is_denmark_mostly_occupied = yes
 		}
 	}
-	option = { #Fight On!
-		name = denmark_occupation_event.1.b
-		ai_chance = {
-			base = 1
-			modifier = {
-				factor = 5
-				FROM = { is_major = no }
-			}
-			modifier = {
-				factor = 5
-				enemies_strength_ratio < 0.5
-			}
-			modifier = {
-				factor = 5
-				OR = {
-					DEN_rearming_ai = yes
-					DEN_royal_ai = yes								
-					DEN_fascist_ai = yes
-				}
-			}
-		}
-		add_stability = -0.15
-		
-		if = {
-			limit = {
-				has_dlc = "By Blood Alone"
-			}
-			remove_ideas = {
-				DEN_declaration_of_neutrality
-			}
-			else = {
-				remove_ideas = {
-					DEN_declaration_of_neutrality_no_BBA
-				}
-			}
-		}
-
-		hidden_effect = { #TODO_DANNE; can I remove the neutrality_flag?
-			clr_country_flag = DEN_neutrality_flag
-		}
-		hidden_effect = {
-			play_song = "danish_song_of_liberation"
-		}
-	}
 }
 
 country_event = { #Denmark wants to become a puppet
@@ -1258,21 +1214,6 @@ country_event = { #Denmark wants to become a puppet
 		set_variable = { DEN.DEN_overlord_nation = ROOT }
 
 		FROM = { country_event = { id = denmark_occupation_event.3 hours = 6 } }
-	}
-
-	option = { #Fight on
-		name = denmark_occupation_event.2.b
-		ai_chance = {
-			base = 1
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		add_stability = -0.1
-		add_war_support = 0.05
-
-		FROM = { country_event = { id = denmark_occupation_event.5 hours = 6 } }
 	}
 }
 

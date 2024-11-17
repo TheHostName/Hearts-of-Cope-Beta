@@ -9294,7 +9294,7 @@ operations = {
 			FRA = { has_capitulated = yes }
 			is_in_faction_with = FRA
 			OR = {
-				date > 7.1.1942
+				date > 1942.07.01
 				controls_state = 450
 			}
 		}
@@ -9328,7 +9328,7 @@ operations = {
 		}
 	}
 	
-	operation_take_syria = {
+	operation_take_portugals_colonies = {
 
 		icon = generic_operation
 	
@@ -9358,13 +9358,61 @@ operations = {
 		}
 		
 		complete_effect = {
-		FRA = 	{		transfer_state = 677
-		transfer_state = 680
-		transfer_state = 554
-		transfer_state = 553
+			ENG = 	{		
+				transfer_state = 892
+				transfer_state = 891
+				transfer_state = 540
+				transfer_state = 796
+				transfer_state = 544
+				transfer_state = 896
+				transfer_state = 897
+				transfer_state = 321
+				transfer_state = 705
+				transfer_state = 296
+				transfer_state = 702
+				transfer_state = 698
+				transfer_state = 697
+				transfer_state = 721
+				transfer_state = 729
+				}
+
+	}
+	operation_take_syria = {
+
+		icon = generic_operation
+	
+		allowed = {
+			tag = ENG
 		}
-		TUR = {transfer_state = 799}
+		
+		available = {
+			tag = ENG
+			has_government = democratic
+			has_war_with = GER
 		}
+
+		cost = 0
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		visible = {
+			tag = ENG
+			has_war_with = GER
+		}
+		
+		complete_effect = {
+			FRA = 	{		transfer_state = 677
+			transfer_state = 680
+			transfer_state = 554
+			transfer_state = 553
+			}
+			TUR = {transfer_state = 799}
+			}
+
 	}
 
 	invade_ireland = {

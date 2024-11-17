@@ -579,24 +579,7 @@ characters={
 		}
 	}
 
-	JAP_jo_iimura={
-		name=JAP_jo_iimura
-		portraits={
-			army={
-				large=GFX_portrait_JAP_jo_iimura
-				small=GFX_portrait_JAP_jo_iimura_small
-			}
-		}
-		corps_commander={
-			traits={ career_officer }
-			skill=2
-			attack_skill=1
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=0
-		}
-	}
+
 
 	JAP_hitoshi_imamura={
 		name=JAP_hitoshi_imamura
@@ -635,24 +618,6 @@ characters={
 		}
 	}
 
-	JAP_masatane_kanda={
-		name=JAP_masatane_kanda
-		portraits={
-			army={
-				large=GFX_portrait_JAP_masatane_kanda
-				small=GFX_portrait_JAP_masatane_kanda_small
-			}
-		}
-		corps_commander={
-			traits={ trait_cautious }
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			planning_skill=1
-			logistics_skill=2
-			legacy_id=0
-		}
-	}
 
 	JAP_kuniaki_koiso={
 		name=JAP_kuniaki_koiso

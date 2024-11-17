@@ -681,6 +681,11 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = rubber
+				amount = 2
+			 }
 			add_popularity = {
 			    ideology = fascism
 			    popularity = 0.1
@@ -3487,6 +3492,11 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_STABILITY}
 		completion_reward = {
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = rubber
+				amount = 2
+			 }
 			add_stability = 0.1
 			activate_mission = SPA_carlist_uprising_mission
 		}
@@ -5225,6 +5235,34 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = SPR_recovering_from_civil_war_focus_tt
+			every_state = {
+				limit = {
+					OR = {
+						state = 41
+						state = 165
+						state = 166
+						state = 167
+						state = 168
+						state = 169
+						state = 170
+						state = 171
+						state = 172
+						state = 173
+						state = 174
+						state = 175
+						state = 176
+						state = 788
+						state = 789
+						state = 790
+						state = 791
+						state = 792
+						state = 793
+						state = 794
+					}
+				}
+				add_core_of = SPR
+			}
+			
 		}
 	}
 
@@ -5475,6 +5513,11 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = rubber
+				amount = 2
+			 }
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = SPA_luis_hernando_de_larramendi
 			show_ideas_tooltip = SPA_martin_de_riquer
