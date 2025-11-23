@@ -1,0 +1,37 @@
+state={
+	id=1047
+	name="STATE_1047"
+	resources = {
+		rubber = 75 # was: 268
+		oil = 18 # was: 24
+		aluminium = 14 # was: 50
+	}
+
+	state_category=city
+	history = {
+
+		owner = INS
+		add_core_of = INS
+
+		victory_points = {
+			4652 1 
+		}
+		
+
+
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			air_base = 1
+			7381 = {
+				naval_base = 6
+			}
+		}
+	}
+	provinces={
+	1277 1332 1428 1460 1648 4446 4652 7327 7463 7673 7658 8360 10209 10225 10354 10382 10509 10522 12126 12168 12181 12184 12212 12302 12343 12488 
+	}
+	manpower=20000000
+	buildings_max_level_factor=1.000
+	local_supplies=5.000
+}
