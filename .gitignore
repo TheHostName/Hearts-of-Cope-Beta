@@ -1,0 +1,30 @@
+# ===========================
+# IDE / Editor directories
+# ===========================
+
+# JetBrains / IntelliJ / WebStorm / etc.
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# ===========================
+# OS-generated junk
+# ===========================
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Linux temp files
+*~
+
+# ===========================
+# Archives
+# ===========================
+*.zip
+*.rar
+*.7z
