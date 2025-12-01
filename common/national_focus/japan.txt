@@ -13778,7 +13778,7 @@ focus_tree = {
 			has_resources_in_collection = {
 				collection = collection:country_and_all_subjects
 				resource = steel
-				amount > 199
+				amount > 399
 				extracted = yes
 			}
 		
@@ -13786,7 +13786,7 @@ focus_tree = {
 			has_resources_in_collection = {
 				collection = collection:country_and_all_subjects
 				resource = aluminium
-				amount > 199 
+				amount > 399 
 				extracted = yes
 			}
 		
@@ -13794,7 +13794,7 @@ focus_tree = {
 			has_resources_in_collection = {
 				collection = collection:country_and_all_subjects
 				resource = oil
-				amount > 249
+				amount > 399
 				extracted = yes
 			}
 		
@@ -13802,22 +13802,6 @@ focus_tree = {
 			has_resources_in_collection = {
 				collection = collection:country_and_all_subjects
 				resource = tungsten
-				amount > 199
-				extracted = yes
-			}
-		
-		
-			has_resources_in_collection = {
-				collection = collection:country_and_all_subjects
-				resource = chromium
-				amount > 149 
-				extracted = yes
-			}
-		
-		
-			has_resources_in_collection = {
-				collection = collection:country_and_all_subjects
-				resource = rubber
 				amount > 299
 				extracted = yes
 			}
@@ -13825,8 +13809,24 @@ focus_tree = {
 		
 			has_resources_in_collection = {
 				collection = collection:country_and_all_subjects
+				resource = chromium
+				amount > 199 
+				extracted = yes
+			}
+		
+		
+			has_resources_in_collection = {
+				collection = collection:country_and_all_subjects
+				resource = rubber
+				amount > 599
+				extracted = yes
+			}
+		
+		
+			has_resources_in_collection = {
+				collection = collection:country_and_all_subjects
 				resource = coal
-				amount > 199
+				amount > 399
 				extracted = yes
 			}
 			
@@ -13857,9 +13857,9 @@ focus_tree = {
 				add_to_variable = { JAP_industry_production_speed_buildings_factor = 0.05 tooltip = production_speed_buildings_factor_tt }
 				add_to_variable = { JAP_industry_industry_air_damage_factor = -0.05 tooltip = industry_air_damage_factor_tt }
 				add_to_variable = { JAP_industry_lack_of_resource_penalty_factor = -0.1 tooltip = production_lack_of_resource_penalty_factor_tt }
-				add_to_variable = { JAP_industry_production_factory_max_efficiency_factor = 0.15 tooltip = production_factory_max_efficiency_factor_tt }
+				add_to_variable = { JAP_industry_production_factory_max_efficiency_factor = 0.1 tooltip = production_factory_max_efficiency_factor_tt }
 				add_to_variable = { JAP_industry_line_change_production_efficiency_factor = 0.1 tooltip = line_change_production_efficiency_factor_tt }
-				add_to_variable = { JAP_industry_industrial_capacity_dockyard = 0.15 tooltip = industrial_capacity_dockyard_tt }
+				add_to_variable = { JAP_industry_industrial_capacity_dockyard = 0.1 tooltip = industrial_capacity_dockyard_tt }
 			}
 			ELSE_IF = {
 				limit = {
@@ -13870,9 +13870,9 @@ focus_tree = {
 				add_to_variable = { JAP_industry_production_speed_buildings_factor = 0.05 tooltip = production_speed_buildings_factor_tt }
 				add_to_variable = { JAP_industry_industry_air_damage_factor = -0.05 tooltip = industry_air_damage_factor_tt }
 				add_to_variable = { JAP_industry_lack_of_resource_penalty_factor = -0.1 tooltip = production_lack_of_resource_penalty_factor_tt }
-				add_to_variable = { JAP_industry_production_factory_max_efficiency_factor = 0.15 tooltip = production_factory_max_efficiency_factor_tt }
+				add_to_variable = { JAP_industry_production_factory_max_efficiency_factor = 0.1 tooltip = production_factory_max_efficiency_factor_tt }
 				add_to_variable = { JAP_industry_line_change_production_efficiency_factor = 0.1 tooltip = line_change_production_efficiency_factor_tt }
-				add_to_variable = { JAP_industry_industrial_capacity_dockyard = 0.15 tooltip = industrial_capacity_dockyard_tt }
+				add_to_variable = { JAP_industry_industrial_capacity_dockyard = 0.1 tooltip = industrial_capacity_dockyard_tt }
 			}
 
 		}
