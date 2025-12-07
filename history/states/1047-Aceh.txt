@@ -12,10 +12,10 @@ state={
 
 		owner = INS
 		add_core_of = INS
-
 		victory_points = {
 			4652 1 
 		}
+
 		
 
 
@@ -23,8 +23,11 @@ state={
 			infrastructure = 2
 			industrial_complex = 1
 			air_base = 1
-			7381 = {
-				naval_base = 6
+			4652 = {
+				naval_base = 3
+			}
+			1648 = {
+				naval_base = 1
 			}
 		}
 	}
