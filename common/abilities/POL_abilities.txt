@@ -3,7 +3,7 @@ ability = {
 		name = ABILITY_ARMOURED_TRAINS
 		desc = ABILITY_ARMOURED_TRAINS_DESC
 		
-		sound_effect = command_power_ability_trains
+		sound_effect = command_power_ability_defensive
 		
 		type = army_leader
 		
@@ -67,7 +67,7 @@ ability = {
 		name = ABILITY_ARMOURED_TRAINS
 		desc = ABILITY_ARMOURED_TRAINS_DESC
 		
-		sound_effect = command_power_ability_trains
+		sound_effect = command_power_ability_offensive
 		
 		type = army_leader
 		
