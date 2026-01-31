@@ -83,24 +83,6 @@ focus_tree = {
 		}
 	}
 
-	shortcut = { 
-		name = JAP_revere_the_emperor_shortcut
-		target = JAP_revere_the_emperor_destroy_the_traitors 
-		scroll_wheel_factor = 0.6
-		trigger = {
-			has_dlc = "No Compromise, No Surrender"
-		}
-	}
-
-	shortcut = { 
-		name = JAP_okadas_military_purge_speech_shortcut
-		target = JAP_okadas_military_purge_speech
-		scroll_wheel_factor = 0.6
-		trigger = {
-			has_dlc = "No Compromise, No Surrender"
-		}
-	}
-
 	inlay_window = {
 		id = jap_imperial_influence_inlay_window
 		
@@ -131,58 +113,6 @@ focus_tree = {
 					option = HIDE
 				}
 				has_completed_focus = JAP_sea_purge_the_kodoha_faction
-			}
-		}
-
-		override_position = {
-			x = 6000
-			y = 700
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
-			}
-		}
-
-		override_position = {
-			x = 4100
-			y = 700
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = JAP_okadas_military_purge_speech
-				NOT = {
-					has_completed_focus = JAP_organize_a_general_election
-					has_completed_focus = JAP_a_red_sun_rises_for_a_new_era
-				}
-			}
-		}
-
-		override_position = {
-			x = 3000
-			y = 700
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = JAP_organize_a_general_election
-			}
-		}
-
-		override_position = {
-			x = 3000
-			y = 700
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = JAP_a_red_sun_rises_for_a_new_era
 			}
 		}
 
@@ -3606,17 +3536,8 @@ focus_tree = {
 	focus = {
 		id = JAP_sea_purge_the_kodoha_faction
 		icon = GFX_focus_JAP_purge_the_kodoha_faction
-		mutually_exclusive = { 
-			focus = JAP_the_unthinkable_option 
-			focus = JAP_support_the_kodoha_faction 
-			focus = JAP_strengthen_civilian_government 
-			focus = JAP_revere_the_emperor_destroy_the_traitors 
-			focus = JAP_okadas_military_purge_speech 
-		}
 		x = 70
 		y = 0
-		
-		relative_position_id = JAP_okadas_military_purge_speech
 
 		offset = {
 			x = -58
@@ -3673,13 +3594,6 @@ focus_tree = {
 						rule = obsolete_focus_branches_visibility
 						option = HIDE
 					}
-				}
-				NOT = {
-					has_completed_focus = JAP_the_unthinkable_option
-					has_completed_focus = JAP_support_the_kodoha_faction
-					has_completed_focus = JAP_strengthen_civilian_government
-					has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
-					has_completed_focus = JAP_okadas_military_purge_speech
 				}
 			}
 		}
@@ -4090,8 +4004,6 @@ focus_tree = {
 			#custom_effect_tooltip = generic_skip_one_line_tt
 
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = JAP_mitsumasa_yonai
-			
 		}
 	}
 
@@ -4861,7 +4773,6 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = JAP_naoki_hoshino
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = JAP_gotaro_ogawa
 			
@@ -5235,7 +5146,6 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = JAP_hiroshi_oshima
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = JAP_harukichi_shimoi
 			
@@ -5428,7 +5338,6 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = JAP_koichi_kido
 				
 			hidden_effect = {
 				IF = {
@@ -5525,8 +5434,6 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = kingoro_hashimoto
-			
 		}
 	}
 
@@ -6250,9 +6157,6 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = JAP_shigenori_togo
-				
-			
 		}
 	}
 
@@ -6301,9 +6205,6 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = JAP_shumei_okawa
-				
-			
 		}
 	}
 
@@ -6550,10 +6451,6 @@ focus_tree = {
 						rule = obsolete_focus_branches_visibility
 						option = HIDE
 					}
-				}
-				NOT = {						
-					has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
-					has_completed_focus = JAP_okadas_military_purge_speech
 				}
 			}
 		}
@@ -7236,10 +7133,6 @@ focus_tree = {
 						option = HIDE
 					}
 				}
-				NOT = {						
-					has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
-					has_completed_focus = JAP_okadas_military_purge_speech
-				}
 			}
 		}
 
@@ -7801,7 +7694,6 @@ focus_tree = {
 					has_dlc = "No Compromise, No Surrender"
 				}
 				OR = {
-					has_completed_focus = JAP_the_imperial_colors
 					has_completed_focus = JAP_imperial_rule_assistance_association
 				}
 			}
@@ -9214,21 +9106,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_sea_purge_the_kodoha_faction
 
-		offset = {
-			x = -34 
-			y = 0
-			trigger = {
-				AND = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-					has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
-				}
-			}
-		}
-
-		prerequisite = { focus = JAP_sea_purge_the_kodoha_faction focus = JAP_revere_the_emperor_destroy_the_traitors }
+		prerequisite = { focus = JAP_sea_purge_the_kodoha_faction }
 
 		cost = 5
 
@@ -10979,21 +10857,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_sea_purge_the_kodoha_faction
 
-		offset = {
-			x = -34
-			y = 0
-			trigger = {
-				AND = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-					has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
-				}
-			}
-		}
-
-		prerequisite = { focus = JAP_sea_purge_the_kodoha_faction focus = JAP_revere_the_emperor_destroy_the_traitors }
+		prerequisite = { focus = JAP_sea_purge_the_kodoha_faction }
 
 		cost = 5
 
@@ -11044,7 +10908,7 @@ focus_tree = {
 
 				division_template = {
 					name = "Asano Brigade"
-					division_names_group = SOV_CAV_01
+					division_names_group = JAP_CAV_01
 					role = garrison
 					template_counter = 110
 					is_locked = no
@@ -11836,10 +11700,8 @@ focus_tree = {
 				limit = {
 					has_dlc = "No Compromise, No Surrender"
 				}
-				OR = {
-					has_completed_focus = JAP_imperial_rule_assistance_association
-					has_completed_focus = JAP_the_imperial_colors
-				}
+				has_completed_focus = JAP_imperial_rule_assistance_association
+
 			}
 			ELSE = {
 				OR = {
@@ -11899,9 +11761,7 @@ focus_tree = {
 
 			IF = {
 				limit = {
-					NOT = {
-						has_completed_focus = JAP_subdue_the_kwantung_army
-					}
+
 				}
 				hidden_effect = {
 					SOV = {
@@ -11955,7 +11815,6 @@ focus_tree = {
 
 			IF = {
 				limit = {
-					has_completed_focus = JAP_utilize_our_polish_friendship
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 				POL = {
@@ -12008,10 +11867,8 @@ focus_tree = {
 				limit = {
 					has_dlc = "No Compromise, No Surrender"
 				}
-				OR = {
-					has_completed_focus = JAP_imperial_rule_assistance_association
-					has_completed_focus = JAP_the_imperial_colors
-				}
+				has_completed_focus = JAP_imperial_rule_assistance_association
+
 			}
 			ELSE = {
 				OR = {
@@ -12114,7 +11971,6 @@ focus_tree = {
 
 			IF = {
 				limit = {
-					has_completed_focus = JAP_utilize_our_polish_friendship
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 				POL = {
@@ -12261,34 +12117,6 @@ focus_tree = {
 		y = 0
 
 		offset = {
-			x = -62
-			y = 0
-			trigger = {
-				AND = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-					has_completed_focus = JAP_okadas_military_purge_speech
-				}
-			}
-		}
-
-		offset = {
-			x = -42
-			y = 0
-			trigger = {
-				AND = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-					has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
-				}
-			}
-		}
-
-		offset = {
 			x = -50
 			y = 0
 			trigger = {
@@ -12326,34 +12154,6 @@ focus_tree = {
 						option = HIDE
 					}
 					has_completed_focus = JAP_the_unthinkable_option
-				}
-			}
-		}
-
-		offset = {
-			x = -4
-			y = 0
-			trigger = {
-				AND = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-					has_completed_focus = JAP_a_red_sun_rises_for_a_new_era
-				}
-			}
-		}
-
-		offset = {
-			x = -4
-			y = 0
-			trigger = {
-				AND = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-					has_completed_focus = JAP_organize_a_general_election
 				}
 			}
 		}
@@ -15409,7 +15209,6 @@ focus_tree = {
 		bypass = {
 			OR = {
 				is_subject = yes
-				has_completed_focus = JAP_implement_army_reforms
 			}
 		}
 
