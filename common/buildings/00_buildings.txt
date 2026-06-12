@@ -39,7 +39,6 @@ buildings = {
 
 		show_modifier = yes
 		allied_build = yes
-		affects_energy = yes
 
 		infrastructure_construction_effect = yes
 		level_cap = {
@@ -109,7 +108,6 @@ buildings = {
 		level_cap = {
 			province_max = 1
 		}
-				tags = { supply_building }
 	}	
 	
 	rail_way = {
@@ -154,13 +152,11 @@ buildings = {
 		always_shown = yes
 		base_cost = 10000
 		per_level_extra_cost = -1000
-				allied_build = yes
 		spawn_point = naval_base_spawn 
 		only_costal = yes
 		is_port = yes
 		icon_frame = 6
 		value = 1
-				tags = { naval_buildings_tag }
 		allied_build = yes
 		infrastructure_construction_effect = yes
 		level_cap = {
@@ -174,7 +170,6 @@ buildings = {
 		base_cost = 500
 		per_level_extra_cost = 500
 		disabled_in_dmz = yes
-				allied_build = yes
 		icon_frame = 7
 		land_fort = 1
 		value = 1
@@ -190,7 +185,6 @@ buildings = {
 		base_cost = 500
 		per_level_extra_cost = 500
 		disabled_in_dmz = yes
-				allied_build = yes
 		only_costal = yes
 		icon_frame = 8
 		naval_fort = 1
@@ -247,7 +241,6 @@ buildings = {
 		icon_frame = 9
 		anti_air = yes
 		disabled_in_dmz = yes
-				allied_build = yes
 		air_defence = 1
 		damage_factor = 0.1
 		value = 1
@@ -306,7 +299,6 @@ buildings = {
 		base_cost = 2500
 		icon_frame = 11
 		radar = yes
-				allied_build = yes
 		damage_factor = 0.5
 		value = 4
 		centered = yes
@@ -355,55 +347,6 @@ buildings = {
 			exclusive_with = mega_gun_emplacement
 		}
 	}
-		
-	naval_supply_hub = {
-		show_on_map = 1
-		base_cost = 12500
-		icon_frame = 28
-		disabled_in_dmz = yes
-		naval_supply_hub = yes
-				allied_build = yes
-		infrastructure_construction_effect = yes
-		only_costal = yes
-		tags = { naval_buildings_tag }
-		building_prerequisite = {
-			building_dependency = {
-				building = naval_base
-				level = 8
-			}
-		}
-		level_cap = {
-			province_max = 1
-		}
-	}
-	
-	naval_headquarters = {
-		dlc_allowed = { has_dlc = "No Compromise, No Surrender" }
-		show_on_map = 1
-		base_cost = 10000
-		per_controlled_building_extra_cost = 5000
-		icon_frame = 29
-		value = 1
-		naval_headquarter = yes
-		disabled_in_dmz = yes
-				allied_build = yes
-		infrastructure_construction_effect = yes
-		only_costal = yes
-		tags = { naval_buildings_tag }
-		building_prerequisite = {
-			building_dependency = {
-				building = naval_base
-				level = 8
-			}
-		}
-		level_cap = {
-			province_max = 1
-		}
-		modules = {
-			naval_leader_module
-		}
-	}
-	
 	
 	nuclear_reactor = {
 		#hide_if_missing_tech = yes
@@ -477,7 +420,6 @@ buildings = {
 		base_cost = 35000
 		icon_frame = 27
 		#nuclear_reactor = yes
-				affects_energy = yes
 		value = 10
 		infrastructure_construction_effect = yes
 		
@@ -493,7 +435,6 @@ buildings = {
 			state_production_speed_buildings_factor = 0.15
 			local_building_slots_factor = 0.15
 			state_resources_factor = 0.1			
-						local_factory_energy_consumption = -0.50
 		}
 
 		level_cap = {
@@ -595,7 +536,6 @@ buildings = {
 		spawn_point = dam_spawn
 		damage_factor = -1
 		is_buildable = no
-		affects_energy = yes
 		need_detection = yes
 		detecting_intel_type = civilian 
 		province_damage_modifiers = { flooded }
@@ -610,7 +550,6 @@ buildings = {
 			state_production_speed_buildings_factor = 0.15
 			local_building_slots_factor = 0.15
 			state_resources_factor = 0.1
-			local_factory_energy_consumption = -0.65
 		}
 	}
 	dam_mountain = {
@@ -623,7 +562,6 @@ buildings = {
 		spawn_point = dam_spawn
 		damage_factor = -1
 		is_buildable = no
-		affects_energy = yes
 		need_detection = yes
 		detecting_intel_type = civilian 
 		province_damage_modifiers = { flooded }
@@ -637,7 +575,6 @@ buildings = {
 			state_production_speed_buildings_factor = 0.15
 			local_building_slots_factor = 0.15
 			state_resources_factor = 0.1
-			local_factory_energy_consumption = -0.65
 		}
 	}
 
@@ -684,45 +621,6 @@ buildings = {
 		show_modifier = yes
 		state_modifiers = {
 			
-		}
-	}	
-	#### Energy
-	
-	energy_infrastructure = {
-		base_cost = 12000
-		icon_frame = 30
-		value = 1
-
-		show_modifier = yes
-		affects_energy = yes
-
-		infrastructure_construction_effect = yes
-		level_cap = {
-			state_max = 1
-			shares_slots = yes
-			group_by = infrastructure_keystone
-		}
-		state_modifiers = {
-			local_factory_energy_consumption_per_infrastructure = -0.075
-		}
-	}
-	
-	industrial_infrastructure = {
-		base_cost = 12000
-		icon_frame = 31
-		value = 1
-
-		show_modifier = yes
-
-
-		infrastructure_construction_effect = yes
-		level_cap = {
-			state_max = 1
-			shares_slots = yes
-			group_by = infrastructure_keystone
-		}
-		state_modifiers = {
-			local_resource_gain_efficiency_per_infrastructure = 0.10
 		}
 	}
 }
