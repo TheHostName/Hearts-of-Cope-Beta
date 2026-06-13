@@ -1,0 +1,11 @@
+scripted_gui = {
+
+	Stalin_paranoia_container= {
+		context_type = player_context
+		window_name = "Stalin_paranoia_container"
+		visible = {
+			has_country_flag = SOV_paranoia_system_active_flag
+		}
+		ai_enabled = { always = no }
+	}
+}

@@ -1,0 +1,82 @@
+add_namespace = news
+
+# Japan wins in china
+news_event = {
+	id = Noasia_news.1
+	title = Noasia_news.1.t
+	desc = Noasia_news.1.d
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Noasia_news.1.a
+		trigger = {
+			NOT = {
+				TAG = CHI
+			}
+		}
+	}
+}
+# Japan attacks indonesia
+news_event = {
+	id = Noasia_news.2
+	title = Noasia_news.2.t
+	desc = Noasia_news.2.d
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Noasia_news.2.a
+		trigger = {
+			NOT = {
+				TAG = CHI
+			}
+		}
+	}
+}
+# Japan take over indonesia
+news_event = {
+	id = Noasia_news.3
+	title = Noasia_news.3.t
+	desc = Noasia_news.3.d
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Noasia_news.3.a
+		trigger = {
+			NOT = {
+				TAG = CHI
+			}
+		}
+	}
+}
+# Japan loses parts of indonesia
+news_event = {
+	id = Noasia_news.4
+	title = Noasia_news.4.t
+	desc = Noasia_news.4.d
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Noasia_news.4.a
+		trigger = {
+			NOT = {
+				TAG = CHI
+			}
+		}
+	}
+}
