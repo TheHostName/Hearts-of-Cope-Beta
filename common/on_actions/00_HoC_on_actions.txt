@@ -1,0 +1,469 @@
+on_actions = {
+	on_naval_invasion = {
+		effect = { 
+			THIS = {
+				if = {
+					limit = {
+						NOT = { CONTROLLER = { tag = ROOT } }
+						NOT = { CONTROLLER = { has_country_flag = notif_disable_inv_warning } }
+					}
+					CONTROLLER = {
+						set_country_flag = ui_show_invasion_warning
+						set_variable = { ui_invaded_state = PREV }
+						set_variable = { ui_invaded_country = PREV.owner }
+						set_variable = { ui_invader_country = ROOT }
+					}
+					if = {
+						limit = { CONTROLLER = { is_puppet = yes } }
+						CONTROLLER = {
+							OVERLORD = {
+								set_country_flag = ui_show_invasion_warning
+								set_variable = { ui_invaded_state = PREV.PREV }
+								set_variable = { ui_invaded_country = PREV.PREV.owner }
+								set_variable = { ui_invader_country = ROOT }
+							}
+						}
+					} 
+					every_country = {
+						if = { 
+							limit = { 
+								PREV.CONTROLLER = { is_in_faction_with = THIS } 
+							}
+							set_country_flag = ui_show_invasion_warning
+							set_variable = { ui_invaded_state = PREV }
+							set_variable = { ui_invaded_country = PREV.CONTROLLER }
+							set_variable = { ui_invader_country = ROOT }
+						}
+					}
+
+				}
+			}
+		}
+	}
+	on_paradrop = {
+		effect = { 
+			THIS = {
+				if = {
+					limit = {
+						NOT = { CONTROLLER = { tag = ROOT } }
+						NOT = { CONTROLLER = { has_country_flag = notif_disable_para_warning } }
+					}
+					CONTROLLER = {
+						set_country_flag = ui_show_paradrop_warning
+						set_variable = { ui_invaded_state = PREV }
+						set_variable = { ui_invaded_country = PREV.owner }
+						set_variable = { ui_invader_country = ROOT }
+					}
+					if = {
+						limit = { CONTROLLER = { is_puppet = yes } }
+						CONTROLLER = {
+							OVERLORD = {
+								set_country_flag = ui_show_paradrop_warning
+								set_variable = { ui_invaded_state = PREV.PREV }
+								set_variable = { ui_invaded_country = PREV.PREV.owner }
+								set_variable = { ui_invader_country = ROOT }
+							}
+						}
+					} 
+					every_country = {
+						if = { 
+							limit = { 
+								PREV.CONTROLLER = { is_in_faction_with = THIS } 
+							}
+							set_country_flag = ui_show_paradrop_warning
+							set_variable = { ui_invaded_state = PREV }
+							set_variable = { ui_invaded_country = PREV.CONTROLLER }
+							set_variable = { ui_invader_country = ROOT }
+						}
+					}
+				}
+			}
+		}
+	}
+	#ROOT is new controller #FROM is old controller #FROM.FROM is state ID
+on_state_control_changed = {
+#SOVIET - Clean other state modifiers when Soviets lose control over the state
+effect = {
+	if = {
+		limit = {
+			FROM.FROM = { is_core_of = ENG }
+			ROOT = { NOT = { tag = ENG } }
+		}
+		if = { #El-Alamain Battary
+			limit = {
+				FROM.FROM = { has_dynamic_modifier = { modifier = UK_El_Alamain_battary } }
+			}
+			FROM.FROM = { remove_dynamic_modifier = { modifier = UK_El_Alamain_battary } }
+		}
+		if = { #Gibralta Battary
+			limit = {
+				FROM.FROM = { has_dynamic_modifier = { modifier = UK_Gibralta_battary } }
+			}
+			FROM.FROM = { remove_dynamic_modifier = { modifier = UK_Gibralta_battary } }
+		}
+
+	}
+}
+}
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						or = {
+							original_tag = GER
+							original_tag = ITA
+							original_tag = ROM
+							original_tag = HUN
+						}
+					}
+					ROOT = {
+						original_tag = ETH
+					}
+				}
+				ITA = {
+					white_peace = ROOT
+					annex_country = {
+						target = ROOT
+						transfer_troops = no
+					}
+					
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						or = {
+							original_tag = GER
+							original_tag = ITA
+							original_tag = ROM
+							original_tag = HUN
+						}
+					}
+					ROOT = {
+						original_tag = DEN
+					}
+				}
+				GER = {
+					white_peace = ROOT
+				puppet = DEN				
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						original_tag = JAP
+					}
+					ROOT = {
+						original_tag = CHI
+					}
+				}
+				MAN = {
+					white_peace = ROOT
+					annex_country = {
+						target = ROOT
+						transfer_troops = yes
+					}
+					
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						or = {
+							original_tag = GER
+							original_tag = ITA
+							original_tag = ROM
+							original_tag = HUN
+						}
+					}
+					ROOT = {
+						original_tag = SOV
+					}
+				}
+				GER = {
+					white_peace = ROOT
+					annex_country = {
+						target = ROOT
+						transfer_troops = no
+					}
+					
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+					or = {
+						or = {
+							original_tag = GER
+							original_tag = ITA
+							original_tag = ROM
+							original_tag = HUN
+						}
+					}
+					}
+					ROOT = {
+						original_tag = CRO
+					}
+				}
+				ITA = {
+					white_peace = ROOT
+					annex_country = {
+						target = ROOT
+						transfer_troops = no
+					}
+					
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						or = {
+							original_tag = USA
+							original_tag = ENG
+							original_tag = AST
+							original_tag = RAJ
+							original_tag = CAN
+						}
+					}
+					ROOT = {
+						original_tag = JAP
+					}
+				}
+				USA = {
+					white_peace = ROOT
+					white_peace = MAN
+					white_peace = SIA
+					annex_country = {
+						target = ROOT
+						transfer_troops = no
+					}
+					puppet = MAN
+					puppet = SIA
+					
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						original_tag = ENG
+					}
+					ROOT = {
+						original_tag = GER
+					}
+				}
+				FROM = {
+					white_peace = ROOT
+					puppet = GER
+				GER = {
+					set_politics = {
+						ruling_party = democratic
+						elections_allowed = yes
+						last_election = "1935.12.17"
+						election_frequency = 48
+
+						add_popularity = {
+						ideology = democratic
+						popularity = 0.65
+						}
+					}
+				}
+				}
+				}
+					
+		}
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						original_tag = SOV
+					}
+					ROOT = {
+						original_tag = GER
+					}
+				}
+				FROM = {
+					white_peace = ROOT
+					puppet = GER
+				GER = {
+					set_politics = {
+						ruling_party = communist
+						elections_allowed = no
+						last_election = "1935.12.17"
+						election_frequency = 48
+
+						add_popularity = {
+						ideology = communist
+						popularity = 0.65
+						}
+					}
+				}
+				}
+				}
+					
+		}
+	
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					original_tag = SOV
+				}
+				ROOT = {
+					original_tag = GER
+				}
+			}
+			FROM = {
+				white_peace = ROOT
+				puppet = GER
+			GER = {
+				set_politics = {
+					ruling_party = communist
+					elections_allowed = no
+					last_election = "1935.12.17"
+					election_frequency = 48
+
+					add_popularity = {
+					ideology = communist
+					popularity = 0.65
+					}
+				}
+			}
+			}
+			}
+				
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					original_tag = SOV
+				}
+				ROOT = {
+					original_tag = PER
+				}
+			}
+			FROM = {
+				white_peace = ROOT
+				puppet = PER
+			PER = {
+				set_politics = {
+					ruling_party = communist
+					elections_allowed = no
+					last_election = "1935.12.17"
+					election_frequency = 48
+
+					add_popularity = {
+					ideology = communist
+					popularity = 0.85
+					}
+				}
+			}
+			}
+			}
+				
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					original_tag = SOV
+				}
+				ROOT = {
+					original_tag = IRQ
+				}
+			}
+			FROM = {
+				white_peace = ROOT
+				puppet = IRQ
+			IRQ = {
+				set_politics = {
+					ruling_party = communist
+					elections_allowed = no
+					last_election = "1935.12.17"
+					election_frequency = 48
+
+					add_popularity = {
+					ideology = communist
+					popularity = 0.85
+					}
+				}
+			}
+			}
+			}
+				
+	}
+	}
+	on_startup = {
+		effect = {
+			if = { limit = { has_game_rule = { rule = ccshtool_GER_randomhost   option = ccshtool_GER_randomhost } }  GER = { set_country_flag = ccshtool_enabled_cflag } }
+		}
+		effect = {
+			if = { limit = { has_game_rule = { rule = ccshtool_ITA_randomhost   option = ccshtool_ITA_randomhost } }  ITA = { set_country_flag = ccshtool_enabled_cflag } }
+		}
+		effect = {
+			if = { limit = { has_game_rule = { rule = ccshtool_ROM_randomhost   option = ccshtool_ROM_randomhost } }  ROM = { set_country_flag = ccshtool_enabled_cflag } }
+		}
+		effect = {
+			if = { limit = { has_game_rule = { rule = ccshtool_HUN_randomhost   option = ccshtool_HUN_randomhost } }  HUN = { set_country_flag = ccshtool_enabled_cflag } }
+		}
+		effect = {
+			if = { limit = { has_game_rule = { rule = ccshtool_BUL_randomhost   option = ccshtool_BUL_randomhost } }  BUL = { set_country_flag = ccshtool_enabled_cflag } }
+		}
+		effect = {
+			if = { limit = { has_game_rule = { rule = ccshtool_FIN_randomhost   option = ccshtool_FIN_randomhost } }  FIN = { set_country_flag = ccshtool_enabled_cflag } }
+		}
+		effect = {
+			if = { limit = { has_game_rule = { rule = ccshtool_ENG_randomhost   option = ccshtool_ENG_randomhost } }  ENG = { set_country_flag = ccshtool_enabled_cflag } }
+		}
+		effect = {
+			if = { limit = { has_game_rule = { rule = ccshtool_USA_randomhost   option = ccshtool_USA_randomhost } }  USA = { set_country_flag = ccshtool_enabled_cflag } }
+		}
+		effect = {
+			if = { limit = { has_game_rule = { rule = ccshtool_CAN_randomhost   option = ccshtool_CAN_randomhost } }  CAN = { set_country_flag = ccshtool_enabled_cflag } }
+		}
+		effect = {
+			if = { limit = { has_game_rule = { rule = ccshtool_SAF_randomhost   option = ccshtool_SAF_randomhost } }  SAF = { set_country_flag = ccshtool_enabled_cflag } }
+		}
+		effect = {
+			if = { limit = { has_game_rule = { rule = ccshtool_RAJ_randomhost   option = ccshtool_RAJ_randomhost } }  RAJ = { set_country_flag = ccshtool_enabled_cflag } }
+		}
+		effect = {
+			if = { limit = { has_game_rule = { rule = ccshtool_AST_randomhost   option = ccshtool_AST_randomhost } }  AST = { set_country_flag = ccshtool_enabled_cflag } }
+		}
+		effect = {
+			if = { limit = { has_game_rule = { rule = ccshtool_JAP_randomhost   option = ccshtool_JAP_randomhost } }  JAP = { set_country_flag = ccshtool_enabled_cflag } }
+		}
+		effect = {
+			if = { limit = { has_game_rule = { rule = ccshtool_MAN_randomhost   option = ccshtool_MAN_randomhost } }  MAN = { set_country_flag = ccshtool_enabled_cflag } }
+		}
+		effect = {
+			if = { limit = { has_game_rule = { rule = ccshtool_SOV_randomhost   option = ccshtool_SOV_randomhost } }  SOV = { set_country_flag = ccshtool_enabled_cflag } }
+		}
+		effect = {
+			if = { limit = { has_game_rule = { rule = ccshtool_FRA_randomhost   option = ccshtool_FRA_randomhost } }  FRA = { set_country_flag = ccshtool_enabled_cflag } }
+		}
+		effect = {
+			if = { limit = { has_game_rule = { rule = ccshtool_SPR_randomhost   option = ccshtool_SPR_randomhost } }  SPR = { set_country_flag = ccshtool_enabled_cflag } }
+		}
+		effect = {
+			if = { limit = { has_game_rule = { rule = ccshtool_SIA_randomhost   option = ccshtool_SIA_randomhost } }  SIA = { set_country_flag = ccshtool_enabled_cflag } }
+		}
+		effect = {
+			if = { limit = { has_game_rule = { rule = ccshtool_MON_randomhost   option = ccshtool_MON_randomhost } }  MON = { set_country_flag = ccshtool_enabled_cflag } }
+		}
+
+	}
+}
