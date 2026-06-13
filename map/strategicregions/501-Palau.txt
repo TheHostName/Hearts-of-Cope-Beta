@@ -1,6 +1,6 @@
 strategic_region={
-	id=300
-	name="STRATEGICREGION_300"
+	id=307
+	name="STRATEGICREGION_307"
 	provinces={
 		3805 4357 12103 
 	}
