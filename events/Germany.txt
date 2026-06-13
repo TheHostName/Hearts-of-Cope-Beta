@@ -164,17 +164,20 @@ country_event = {
 			modifier = {
 				factor = 0
 				tag = JAP
+				OR = {
 				has_completed_focus = JAP_the_unthinkable_option
+					has_completed_focus = JAP_return_of_the_manchukuo_exiles
+				}
 			}
 			modifier = {
 				factor = 0
 				is_literally_china = yes
-				JAP = { has_completed_focus = JAP_purge_the_kodoha_faction }
+				JAP = { has_completed_focus = JAP_sea_purge_the_kodoha_faction }
 			}
 			modifier = {
 				factor = 0
 				tag = JAP
-				has_completed_focus = JAP_purge_the_kodoha_faction
+				has_completed_focus = JAP_sea_purge_the_kodoha_faction
 				date > 1938.1.1
 			}
 		}
@@ -202,7 +205,7 @@ country_event = {
 	id = germany.6
 	title = germany.6.t
 	desc = germany.6.d
-	picture = GFX_report_event_hitler_croatia_handshake
+	picture = [GetHitlerCroatianHandshakeEventPicture]
 
 
 	is_triggered_only = yes
@@ -1505,7 +1508,7 @@ country_event = {
 	id = germany.24
 	title = germany.24.t
 	desc = germany.24.d
-	picture = GFX_report_event_hitler_china
+	picture = [GetHitlerChinaEventPicture]
 
 	is_triggered_only = yes
 
@@ -1672,7 +1675,7 @@ country_event = {
 	id = germany.28
 	title = germany.28.t
 	desc = germany.28.d
-	picture = GFX_report_event_hitler_parade
+	picture = GFX_report_event_soldiers_parade
 
 	is_triggered_only = yes
 
@@ -3996,7 +3999,7 @@ country_event = {
 	id = germany.72
 	title = germany.72.t
 	desc = germany.72.d
-	picture = GFX_report_event_hitler_parade
+	picture = GFX_report_event_soldiers_parade
 
 	is_triggered_only = yes
 
@@ -4044,7 +4047,7 @@ country_event = {
 			limit =  {
 				OR = {
 					any_war_score < 39
-					has_stability < 60
+					has_stability < 0.6
 				}
 			}
 			start_civil_war = {
@@ -4086,7 +4089,7 @@ country_event = {
 				PREV.PREV = {
 					set_variable = { GER_military_army_org_factor = 0.05 }
 					set_variable = { GER_military_planning_speed = 0.25 }
-					set_variable = { GER_military_supply_factor = -0.15 }
+					set_variable = { GER_military_supply_consumption_factor = 0.15 }
 					set_variable = { GER_military_equipment_capture = 0 }
 					set_variable = { GER_military_initiative_factor = 0 }
 					set_variable = { GER_military_army_fuel_consumption_factor = 0 }
@@ -4157,7 +4160,7 @@ country_event = {
 			limit =  {
 				NOT = {
 					any_war_score < 39
-					has_stability < 60
+					has_stability < 0.6
 				}
 			}
 			start_civil_war = {
@@ -4199,7 +4202,7 @@ country_event = {
 				PREV.PREV = {
 					set_variable = { GER_military_army_org_factor = 0.05 }
 					set_variable = { GER_military_planning_speed = 0.25 }
-					set_variable = { GER_military_supply_factor = -0.15 }
+					set_variable = { GER_military_supply_consumption_factor = 0.15 }
 					set_variable = { GER_military_equipment_capture = 0 }
 					set_variable = { GER_military_initiative_factor = 0 }
 					set_variable = { GER_military_army_fuel_consumption_factor = 0 }
@@ -4298,7 +4301,7 @@ country_event = {
 			limit =  {
 				OR = {
 					any_war_score < 39
-					has_stability < 60
+					has_stability < 0.6
 				}
 			}
 			start_civil_war = {
@@ -4366,7 +4369,7 @@ country_event = {
 				PREV.PREV = {
 					set_variable = { GER_military_army_org_factor = 0.05 }
 					set_variable = { GER_military_planning_speed = 0.25 }
-					set_variable = { GER_military_supply_factor = -0.15 }
+					set_variable = { GER_military_supply_consumption_factor = 0.15 }
 					set_variable = { GER_military_equipment_capture = 0 }
 					set_variable = { GER_military_initiative_factor = 0 }
 					set_variable = { GER_military_army_fuel_consumption_factor = 0 }
@@ -4411,7 +4414,7 @@ country_event = {
 			limit =  {
 				NOT = {
 					any_war_score < 39
-					has_stability < 60
+					has_stability < 0.6
 				}
 			}
 			start_civil_war = {
@@ -4479,7 +4482,7 @@ country_event = {
 				PREV.PREV = {
 					set_variable = { GER_military_army_org_factor = 0.05 }
 					set_variable = { GER_military_planning_speed = 0.25 }
-					set_variable = { GER_military_supply_factor = -0.15 }
+					set_variable = { GER_military_supply_consumption_factor = 0.15 }
 					set_variable = { GER_military_equipment_capture = 0 }
 					set_variable = { GER_military_initiative_factor = 0 }
 					set_variable = { GER_military_army_fuel_consumption_factor = 0 }
@@ -4554,7 +4557,7 @@ country_event = {
 			limit =  {
 				OR = {
 					any_war_score < 39
-					has_stability < 60
+					has_stability < 0.6
 				}
 			}
 			start_civil_war = {
@@ -4667,7 +4670,7 @@ country_event = {
 			limit =  {
 				NOT = {
 					any_war_score < 39
-					has_stability < 60
+					has_stability < 0.6
 				}
 			}
 			start_civil_war = {
@@ -4735,7 +4738,7 @@ country_event = {
 				PREV.PREV = {
 					set_variable = { GER_military_army_org_factor = 0.05 }
 					set_variable = { GER_military_planning_speed = 0.25 }
-					set_variable = { GER_military_supply_factor = -0.15 }
+					set_variable = { GER_military_supply_consumption_factor = 0.15 }
 					set_variable = { GER_military_equipment_capture = 0 }
 					set_variable = { GER_military_initiative_factor = 0 }
 					set_variable = { GER_military_army_fuel_consumption_factor = 0 }
@@ -4804,7 +4807,7 @@ country_event = {
 			limit =  {
 				OR = {
 					any_war_score < 39
-					has_stability < 60
+					has_stability < 0.6
 				}
 			}
 			start_civil_war = {
@@ -4872,7 +4875,7 @@ country_event = {
 				PREV.PREV = {
 					set_variable = { GER_military_army_org_factor = 0.05 }
 					set_variable = { GER_military_planning_speed = 0.25 }
-					set_variable = { GER_military_supply_factor = -0.15 }
+					set_variable = { GER_military_supply_consumption_factor = 0.15 }
 					set_variable = { GER_military_equipment_capture = 0 }
 					set_variable = { GER_military_initiative_factor = 0 }
 					set_variable = { GER_military_army_fuel_consumption_factor = 0 }
@@ -4917,7 +4920,7 @@ country_event = {
 			limit =  {
 				NOT = {
 					any_war_score < 39
-					has_stability < 60
+					has_stability < 0.6
 				}
 			}
 			start_civil_war = {

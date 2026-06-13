@@ -1,0 +1,9 @@
+HoC_Decisions = {
+	icon = generic_propaganda
+
+	visible = {
+
+	}
+}
+
+

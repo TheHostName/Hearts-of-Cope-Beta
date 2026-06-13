@@ -1,0 +1,79 @@
+economy_decisions = {
+	spain_resource_right_portugal = { 
+
+		icon = aluminium
+		
+		allowed = {
+			tag = SPR
+			date > 01.01.1939
+		}
+
+		available = {
+			tag = SPR
+			date > 1939.01.01
+		}
+
+		visible = {
+			tag = SPR
+		}
+
+		fire_only_once = yes
+
+		cost = 150
+		days_remove = 0
+
+		modifier = {
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		complete_effect = {
+			POR = {give_resource_rights = { receiver = SPR state = 181 } }
+			POR = {give_resource_rights = { receiver = SPR state = 112 } }
+			POR = {give_resource_rights = { receiver = SPR state = 795 } }
+		}
+	}
+	spain_embargo_allies= { 
+
+		icon = aluminium
+		
+		allowed = {
+			tag = SPR
+
+		}
+
+		available = {
+			tag = SPR
+			date > 1941.06.01
+		}
+
+		visible = {
+			tag = SPR
+		}
+
+		fire_only_once = yes
+
+		cost = 150
+		days_remove = 0
+
+		modifier = {
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		complete_effect = {
+			SPR = {
+				send_embargo = ENG
+				send_embargo = FRA
+				send_embargo = CAN
+				send_embargo = SAF
+				send_embargo = MEX
+				}
+		}
+	}
+
+}	
