@@ -1,0 +1,37 @@
+leader_traits = {
+	jap_grinding = { 
+		type = all
+		trait_type = personality_trait
+
+		allowed = {
+		}
+		gain_xp = {
+			always = no # not gainable
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+		non_shared_modifier = {
+			experience_gain_factor = -0.6
+		}
+	}
+	Large_Army_General = { 
+		type = all
+		trait_type = personality_trait
+
+		allowed = {
+		}
+		gain_xp = {
+			always = no # not gainable
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+		corps_commander_modifier = {
+			max_commander_army_size = 600
+		}
+		non_shared_modifier = {
+			experience_gain_factor = -0.85
+		}
+	}
+}

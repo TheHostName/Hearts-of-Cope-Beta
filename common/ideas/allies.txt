@@ -1,0 +1,127 @@
+ideas = {
+
+	country = {
+		north_american_trade_treaty = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+			targeted_modifier = {
+				tag = USA
+				trade_cost_for_target_factor = -0.50
+			}
+			targeted_modifier = {
+				tag = CAN
+				trade_cost_for_target_factor = -0.50
+			}
+			modifier = {
+
+			}
+		}
+
+		asia_matters = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				production_speed_synthetic_refinery_factor = -1
+				production_speed_rubber_refinery_factor = -1
+				global_building_slots_factor = 0.30
+			}
+		}
+		Manifest_Destiny = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				global_building_slots_factor = 0.30
+			}
+		}
+		asia_matters_UK = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				production_speed_synthetic_refinery_factor = -1
+				production_speed_rubber_refinery_factor = -1
+			}
+		}
+
+		usa_rearmament = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.35
+				production_speed_dockyard_factor = 0.35
+			}
+		}
+		industrial_mobilization = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.5
+				production_factory_efficiency_gain_factor = 0.3
+			}
+		}
+	}
+}		

@@ -1,0 +1,1750 @@
+HoC_Decisions = {
+	
+	
+	Set_hosttool_nation_GER = { 
+	
+		icon = aluminium
+		
+		allowed = {
+			tag = GER
+			NOT = {
+				has_global_flag = Hosttool_is_set_GER
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_JAP
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_ENG
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_USA
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_SOV
+			}
+		}
+	
+		available = {
+			tag = GER
+			NOT = {
+				has_global_flag = Hosttool_is_set_GER
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_JAP
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_ENG
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_USA
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_SOV
+			}
+		}
+	
+		visible = {
+			tag = GER
+		}
+	
+		fire_only_once = yes
+	
+		cost = 0
+		days_remove = 0
+	
+		modifier = {
+		}
+	
+		ai_will_do = {
+			factor = 0
+		}
+	
+		complete_effect = {
+			GER = { 
+				set_country_flag = ccshtool_enabled_cflag
+			}
+			set_global_flag = Hosttool_is_set_GER
+					}
+	}
+	Set_hosttool_nation_SOV = { 
+	
+		icon = aluminium
+		
+		allowed = {
+			tag = SOV
+			NOT = {
+				has_global_flag = Hosttool_is_set_GER
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_JAP
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_ENG
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_USA
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_SOV
+			}
+		}
+	
+		available = {
+			tag = SOV
+			NOT = {
+				has_global_flag = Hosttool_is_set_GER
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_JAP
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_ENG
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_USA
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_SOV
+			}
+		}
+	
+		visible = {
+			tag = SOV
+		}
+	
+		fire_only_once = yes
+	
+		cost = 0
+		days_remove = 0
+	
+		modifier = {
+		}
+	
+		ai_will_do = {
+			factor = 0
+		}
+	
+		complete_effect = {
+			SOV = { 
+				set_country_flag = ccshtool_enabled_cflag
+			}
+			set_global_flag = Hosttool_is_set_SOV
+					}
+	}
+
+Set_hosttool_nation_UK = { 
+	
+	icon = aluminium
+	
+	allowed = {
+		tag = ENG
+		NOT = {
+			has_global_flag = Hosttool_is_set_GER
+		}
+		NOT = {
+			has_global_flag = Hosttool_is_set_JAP
+		}
+		NOT = {
+			has_global_flag = Hosttool_is_set_ENG
+		}
+		NOT = {
+			has_global_flag = Hosttool_is_set_USA
+		}
+		NOT = {
+			has_global_flag = Hosttool_is_set_SOV
+		}
+	}
+
+	available = {
+		tag = ENG
+		NOT = {
+			has_global_flag = Hosttool_is_set_GER
+		}
+		NOT = {
+			has_global_flag = Hosttool_is_set_JAP
+		}
+		NOT = {
+			has_global_flag = Hosttool_is_set_ENG
+		}
+		NOT = {
+			has_global_flag = Hosttool_is_set_USA
+		}
+		NOT = {
+			has_global_flag = Hosttool_is_set_SOV
+		}
+	}
+
+	visible = {
+		tag = ENG
+	}
+
+	fire_only_once = yes
+
+	cost = 0
+	days_remove = 0
+
+	modifier = {
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+
+	complete_effect = {
+		ENG = { 
+			set_country_flag = ccshtool_enabled_cflag
+		}
+		set_global_flag = Hosttool_is_set_ENG
+				}
+}
+Set_hosttool_nation_USA = { 
+	
+	icon = aluminium
+	
+	allowed = {
+		tag = USA
+		NOT = {
+			has_global_flag = Hosttool_is_set_GER
+		}
+		NOT = {
+			has_global_flag = Hosttool_is_set_JAP
+		}
+		NOT = {
+			has_global_flag = Hosttool_is_set_ENG
+		}
+		NOT = {
+			has_global_flag = Hosttool_is_set_USA
+		}
+		NOT = {
+			has_global_flag = Hosttool_is_set_SOV
+		}
+	}
+
+	available = {
+		tag = USA
+		NOT = {
+			has_global_flag = Hosttool_is_set_GER
+		}
+		NOT = {
+			has_global_flag = Hosttool_is_set_JAP
+		}
+		NOT = {
+			has_global_flag = Hosttool_is_set_ENG
+		}
+		NOT = {
+			has_global_flag = Hosttool_is_set_USA
+		}
+		NOT = {
+			has_global_flag = Hosttool_is_set_SOV
+		}
+	}
+
+	visible = {
+		tag = USA
+	}
+
+	fire_only_once = yes
+
+	cost = 0
+	days_remove = 0
+
+	modifier = {
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+
+	complete_effect = {
+		USA = { 
+			set_country_flag = ccshtool_enabled_cflag
+		}
+		set_global_flag = Hosttool_is_set_USA
+				}
+}
+Set_hosttool_nation_JAP = { 
+	
+	icon = aluminium
+	
+	allowed = {
+		tag = JAP
+		NOT = {
+			has_global_flag = Hosttool_is_set_GER
+		}
+		NOT = {
+			has_global_flag = Hosttool_is_set_JAP
+		}
+		NOT = {
+			has_global_flag = Hosttool_is_set_ENG
+		}
+		NOT = {
+			has_global_flag = Hosttool_is_set_USA
+		}
+		NOT = {
+			has_global_flag = Hosttool_is_set_SOV
+		}
+	}
+
+	available = {
+		tag = JAP
+		NOT = {
+			has_global_flag = Hosttool_is_set_GER
+		}
+		NOT = {
+			has_global_flag = Hosttool_is_set_JAP
+		}
+		NOT = {
+			has_global_flag = Hosttool_is_set_ENG
+		}
+		NOT = {
+			has_global_flag = Hosttool_is_set_USA
+		}
+		NOT = {
+			has_global_flag = Hosttool_is_set_SOV
+		}
+	}
+
+	visible = {
+		tag = JAP
+	}
+
+	fire_only_once = yes
+
+	cost = 0
+	days_remove = 0
+
+	modifier = {
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+
+	complete_effect = {
+		JAP = { 
+			set_country_flag = ccshtool_enabled_cflag
+		}
+		set_global_flag = Hosttool_is_set_JAP
+				}
+}
+
+	add_convoy = {
+		priority = 100
+        icon = SWE_set_navy_budget
+        allowed = {
+ 		}
+		visible = {
+			is_ai = no
+		}
+        days_remove = 10
+        cost = 0
+        complete_effect = {
+            add_manpower = 1
+            add_equipment_to_stockpile = {
+                type = convoy_1
+                amount = 1
+            }
+        }
+		
+ 		remove_effect = {
+            add_manpower = -1
+            add_equipment_to_stockpile = {
+                type = convoy_1
+                amount = -1
+            }
+ 		}
+        ai_will_do = {
+            factor = 0
+        }
+    }
+	Tora_remove = { 
+
+		icon = aluminium
+		
+		allowed = {
+			tag = CUB
+		}
+
+		available = {
+			tag = CUB
+			date > 1942.1.1
+			date < 1943.1.1
+		}
+
+		visible = {
+			tag = CUB
+		}
+
+		fire_only_once = no
+
+		cost = 0
+		days_remove = 7
+
+		modifier = {
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		complete_effect = {
+			JAP = {	remove_ideas = JAP_tora_tora_tora_idea}
+
+
+	}
+}
+	No_asia_game = { 
+
+		icon = aluminium
+		
+		allowed = {
+		}
+
+		available = {
+			has_country_flag = ccshtool_enabled_cflag
+		}
+
+		visible = {
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+		days_remove = 0
+
+		modifier = {
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+				ENG = {
+					add_manpower = 1000000
+					load_oob = "ENG_RAJ_Support_oob"
+				}
+			
+				
+			
+			JAP = { add_ideas = ai_country}
+			CHI = { add_ideas = ai_country}
+			USA = { add_ideas = ai_country}
+			RAJ = { add_ideas = ai_country}
+			SIA = { add_ideas = ai_country}
+			IND = { add_ideas = ai_country}
+			MAL = { add_ideas = ai_country}
+			CAN = { add_ideas = NO_asia_building_space_buff}
+			SAF = { add_ideas = NO_asia_building_space_buff}
+
+			CAN = { remove_ideas = asia_matters }
+			JAP = { 
+				annex_country = { target = MAN transfer_troops = yes }
+			}
+			CHI = { 
+				annex_country = { target = GXC transfer_troops = yes }
+				annex_country = { target = SHX transfer_troops = yes }
+				annex_country = { target = PRC transfer_troops = yes }
+				annex_country = { target = XSM transfer_troops = yes }
+				annex_country = { target = TNG transfer_troops = yes }
+				annex_country = { target = SIK transfer_troops = yes }
+				annex_country = { target = YUN transfer_troops = yes }
+			}
+			611 = { 
+				add_core_of = JAP
+			}
+			612 = { 
+				add_core_of = JAP
+			}
+			610 = { 
+				add_core_of = JAP
+			}
+			715 = { 
+				add_core_of = JAP
+			}
+			716 = { 
+				add_core_of = JAP
+			}
+			717 = { 
+				add_core_of = JAP
+			}
+			328 = { 
+				add_core_of = JAP
+			}
+			714 = { 
+				add_core_of = JAP
+			}
+			761 = { 
+				add_core_of = JAP
+			}
+			CHI = {
+				send_embargo = ENG
+				send_embargo = FRA
+				send_embargo = CAN
+				send_embargo = SAF
+				send_embargo = MEX
+				}
+			USA = { 
+				send_embargo = GER
+				send_embargo = HUN
+				send_embargo = ROM
+				send_embargo = BUL
+				send_embargo = ITA
+				send_embargo = SPR
+				if = {
+					limit = {
+						NOT = { has_idea = export_focus }
+					}
+					add_ideas = export_focus
+			}
+			}
+			JAP = {
+				send_embargo = ENG
+				send_embargo = FRA
+				send_embargo = CAN
+				send_embargo = SAF
+				send_embargo = MEX
+				}
+			set_global_flag = No_Asia_flag
+		}
+	}
+	no_fun_allowed_flag = { 
+	
+		icon = aluminium
+		
+		allowed = {
+			tag = CUB
+		}
+
+		available = {
+			tag = CUB
+		}
+
+		visible = {
+			tag = CUB
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+		days_remove = 0
+
+		modifier = {
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		complete_effect = {
+			set_global_flag = no_fun_allowed
+					}
+	}
+		Canada_annex_SAF = { 
+	
+			icon = aluminium
+			
+			allowed = {
+			}
+	
+			available = {
+				has_country_flag = ccshtool_enabled_cflag
+			}
+	
+			visible = {
+			}
+	
+			fire_only_once = yes
+	
+			cost = 0
+			days_remove = 0
+	
+			modifier = {
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+	
+			complete_effect = {
+				CAN = { 
+					annex_country = { target = SAF transfer_troops = yes }
+				}
+
+				895 = { 
+					add_core_of = CAN
+					}
+				894 = { 
+					add_core_of = CAN
+				}
+				541 = { 
+					add_core_of = CAN
+				}
+				893 = { 
+					add_core_of = CAN
+				}
+				681 = { 
+					add_core_of = CAN
+				}
+				275 = { 
+					add_core_of = CAN
+				}
+				719 = { 
+					add_core_of = CAN
+				}
+			}
+		}
+	NO_ASIA_attache = {
+        cost = 100
+
+        fire_only_once = yes
+
+        available = {
+			date > 1938.1.1
+			NOT = {
+				GER = {
+					has_completed_focus = GER_danzig_or_war
+				}
+			}
+			has_global_flag = No_Asia_flag
+        }
+
+        visible = {
+
+		}
+
+        complete_effect = {
+			add_ideas = NO_ASIA_attache_idea
+		}
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	NO_ASIA_china_war_tension = {
+
+        fire_only_once = yes
+
+		allowed = { 
+			tag = JAP 
+		}
+
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			tag = JAP
+			date = 1938.1.1
+			has_global_flag = No_Asia_flag
+		}
+
+        visible = {
+
+		}
+
+        complete_effect = {
+			add_named_threat = { threat = 10 name = JAP_intervene_in_china }
+			hidden_effect = {
+				news_event = { hours = 6 id = news.1 }
+			}
+		}
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	NO_ASIA_china_war_end_tension = {
+
+        fire_only_once = yes
+
+		allowed = { 
+			tag = JAP 
+		}
+
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			tag = JAP
+			date = 1939.3.1
+			has_global_flag = No_Asia_flag
+		}
+
+        visible = {
+
+		}
+
+        complete_effect = {
+			add_named_threat = { threat = 18 name = JAP_intervene_in_china }
+			hidden_effect = {
+				news_event = { hours = 6 id = Noasia_news.1 }
+			}
+		}
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	NO_ASIA_USA_excavation_1 = {
+
+        fire_only_once = yes
+
+		allowed = { 
+			tag = JAP 
+		}
+
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			tag = JAP
+			date = 1939.1.1
+			has_global_flag = No_Asia_flag
+		}
+
+        visible = {
+
+		}
+
+        complete_effect = {
+		USA = {
+				set_technology = {
+					excavation1= 1
+				}
+		}
+
+	}
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	NO_ASIA_USA_excavation_2 = {
+
+        fire_only_once = yes
+
+		allowed = { 
+			tag = JAP 
+		}
+
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			tag = JAP
+			date = 1939.6.1
+			has_global_flag = No_Asia_flag
+		}
+
+        visible = {
+
+		}
+
+        complete_effect = {
+		USA = {
+				set_technology = {
+					excavation2= 1
+				}
+		}
+		}
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	NO_ASIA_USA_excavation_3 = {
+
+        fire_only_once = yes
+
+		allowed = { 
+			tag = JAP 
+		}
+
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			tag = JAP
+			date = 1940.6.1
+			has_global_flag = No_Asia_flag
+		}
+
+        visible = {
+
+		}
+
+        complete_effect = {
+		USA = {
+				set_technology = {
+					excavation3= 1
+				}
+		}
+		}
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	NO_ASIA_USA_excavation_4 = {
+
+        fire_only_once = yes
+
+		allowed = { 
+			tag = JAP 
+		}
+
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			tag = JAP
+			date = 1942.1.1
+			has_global_flag = No_Asia_flag
+		}
+
+        visible = {
+
+		}
+
+        complete_effect = {
+		USA = {
+				set_technology = {
+					excavation4= 1
+				}
+		}
+		}
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	NO_ASIA_USA_excavation_5 = {
+
+        fire_only_once = yes
+
+		allowed = { 
+			tag = JAP 
+		}
+
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			tag = JAP
+			date = 1944.1.1
+			has_global_flag = No_Asia_flag
+		}
+
+        visible = {
+
+		}
+
+        complete_effect = {
+		USA = {
+				set_technology = {
+					excavation5= 1
+				}
+		}
+		}
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	Strike_south_occupations_0 = {
+		fire_only_once = yes
+		allowed = { 
+			tag = JAP 
+		}
+
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			tag = JAP
+			date = 1940.1.1
+			has_global_flag = No_Asia_flag
+		}
+
+		cancel_trigger = {
+		}
+
+		days_remove = 30
+
+		remove_effect = {
+
+			JAP = {
+				transfer_state = 671
+				transfer_state = 670
+				transfer_state = 741
+				transfer_state = 286
+
+			}
+
+			671 = { 
+				add_core_of = JAP
+			}
+			868 = { 
+				add_core_of = JAP
+			}
+			869 = { 
+				add_core_of = JAP
+			}
+			724 = { 
+				add_core_of = JAP
+			}
+			289 = { 
+				add_core_of = JAP
+			}
+			670 = { 
+				add_core_of = JAP
+			}
+			741 = { 
+				add_core_of = JAP
+			}
+			286 = { 
+				add_core_of = JAP
+			}
+			ENG = {
+				transfer_state = 553
+				transfer_state = 554
+				transfer_state = 680
+				transfer_state = 677
+				transfer_state = 799
+			}
+		}
+
+
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	Strike_south_occupations_1 = {
+		fire_only_once = yes
+		allowed = { 
+			tag = JAP 
+		}
+
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			tag = JAP
+			date = 1941.1.1
+			has_global_flag = No_Asia_flag
+		}
+
+		cancel_trigger = {
+		}
+
+		days_remove = 30
+
+		remove_effect = {
+			hidden_effect = {
+				news_event = { hours = 6 id = noasia_news.2 }
+			}
+			289 = { 
+				add_resource = {
+					type = rubber
+					amount = 120
+				}
+				}
+			SIA = {
+				send_embargo = ENG
+				send_embargo = FRA
+				send_embargo = CAN
+				send_embargo = SAF
+				send_embargo = MEX
+				}
+			SIA = {
+				transfer_state = 336
+			}
+			336 = { 
+				add_core_of = SIA
+				}
+			336 = {
+					add_dynamic_modifier = {
+						modifier = SWE_blown_up_mines
+					}
+			}
+			286 = {
+				add_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			671 = {
+				add_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			288 = {
+				add_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			333 = {
+				add_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 999
+		}
+	}
+
+	Strike_south_occupations_2 = {
+		fire_only_once = yes
+		allowed = { 
+			tag = JAP 
+		}
+
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			tag = JAP
+			date = 1941.3.1
+			has_global_flag = No_Asia_flag
+		}
+
+		cancel_trigger = {
+		}
+
+		days_remove = 30
+
+		remove_effect = {
+
+			672 = {
+				add_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			1017 = {
+				add_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			1018 = {
+				add_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			334 = {
+				add_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			671 = {
+				add_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	Strike_south_occupations_3 = {
+		fire_only_once = yes
+		allowed = { 
+			tag = JAP 
+		}
+
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			tag = JAP
+			date = 1941.7.1
+			has_global_flag = No_Asia_flag
+		}
+
+		cancel_trigger = {
+		}
+
+		days_remove = 30
+
+		remove_effect = {
+			hidden_effect = {
+				news_event = { hours = 6 id = noasia_news.3 }
+			}
+			673 = {
+				add_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			335 = {
+				add_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			667 = {
+				add_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 999
+		}
+	}
+
+	Strike_south_occupations_reversed_1 = {
+		fire_only_once = yes
+
+		allowed = { 
+			tag = JAP 
+		}
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			has_global_flag = No_Asia_flag
+			tag = JAP
+			date = 1943.9.1
+		}
+
+		cancel_trigger = {
+		}
+
+		days_remove = 30
+
+		remove_effect = {
+			hidden_effect = {
+				news_event = { hours = 6 id = noasia_news.4 }
+			}
+			667 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			1017 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			335 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			673 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	Strike_south_occupations_reversed_2 = {
+		fire_only_once = yes
+		allowed = { 
+			tag = JAP 
+		}
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			has_global_flag = No_Asia_flag
+			tag = JAP
+			date = 1944.2.1
+		}
+
+		cancel_trigger = {
+		}
+
+		days_remove = 30
+
+		remove_effect = {
+			671 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+
+			334 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			672 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			1018 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	Strike_south_occupations_reversed_3 = {
+		fire_only_once = yes
+		allowed = { 
+			tag = JAP 
+		}
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			has_global_flag = No_Asia_flag
+			tag = JAP
+			date = 1944.7.1
+		}
+
+		cancel_trigger = {
+		}
+
+		days_remove = 30
+
+		remove_effect = {
+			MAL = {
+				transfer_state = 336
+			}
+			336 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			333 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+
+			286 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			671 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			288 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	Strike_south_occupations_reversed_4 = {
+		fire_only_once = yes
+		allowed = { 
+			tag = JAP 
+		}
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			has_global_flag = No_Asia_flag
+			tag = JAP
+			date = 1944.12.1
+		}
+
+		cancel_trigger = {
+		}
+
+		days_remove = 30
+
+		remove_effect = {
+			667 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+
+			289 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	US_Lend_Lease_CAN = {
+		fire_only_once = yes
+		allowed = { 
+			tag = JAP 
+		}
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			has_global_flag = No_Asia_flag
+			tag = JAP
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
+		}
+
+		cancel_trigger = {
+		}
+
+		days_remove = 1
+
+		remove_effect = {
+			CAN = {
+				add_research_slot = 1
+
+				OVERLORD = { set_autonomy = { target = CAN autonomy_state = autonomy_free } }
+			}
+			469 = { 
+			add_resource = {
+				type = steel
+				amount = 80
+			}
+			add_resource = {
+				type = oil
+				amount = 50
+			}
+			}
+
+		}
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	
+	US_Lend_Lease_CAN_2 = {
+		allowed = { 
+			tag = JAP 
+		}
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			has_global_flag = No_Asia_flag
+			tag = JAP
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
+			NOT = { date > 1941.1.1} 
+		}
+
+		cancel_trigger = {
+		}
+
+		days_remove = 30
+
+		remove_effect = {
+			CAN = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes 
+				}
+
+
+			}
+
+		}
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	US_entry_to_war_CAN_supoort = {
+
+		allowed = { 
+			tag = JAP 
+		}
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			has_global_flag = No_Asia_flag
+			tag = JAP
+			NOT = {date > 1944.1.1}
+			NOT = {date < 1941.1.1}
+			
+		}
+
+		cancel_trigger = {
+		}
+
+		days_remove = 30
+
+		remove_effect = {
+
+			CAN = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes 
+				}
+				add_offsite_building = {
+					type = arms_factory
+					level = 2
+					instant_build = yes 
+				}
+
+		}
+	}
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	US_entry_to_war_CAN_supoort1 = {
+		fire_only_once = yes
+		allowed = { 
+			tag = JAP 
+		}
+		visible = {
+			has_global_flag = No_Asia_flag
+		}
+		available = {
+			has_global_flag = No_Asia_flag
+			tag = JAP
+			date > 1941.1.1
+		}
+
+		cancel_trigger = {
+		}
+
+		days_remove = 1
+
+		remove_effect = {
+
+
+			CAN = {
+				add_offsite_building = {
+					type = dockyard
+					level = 11
+					instant_build = yes 
+				}
+				transfer_state = 357
+				transfer_state = 358
+				transfer_state = 360
+				transfer_state = 361
+				transfer_state = 359
+				transfer_state = 362
+				transfer_state = 816
+				transfer_state = 261
+				transfer_state = 393
+				add_corps_commander_role = {
+					character = "USA_george_s_patton"
+
+						traits={ trait_reckless armor_officer war_hero trickster panzer_leader }
+						skill=5
+						attack_skill=7
+						defense_skill=3
+						planning_skill=2
+						logistics_skill=4
+						legacy_id=0
+				}
+
+				add_field_marshal_role = {
+					character = "USA_dwight_d_eisenhower"
+						traits={ trait_cautious armor_officer politically_connected organizer logistics_wizard offensive_doctrine }
+						skill=5
+						attack_skill=3
+						defense_skill=3
+						planning_skill=5
+						logistics_skill=5
+						legacy_id=602
+					}
+				add_corps_commander_role = {
+						character = "USA_mark_clark"
+						traits={ trait_reckless infantry_officer }
+						skill=4
+						attack_skill=5
+						defense_skill=3
+						planning_skill=2
+						logistics_skill=3
+						legacy_id=0
+					}	
+				
+				set_technology = {
+					improved_airplane_launcher = 1
+					sonar = 1
+					improved_sonar = 1
+					radio_detection = 1
+					decimetric_radar = 1
+					improved_decimetric_radar = 1
+					centimetric_radar = 1
+					improved_depth_charges = 1
+					basic_ship_hull_carrier = 1
+					basic_ship_hull_cruiser = 1
+					basic_ship_hull_heavy = 1	
+					improved_small_airframe = 1
+					basic_small_airframe = 1		
+					iw_medium_airframe = 1
+					improved_medium_airframe = 1
+					basic_medium_airframe = 1
+					iw_large_airframe = 1
+					basic_large_airframe = 1
+					bba_early_transport_plane = 1
+					early_bombs = 1
+					survivability_studies = 1
+					aa_cannon_1 = 1
+					air_torpedoe_1 = 1
+					air_torpedoe_2 = 1
+					range_improvements = 1
+					engines_2 = 1
+					engines_3 = 1
+				}
+			}
+			357 = { 
+				add_core_of = CAN
+			}
+			358 = { 
+				add_core_of = CAN
+			}
+			359 = { 
+				add_core_of = CAN
+			}
+			360 = { 
+				add_core_of = CAN
+			}
+			361 = { 
+				add_core_of = CAN
+			}
+			362 = { 
+				add_core_of = CAN
+			}
+			816 = { 
+				add_core_of = CAN
+			}
+			261 = { 
+				add_core_of = CAN
+			}
+			393 = { 
+				add_core_of = CAN
+			}
+			469 = { 
+				add_resource = {
+					type = oil
+					amount = 320
+				}
+				add_resource = {
+					type = aluminium
+					amount = 100
+				}
+			}
+
+		}
+		ai_will_do = {
+			factor = 999
+		}
+	}
+	
+	Romania_annex_Hungary = { 
+	
+		icon = aluminium
+		
+		allowed = {
+		}
+
+		available = {
+			has_country_flag = ccshtool_enabled_cflag
+		}
+
+		visible = {
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+		days_remove = 0
+
+		modifier = {
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			ROM = { 
+				annex_country = { target = HUN transfer_troops = yes }
+			}
+
+			155 = { 
+				add_core_of = ROM
+				}
+			154 = { 
+				add_core_of = ROM
+			}
+			43 = { 
+				add_core_of = ROM
+			}
+			974 = { 
+				add_core_of = ROM
+			}
+			973 = { 
+				add_core_of = ROM
+			}
+		}
+	}
+
+	Romania_annex_BUL = { 
+	
+		icon = aluminium
+		
+		allowed = {
+		}
+
+		available = {
+			has_country_flag = ccshtool_enabled_cflag
+		}
+
+		visible = {
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+		days_remove = 0
+
+		modifier = {
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			ROM = { 
+				annex_country = { target = BUL transfer_troops = yes }
+			}
+
+			212 = { 
+				add_core_of = ROM
+				}
+			211 = { 
+				add_core_of = ROM
+			}
+			48 = { 
+				add_core_of = ROM
+			}
+			801 = { 
+				add_core_of = ROM
+			}
+		}
+	}
+
+#	Hungary_annex_Romania = { 
+	#
+	#	icon = aluminium
+	#	
+	#	allowed = {
+	#	}
+#
+	#	available = {
+	#		has_country_flag = ccshtool_enabled_cflag
+	#	}
+#
+#		visible = {
+#		}
+#
+	#	fire_only_once = yes
+#
+	#	cost = 0
+		#days_remove = 0
+#
+		#modifier = {
+	#	}
+#
+		#ai_will_do = {
+		#	factor = 0
+		#}
+#
+	#	complete_effect = {
+		#	HUN = { 
+		#		annex_country = { target = ROM transfer_troops = yes }
+		#	}
+#
+			#82 = { 
+		#		add_core_of = HUN
+		#		}
+		#	83 = { 
+		#		add_core_of = HUN
+		#	}
+		#	84 = { 
+		#		add_core_of = HUN
+		#	}
+		#	76 = { 
+		#		add_core_of = HUN
+		#	}
+		#	81 = { 
+		#		add_core_of = HUN
+		#	}
+		#	46 = { 
+		#		add_core_of = HUN
+		#	}
+		#	77 = { 
+		#		add_core_of = HUN
+		#	}
+		#	971 = { 
+		#		add_core_of = HUN
+		#	}
+		#	766 = { 
+		#		add_core_of = HUN
+		#	}
+		#	79 = { 
+		#		add_core_of = HUN
+		#	}
+		#	80 = { 
+		#		add_core_of = HUN
+		#	}
+		#	78 = { 
+		#		add_core_of = HUN
+		#	}
+		#}
+	#}
+	#Hungary_annex_Bulgaria = { 
+	
+		#icon = aluminium
+		
+		#allowed = {
+	#	}
+
+	#	available = {
+	#		has_country_flag = ccshtool_enabled_cflag
+	#	}
+
+	#	visible = {
+	#	}
+
+	#	fire_only_once = yes
+
+	#	cost = 0
+	#	days_remove = 0
+
+	#	modifier = {
+	#	}
+
+	#	ai_will_do = {
+	#		factor = 0
+	#	}
+
+	#	complete_effect = {
+	#		HUN = { 
+	#			annex_country = { target = BUL transfer_troops = yes }
+#			}
+
+	#		212 = { 
+#				add_core_of = HUN
+		#		}
+		#	211 = { 
+		#		add_core_of = HUN
+		#	}
+		#	48 = { 
+		#		add_core_of = HUN
+		#	}
+		#	801 = { 
+		#		add_core_of = HUN
+		#	}
+		#}
+	#}
+
+}
+
