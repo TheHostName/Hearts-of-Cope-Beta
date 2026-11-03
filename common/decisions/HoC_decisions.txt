@@ -1630,6 +1630,72 @@ Set_hosttool_nation_JAP = {
 			}
 		}
 	}
+Australia_leads_Greater_Kiwi = { 
+	
+		icon = aluminium
+		
+		allowed = {
+			
+		}
+
+		available = {
+			tag = AST
+		}
+
+		visible = {
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+		days_remove = 0
+
+		modifier = {
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_effect = {
+			AST = { 
+				annex_country = { target = NZL transfer_troops = yes }
+			}
+		}
+	}
+New_Zealand_leads_Greater_Kiwi = { 
+	
+		icon = aluminium
+		
+		allowed = {
+			
+		}
+
+		available = {
+			tag = NZL
+		}
+
+		visible = {
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+		days_remove = 0
+
+		modifier = {
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			NZL = { 
+				annex_country = { target = AST transfer_troops = yes }
+			}
+		}
+	}
 
 #	Hungary_annex_Romania = { 
 	#

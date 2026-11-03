@@ -1,0 +1,3079 @@
+focus_tree = {
+	id = turkish_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = TUR
+			has_dlc = "Battle for the Bosporus"
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 100 y = 3250 }
+
+	initial_show_position = {
+		x = 20
+		y = 0
+	}
+
+	focus = {
+		id = TUR_the_montreux_convention
+		icon = GFX_focus_TUR_the_montreux_convention
+		available = {
+			TUR = { is_subject = no }
+		}
+		x = 5
+		y = 0
+		cost = 10
+		ai_will_do = {
+			base = 10
+		}
+
+		bypass = {
+			341 = { is_demilitarized_zone = no }
+			797 = { is_demilitarized_zone = no }
+			340 = { is_demilitarized_zone = no }
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			ENG = { country_event = { id = bftb_turkey.1 } }
+			custom_effect_tooltip = TUR_the_montreux_convention_tt
+		}
+	}
+
+	focus = {
+		id = TUR_continue_the_policy_of_etatism
+		icon = GFX_goal_generic_neutrality_focus
+		mutually_exclusive = { focus = TUR_fully_integrate_the_is_bank }
+		prerequisite = { focus = TUR_the_montreux_convention }
+		available = {
+			TUR = { has_government = neutrality }
+		}
+		x = 3
+		y = 1
+		relative_position_id = TUR_the_montreux_convention
+		cost = 10
+		ai_will_do = {
+			base = 10
+		}
+
+		completion_reward = {
+			add_ideas = TUR_etatism
+			add_ideas = TUR_ismet_inonu
+			custom_effect_tooltip = TUR_sanayiciler_etatism_tt
+			hidden_effect = {
+				set_variable = { var = TUR_etatism_cost_penalty_var value = 150 }
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_fully_integrate_the_is_bank
+		icon = GFX_goal_generic_intelligence_exchange
+		mutually_exclusive = { focus = TUR_continue_the_policy_of_etatism }
+		prerequisite = { focus = TUR_the_montreux_convention }
+		available = {
+			TUR = { has_government = neutrality }
+			is_subject = no
+		}
+		x = -3
+		y = 1
+		relative_position_id = TUR_the_montreux_convention
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		completion_reward = {
+			add_political_power = 120
+			add_ideas = TUR_celal_bayar
+			add_ideas = free_trade
+			custom_effect_tooltip = TUR_sanayiciler_liberals_tt
+		}
+	}
+
+	focus = {
+		id = TUR_ratify_the_six_arrows
+		icon = GFX_focus_TUR_ratify_the_six_arrows
+		prerequisite = { focus = TUR_fully_integrate_the_is_bank focus = TUR_continue_the_policy_of_etatism }
+		x = 0
+		y = 2
+		relative_position_id = TUR_the_montreux_convention
+		cost = 10
+		ai_will_do = {
+			base = 10
+		}
+
+		completion_reward = {
+			unlock_decision_category_tooltip = TUR_the_constitutional_arrows_category
+		}
+	}
+
+	focus = {
+		id = TUR_privatize_the_anadolu_agency
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TUR_fully_integrate_the_is_bank }
+		prerequisite = { focus = TUR_ratify_the_six_arrows }
+		x = -4
+		y = 2
+		relative_position_id = TUR_fully_integrate_the_is_bank
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_popularity = { 
+				ideology = democratic
+				popularity = 0.07
+			}
+			add_stability = 0.05
+			custom_effect_tooltip = TUR_privatize_the_anadolu_agency_tt
+		}
+	}
+
+	focus = {
+		id = TUR_lift_the_ban_on_other_political_parties
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TUR_privatize_the_anadolu_agency }
+		x = 0
+		y = 1
+		relative_position_id = TUR_privatize_the_anadolu_agency
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			add_popularity = { 
+				ideology = democratic
+				popularity = 0.1
+			}
+			add_war_support = 0.05
+			hidden_effect = {
+				country_event = { id = bftb_turkey.14 days = 7 }
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_holding_our_first_multi_party_election
+		icon = GFX_focus_generic_treaty
+		available = { has_country_flag = TUR_official_opposition_party_organised }
+		prerequisite = { focus = TUR_lift_the_ban_on_other_political_parties }
+		x = 0
+		y = 1
+		relative_position_id = TUR_lift_the_ban_on_other_political_parties
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = { id = bftb_turkey.21 }
+		}
+	}
+
+	focus = {
+		id = TUR_democratic_transition_focus
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = TUR_holding_our_first_multi_party_election }
+		prerequisite = { focus = TUR_utilize_foreign_capital }
+		x = 2
+		y = 1
+		relative_position_id = TUR_holding_our_first_multi_party_election
+		cost = 10
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			if = {
+				limit = {
+					has_country_leader = {
+						character = TUR_celal_bayar
+						ruling_only = yes
+					}
+				}
+				add_stability = 0.1
+			}
+			else_if = {
+				limit = {
+					has_country_leader = {
+						character = TUR_adnan_menderes
+						ruling_only = yes
+					}
+				}
+				TUR_kemalist_turn_hostile_effect = yes
+				hidden_effect = {
+					set_party_name = { 
+						ideology = fascism
+						long_name = TUR_cakmak_party_long
+						name = TUR_cakmak_party
+					}
+					add_country_leader_role = {
+						character = TUR_fevzi_cakmak
+						country_leader = {
+							expire = "1965.1.1"
+							ideology = rexism
+							traits = {
+								maresal
+							}
+						}
+						promote_leader = yes
+					}
+				}
+			}
+			add_political_power = 250 
+			add_popularity = { ideology = democratic popularity = 0.1 }
+			hidden_effect = {
+				clr_country_flag = TUR_held_democratic_election
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_expanding_our_armaments
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = TUR_democratic_transition_focus }
+		x = -1
+		y = 1
+		relative_position_id = TUR_democratic_transition_focus
+		cost = 10
+		ai_will_do = {
+			base = 10
+		}
+
+		complete_tooltip = {
+			every_owned_state = {
+				limit = { has_state_flag = TUR_expanding_armaments_flag }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}			
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = TUR_expanding_armaments_flag
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = TUR_expanding_armaments_flag
+			}
+			add_timed_idea = {
+				idea = TUR_rearmament_scheme
+				days = 180
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_permit_regional_elections
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = TUR_democratic_transition_focus }
+		x = 1
+		y = 1
+		relative_position_id = TUR_democratic_transition_focus
+		cost = 10
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_TUR_KEMALISM FOCUS_FILTER_TUR_TRADITIONALISM }
+		completion_reward = {
+			custom_effect_tooltip = TUR_unlock_reconciliation_occupation_law_tt
+			custom_effect_tooltip = TUR_unlock_kurdish_integration_decisions_tt
+			effect_tooltip = { TUR_placate_fundamentalist_state_all_targets_effect = yes }
+			hidden_effect = {
+				every_owned_state = {
+					limit = { 
+						OR = {
+							has_dynamic_modifier = { modifier = islamist_opposition }
+							has_dynamic_modifier = { modifier = islamist_sedition }
+							has_dynamic_modifier = { modifier = islamist_insurgency }
+						}
+					}
+					remove_dynamic_modifier = { modifier = islamist_opposition }
+					remove_dynamic_modifier = { modifier = islamist_sedition }
+					remove_dynamic_modifier = { modifier = islamist_insurgency }
+					add_dynamic_modifier = { modifier = islamists_placated }
+				}
+				set_country_flag = TUR_truce_with_government_called_flag
+				if = {
+					limit = {
+						has_variable = TUR_kemalist_officers_loyalty
+						check_variable = { TUR_kemalist_officers_loyalty > 1 }
+					}
+					subtract_from_variable = { var = TUR_kemalist_officers_loyalty value = 1 }
+					TUR_kemalist_loyalty_and_power_update_effect = yes
+				}
+				if = {
+					limit = {
+						has_idea = TUR_sectarian_woes
+					}
+					swap_ideas = {
+						remove_idea = TUR_sectarian_woes
+						add_idea = TUR_sectarian_woes_2
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = TUR_sectarian_woes_1
+					}
+					remove_ideas = TUR_sectarian_woes_1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_privatize_our_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TUR_expanding_our_armaments focus = TUR_permit_regional_elections }
+		x = 1
+		y = 1
+		relative_position_id = TUR_expanding_our_armaments
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		complete_tooltip = {
+			every_owned_state = {
+				limit = { has_state_flag = TUR_infrastructure_privatised }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}			
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = TUR_infrastructure_privatised
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = TUR_infrastructure_privatised
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = TUR_infrastructure_privatised
+			}
+			add_timed_idea = {
+				idea = TUR_infrastructure_privatised_idea
+				days = 360
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_democratic_capstone_focus
+		icon = GFX_goal_generic_territory_or_war
+		dynamic = yes
+		prerequisite = { focus = TUR_privatize_our_infrastructure }
+		prerequisite = { focus = TUR_peace_in_the_world }
+		x = 0
+		y = 2
+		relative_position_id = TUR_privatize_our_infrastructure
+		cost = 10
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			if = {
+				limit = {
+					has_country_leader = {
+						character = TUR_adnan_menderes
+						ruling_only = yes
+					}
+				}
+				country_event = { id = bftb_turkey.22 }
+				add_war_support = 0.2
+			}
+			else = {
+				add_war_support = 0.1
+				add_stability = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_the_sanayiciler
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = TUR_ratify_the_six_arrows }
+		available = {
+			NOT = { TUR = { has_government = communism } } 
+		}
+		x = -3
+		y = 1
+		relative_position_id = TUR_ratify_the_six_arrows
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			custom_effect_tooltip = TUR_sanayiciler_tt
+			unlock_decision_tooltip = TUR_sponsor_petrol_olfisis_formation
+		}
+	}
+
+	focus = {
+		id = TUR_cooperate_with_the_debt_council
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = TUR_the_sanayiciler }
+		available = {
+			NOT = { TUR = { has_government = communism } } 
+		}
+		x = 0
+		y = 1
+		relative_position_id = TUR_the_sanayiciler
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		completion_reward = {
+			add_political_power = 120
+			if = {
+				limit = { 
+					NOT = { has_idea = free_trade }
+				}
+				add_ideas = free_trade
+			}
+			every_country_with_original_tag = {
+				original_tag_to_check = ENG
+				add_opinion_modifier = {
+					target = TUR
+					modifier = TUR_reliable_trade_partner
+				}
+			}
+			every_country_with_original_tag = {
+				original_tag_to_check = FRA
+				add_opinion_modifier = {
+					target = TUR
+					modifier = TUR_reliable_trade_partner
+				}
+			}
+			every_country_with_original_tag = {
+				original_tag_to_check = ITA
+				add_opinion_modifier = {
+					target = TUR
+					modifier = TUR_reliable_trade_partner
+				}
+			}
+			every_country_with_original_tag = {
+				original_tag_to_check = USA
+				add_opinion_modifier = {
+					target = TUR
+					modifier = TUR_reliable_trade_partner
+				}
+			}
+			custom_effect_tooltip = TUR_debt_council_nationalized_tt
+			hidden_effect = {
+				set_country_flag = TUR_debt_council_reined_in_flag
+				swap_ideas = {
+					remove_idea = TUR_debt_council
+					add_idea = TUR_tpda
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_utilize_foreign_capital
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = TUR_cooperate_with_the_debt_council }
+		x = 0
+		y = 1
+		relative_position_id = TUR_cooperate_with_the_debt_council
+		cost = 10
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 1
+			unlock_decision_tooltip = TUR_discuss_investment_possibilities_with_FROM
+			custom_effect_tooltip = TUR_foreign_capital_tt
+		}
+	}
+
+	focus = {
+		id = TUR_treaty_of_saadabad
+		icon = GFX_focus_TUR_treaty_of_saadabad
+		prerequisite = { focus = TUR_ratify_the_six_arrows }
+		x = 0
+		y = 1
+		relative_position_id = TUR_ratify_the_six_arrows
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		bypass = {
+			AND = {
+				AFG = { exists = no }
+				PER = { exists = no }
+				IRQ = { exists = no }
+			}
+			is_subject = yes
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			if = {
+				limit = {
+					AFG = { 
+						exists = yes
+						is_subject = no 
+					}
+				}
+				AFG = { country_event = { id = bftb_turkey.23 } }
+			}
+			if = {
+				limit = {
+					EGY = { 
+						exists = yes
+						is_subject = no 
+					}
+				}
+				EGY = { country_event = { id = bftb_turkey.23 } }
+			}
+			if = {
+				limit = {
+					PER = { 
+						exists = yes
+						is_subject = no 
+					}
+				}
+				PER = { country_event = { id = bftb_turkey.23 } }
+			}
+			if = {
+				limit = {
+					IRQ = { 
+						exists = yes
+						is_subject = no 
+					}
+				}
+				IRQ = { country_event = { id = bftb_turkey.23 } }
+			}
+			if = {
+				limit = {
+					SYR = { 
+						exists = yes
+						is_subject = no 
+					}
+				}
+				SYR = { country_event = { id = bftb_turkey.23 } }
+			}
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = TUR_assess_our_future
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = TUR_treaty_of_saadabad }
+		available = {
+			OR = {
+				has_completed_focus = TUR_democratic_transition_focus
+				has_completed_focus = TUR_peace_at_home
+				has_completed_focus = TUR_fatherland_first
+				has_completed_focus = TUR_halk_ve_devlet
+				NOT = { 
+					has_country_leader = {
+						character = TUR_mustafa_kemal_ataturk
+						ruling_only = yes
+					}
+				}
+			}
+		}
+		x = 0
+		y = 2
+		relative_position_id = TUR_treaty_of_saadabad
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			if = {
+				limit = {
+					has_completed_focus = TUR_revive_turkish_revolutionism
+				}
+				add_ideas = TUR_legacy_of_ataturk_defiled
+			}
+			if = {
+				limit = {
+					has_completed_focus = TUR_peace_at_home
+					NOT = { has_country_flag = TUR_varlik_vergisi_flag }
+				}
+				add_ideas = TUR_legacy_of_ataturk_preserved
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = TUR_peace_at_home
+					has_country_flag = TUR_varlik_vergisi_flag
+				}
+				add_ideas = TUR_legacy_of_ataturk_defiled
+			}
+			if = {
+				limit = {
+					has_completed_focus = TUR_fully_integrate_the_is_bank
+					NOT = { 
+						has_country_leader = {
+							character = TUR_adnan_menderes
+							ruling_only = yes
+						}
+					}
+				}
+				add_ideas = TUR_legacy_of_ataturk_fulfilled
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = TUR_fully_integrate_the_is_bank
+					has_country_leader = {
+						character = TUR_adnan_menderes
+						ruling_only = yes
+					}
+				}
+				add_ideas = TUR_legacy_of_ataturk_defiled
+			}
+			else = {
+				custom_effect_tooltip = TUR_choices_will_decide_legacy_tt
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_the_hatay_issue
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = TUR_assess_our_future }
+		x = 0
+		y = 2
+		relative_position_id = TUR_assess_our_future
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		bypass = {
+			TUR = { owns_state = 799 }
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			if = {
+				limit = {
+					FRA = { owns_state = 799 }
+				}
+				FRA = { country_event = { id = bftb_turkey.25 hours = 6 } }
+			}
+			else = {
+				random_neighbor_country = { 
+					limit = {
+						owns_state = 799
+					}
+					country_event = { id = bftb_turkey.60 hours = 6 } 
+				}
+			}
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = TUR_peace_in_the_world
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TUR_the_hatay_issue }
+		x = 0
+		y = 1
+		relative_position_id = TUR_the_hatay_issue
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		bypass = {
+			TUR = { has_war = yes }
+		}
+
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			add_ideas = kemalist_neutrality_idea
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = TUR_peace_at_home
+		icon = GFX_goal_tripartite_pact
+		mutually_exclusive = { focus = TUR_revive_turkish_revolutionism }
+		prerequisite = { focus = TUR_ratify_the_six_arrows }
+		available = {
+			TUR = { 
+				OR = { 
+					has_country_leader = {
+						character = TUR_ismet_inonu
+						ruling_only = yes
+					}
+					has_idea = TUR_ismet_inonu
+				}
+				NOT = { has_completed_focus = TUR_fully_integrate_the_is_bank }
+			}
+		}
+		x = 3
+		y = 1
+		relative_position_id = TUR_ratify_the_six_arrows
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_TUR_TRADITIONALISM }
+		completion_reward = {
+			add_stability = 0.1
+			unlock_decision_tooltip = TUR_counter_influence_of_fundamentalists_in_state
+			unlock_decision_tooltip = TUR_offer_conscription_exceptions_to_kurdish_groups
+		}
+	}
+
+	focus = {
+		id = TUR_revive_turkish_revolutionism
+		icon = GFX_goal_generic_dangerous_deal
+		mutually_exclusive = { focus = TUR_peace_at_home }
+		prerequisite = { focus = TUR_ratify_the_six_arrows }
+		prerequisite = { focus = TUR_continue_the_policy_of_etatism }
+		available = {
+			OR = { 
+				has_country_leader = {
+					character = TUR_ismet_inonu
+					ruling_only = yes
+				}
+				has_idea = TUR_ismet_inonu
+				has_country_leader = {
+					character = TUR_fevzi_cakmak
+					ruling_only = yes
+				}
+				has_idea = TUR_fevzi_cakmak_prime_minister
+			}
+		}
+		x = 7
+		y = 2
+		relative_position_id = TUR_continue_the_policy_of_etatism
+		cost = 10
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			add_war_support = 0.05
+			add_stability = -0.05
+			unlock_decision_tooltip = TUR_revolutionism_decision
+		}
+	}
+
+	focus = {
+		id = TUR_turkish_state_railways
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TUR_peace_at_home }
+		x = 0
+		y = 1
+		relative_position_id = TUR_peace_at_home
+		cost = 10
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_TUR_KEMALISM }
+		completion_reward = {
+			show_ideas_tooltip = tcdd
+			every_owned_state = {
+				limit = { 
+					has_dynamic_modifier = { modifier = kemalist_loyalties }
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			every_owned_state = {
+				limit = { 
+					is_core_of = KUR
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_reinvigorate_turkish_nationalism
+		icon = GFX_focus_generic_strike_at_democracy1
+		mutually_exclusive = { focus = TUR_rehabilitate_the_kadro_movement }
+		prerequisite = { focus = TUR_revive_turkish_revolutionism }
+		x = -3
+		y = 1
+		relative_position_id = TUR_revive_turkish_revolutionism
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_TUR_KURDISTAN FOCUS_FILTER_TUR_TRADITIONALISM }
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = TUR_ismet_inonu
+					NOT = { has_idea = TUR_fevzi_cakmak_prime_minister }
+				}
+				remove_ideas = TUR_ismet_inonu
+				add_ideas = TUR_fevzi_cakmak_prime_minister
+			}
+			else_if = {
+				limit = {
+					has_idea = TUR_ismet_inonu
+					has_idea = TUR_fevzi_cakmak_command
+				}
+				remove_ideas = TUR_ismet_inonu
+				remove_ideas = TUR_fevzi_cakmak_command
+				add_ideas = TUR_fevzi_cakmak_prime_minister
+			}
+			else_if = {
+				limit = {
+					has_idea = TUR_celal_bayar
+					NOT = { has_idea = TUR_fevzi_cakmak_prime_minister }
+				}
+				remove_ideas = TUR_celal_bayar
+				add_ideas = TUR_fevzi_cakmak_prime_minister
+			}
+			else_if = {
+				limit = {
+					has_idea = TUR_celal_bayar
+					has_idea = TUR_fevzi_cakmak_command
+				}
+				remove_ideas = TUR_celal_bayar
+				remove_ideas = TUR_fevzi_cakmak_command
+				add_ideas = TUR_fevzi_cakmak_prime_minister
+			}
+			else = {
+				add_war_support = 0.1
+			}
+			random_owned_controlled_state = {
+				limit = { 
+					OR = {
+						has_dynamic_modifier = { modifier = islamist_opposition }
+						has_dynamic_modifier = { modifier = islamist_sedition }
+						has_dynamic_modifier = { modifier = islamist_insurgency }
+					}
+				}
+				save_global_event_target_as = TUR_fundamentalist_state
+				TUR_downgrade_fundamentalist_defiance_effect = yes
+			}
+			random_owned_controlled_state = {
+				limit = { 
+					OR = {
+						has_dynamic_modifier = { modifier = islamist_opposition }
+						has_dynamic_modifier = { modifier = islamist_sedition }
+						has_dynamic_modifier = { modifier = islamist_insurgency }
+					}
+				}
+				save_global_event_target_as = TUR_fundamentalist_state
+				TUR_downgrade_fundamentalist_defiance_effect = yes
+			}
+			random_owned_state = {
+				limit = {
+					OR = {
+						has_dynamic_modifier = { modifier = kurdish_agitation }
+						has_dynamic_modifier = { modifier = kurdish_separatism }
+						has_dynamic_modifier = { modifier = kurdish_rebellion }
+					}
+				}
+				save_event_target_as = TUR_kurdish_state_event_target
+			}
+			TUR_agitate_kurdish_state_random_target_effect = yes
+		}
+	}
+
+	focus = {
+		id = TUR_the_second_five_year_plan
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = TUR_turkish_state_railways focus = TUR_reinvigorate_turkish_nationalism }
+		x = 2
+		y = 1
+		relative_position_id = TUR_turkish_state_railways
+		cost = 10
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_idea = TUR_ismet_inonu
+							has_idea = TUR_fevzi_cakmak_prime_minister
+						}
+						has_country_leader = {
+							character = TUR_fevzi_cakmak
+							ruling_only = yes
+						}
+						has_country_leader = {
+							character = TUR_ismet_inonu
+							ruling_only = yes
+						}
+					}
+				}
+				add_timed_idea = {
+					idea = TUR_second_five_year_plan_inonu
+					days = 1825
+				}
+			}
+			else_if = { 
+				limit = {
+					has_country_leader = {
+						character = TUR_fevzi_cakmak
+						ruling_only = yes
+					}
+				}
+				add_timed_idea = {
+					idea = TUR_second_five_year_plan_cakmak
+					days = 1825
+				}
+			}
+			else_if = { 
+				limit = {
+					has_country_leader = {
+						character = TUR_ismet_inonu
+						ruling_only = yes
+					}
+				}
+				add_timed_idea = {
+					idea = TUR_second_five_year_plan_inonu
+					days = 1825
+				}
+			}
+			else_if = { 
+				limit = {
+					has_idea = TUR_fevzi_cakmak_prime_minister
+				}
+				add_timed_idea = {
+					idea = TUR_second_five_year_plan_cakmak
+					days = 1825
+				}
+			}
+			else_if = { 
+				limit = {
+					has_idea = TUR_ismet_inonu
+				}
+				add_timed_idea = {
+					idea = TUR_second_five_year_plan_inonu
+					days = 1825
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_the_guardians_of_kemalism
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TUR_turkish_state_railways }
+		prerequisite = { focus = TUR_the_second_five_year_plan }
+		x = 0
+		y = 2
+		relative_position_id = TUR_turkish_state_railways
+		cost = 5
+		ai_will_do = {
+			base = 10
+		} 
+
+		select_effect = {
+			random_owned_state = {
+				limit = {
+					has_state_flag = TUR_ideological_battleground_state
+					NOT = { has_dynamic_modifier = { modifier = kemalist_loyalties } }
+				}
+				set_state_flag = TUR_kemalist_state_to_target_1
+			}
+			random_owned_state = {
+				limit = {
+					NOT = { has_state_flag = TUR_kemalist_state_to_target_1 }
+					has_state_flag = TUR_ideological_battleground_state
+					NOT = { has_dynamic_modifier = { modifier = kemalist_loyalties } }
+				}
+				set_state_flag = TUR_kemalist_state_to_target_2
+			}
+		}
+		
+
+		search_filters = { FOCUS_FILTER_TUR_KEMALISM FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			add_war_support = 0.05
+			unlock_decision_tooltip = TUR_entrench_kemalism_in_state
+			custom_effect_tooltip = TUR_kemalist_state_targets_tt
+			random_owned_state = {
+				limit = {
+					has_state_flag = TUR_kemalist_state_to_target_1
+				}
+				add_dynamic_modifier = { modifier = kemalist_loyalties }
+				
+				clr_state_flag = TUR_ideological_battleground_state
+			}
+			random_owned_state = {
+				limit = {
+					has_state_flag = TUR_kemalist_state_to_target_2
+				}
+				add_dynamic_modifier = { modifier = kemalist_loyalties }
+				clr_state_flag = TUR_ideological_battleground_state
+				
+			}	
+			hidden_effect = { 
+				set_variable = { var = TUR_kemalist_officers_loyalty value = 3 }
+				add_to_variable = { var = TUR_kemalist_power_variable value = 2 }
+				TUR_kemalist_loyalty_and_power_update_effect = yes
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_the_sun_language_theory
+		icon = GFX_focus_TUR_the_sun_language_theory
+		prerequisite = { focus = TUR_reinvigorate_turkish_nationalism focus = TUR_the_second_five_year_plan }
+		available = {
+			OR = { 
+				has_country_leader = {
+					character = TUR_fevzi_cakmak
+					ruling_only = yes
+				}
+				has_idea = TUR_fevzi_cakmak_prime_minister
+			}
+		}
+		x = 0
+		y = 2
+		relative_position_id = TUR_reinvigorate_turkish_nationalism
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			add_war_support = 0.05
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = TUR_halide_edib_adivar
+		}
+	}
+
+	focus = {
+		id = TUR_variant_turkish_tax_focus
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = TUR_the_guardians_of_kemalism focus = TUR_the_sun_language_theory }
+		x = 2
+		y = 1
+		relative_position_id = TUR_the_guardians_of_kemalism
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_TUR_TRADITIONALISM }
+		completion_reward = {
+			if = {
+				limit = { 
+					NOT = { 
+						OR = { 
+							has_country_leader = {
+								character = TUR_mustafa_kemal_ataturk
+								ruling_only = yes
+							}
+							has_country_leader = {
+								character = TUR_mehmet_recep_peker
+								ruling_only = yes
+							}
+							has_country_leader = {
+								character = TUR_sevket_sureyya_aydemir
+								ruling_only = yes
+							}
+						}
+					}
+				}
+				add_ideas = TUR_varlik_vergisi_spirit
+				unlock_decision_tooltip = TUR_repeal_the_wealth_tax
+				unlock_decision_tooltip = TUR_acquiesce_to_fundamentalists
+			}
+			else = {
+				add_ideas = TUR_inanc_vergisi_spirit
+				unlock_decision_tooltip = TUR_repeal_the_faith_tax
+				hidden_effect = { set_country_flag = TUR_taxed_religious_institutions }
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_turk_ulusu
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = TUR_the_guardians_of_kemalism focus = TUR_variant_turkish_tax_focus }
+		prerequisite = { focus = TUR_the_hatay_issue }
+		x = 0
+		y = 2
+		relative_position_id = TUR_the_guardians_of_kemalism
+		cost = 10
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_TUR_KEMALISM FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			add_war_support = 0.1
+			every_owned_state = {
+				limit = {
+					OR = {
+						has_dynamic_modifier = { modifier = kurdish_agitation }
+						has_dynamic_modifier = { modifier = kurdish_separatism }
+						has_dynamic_modifier = { modifier = kurdish_rebellion }
+					}
+				}
+				save_event_target_as = TUR_kurdish_state_event_target
+				TUR_pacify_kurdish_state_effect = yes
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_loosen_the_laws_on_secularism
+		icon = GFX_focus_TUR_loosen_the_laws_on_secularism
+		prerequisite = { focus = TUR_reinvigorate_turkish_nationalism }
+		x = 2
+		y = 1
+		relative_position_id = TUR_reinvigorate_turkish_nationalism
+		cost = 10
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_TUR_TRADITIONALISM FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			add_stability = -0.05
+			set_temp_variable = { placate_state_1 = -1 }
+			set_temp_variable = { placate_state_2 = -1 }
+			random_owned_state = {
+				limit = {
+					OR = {
+						has_dynamic_modifier = { modifier = islamist_opposition }
+						has_dynamic_modifier = { modifier = islamist_sedition }
+						has_dynamic_modifier = { modifier = islamist_insurgency }
+					}
+				}
+				PREV = { set_temp_variable = { placate_state_1  = PREV }} #At long last Mischief Village, at long last I have found you
+				save_event_target_as = TUR_fundamentalist_state
+				TUR_placate_fundamentalist_state_effect = yes
+			}
+			random_owned_state = {
+				limit = {
+					OR = {
+						has_dynamic_modifier = { modifier = islamist_opposition }
+						has_dynamic_modifier = { modifier = islamist_sedition }
+						has_dynamic_modifier = { modifier = islamist_insurgency }
+					}
+					NOT = { check_variable = { THIS = ROOT.var:placate_state_1  }}
+				}
+				PREV = { set_temp_variable = { placate_state_2  = PREV }}
+				save_event_target_as = TUR_fundamentalist_state
+				TUR_placate_fundamentalist_state_effect = yes
+			}
+			random_owned_state = {
+				limit = {
+					OR = {
+						has_dynamic_modifier = { modifier = islamist_opposition }
+						has_dynamic_modifier = { modifier = islamist_sedition }
+						has_dynamic_modifier = { modifier = islamist_insurgency }
+					}
+					NOT = { check_variable = { THIS = ROOT.var:placate_state_1  }}
+					NOT = { check_variable = { THIS = ROOT.var:placate_state_2  }}
+				}
+				save_event_target_as = TUR_fundamentalist_state
+				TUR_placate_fundamentalist_state_effect = yes
+			}
+			TUR_kemalist_turn_hostile_effect = yes
+			hidden_effect = { 
+				set_country_flag = TUR_truce_with_government_called_flag 
+				if = {
+					limit = {
+						has_idea = TUR_sectarian_woes
+					}
+					swap_ideas = {
+						remove_idea = TUR_sectarian_woes
+						add_idea = TUR_sectarian_woes_2
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = TUR_sectarian_woes_1
+					}
+					remove_ideas = TUR_sectarian_woes_1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_purify_the_diyanet
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = TUR_loosen_the_laws_on_secularism }
+		x = 0
+		y = 1
+		relative_position_id = TUR_loosen_the_laws_on_secularism
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_TUR_TRADITIONALISM FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			effect_tooltip = { TUR_placate_fundamentalist_state_all_targets_effect = yes }
+			custom_effect_tooltip = TUR_kemalist_officers_made_hostile_tt
+			hidden_effect = { 
+				every_owned_state = {
+					limit = {
+						OR = {
+							has_dynamic_modifier = { modifier = islamist_opposition }
+							has_dynamic_modifier = { modifier = islamist_sedition }
+							has_dynamic_modifier = { modifier = islamist_insurgency }
+						}
+					}
+					TUR_placate_fundamentalist_state_all_targets_effect = yes
+				}
+				random_owned_state = {
+					limit = {
+						AND = { 
+							has_state_flag = TUR_ideological_battleground_state
+							NOT = {
+								OR = { 
+									has_dynamic_modifier = { modifier = kemalist_loyalties }
+									has_dynamic_modifier = { modifier = kemalist_schemers }
+									has_dynamic_modifier = { modifier = islamist_opposition }
+									has_dynamic_modifier = { modifier = islamist_sedition }
+									has_dynamic_modifier = { modifier = islamist_insurgency }
+									has_dynamic_modifier = { modifier = islamists_placated }
+								}
+							}
+						}
+					}
+					save_event_target_as = TUR_kemalist_state_event_target
+				}
+				event_target:TUR_kemalist_state_event_target = { TUR_hostile_kemalists_influenced_state_effect = yes }
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_rehabilitate_the_kadro_movement
+		icon = GFX_focus_generic_military_academy
+		mutually_exclusive = { focus = TUR_reinvigorate_turkish_nationalism }
+		prerequisite = { focus = TUR_revive_turkish_revolutionism }
+		x = 5
+		y = 1
+		relative_position_id = TUR_revive_turkish_revolutionism
+		cost = 10
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			set_party_name = { 
+				ideology = communism
+				long_name = TUR_neutrality_party_long
+				name = TUR_neutrality_party
+			}
+			retire_ideology_leader = communism
+			add_country_leader_role = {
+				character = TUR_sevket_sureyya_aydemir
+				country_leader = {
+				  ideology=marxism
+				  traits = { the_academic }
+				  expire="1965.1.1"
+				}
+				promote_leader = yes
+			}
+			add_timed_idea = {
+				idea = TUR_political_landscape_shifting
+				days = 180
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_kemalism_and_the_modern_movement
+		icon = GFX_focus_generic_diplomatic_treaty
+		mutually_exclusive = { focus = TUR_kemalist_socialist_theory }
+		prerequisite = { focus = TUR_rehabilitate_the_kadro_movement }
+		x = -4
+		y = 1
+		relative_position_id = TUR_rehabilitate_the_kadro_movement
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			add_war_support = 0.05
+			add_popularity = { 
+				ideology = fascism
+				popularity = 0.07
+			}
+			custom_effect_tooltip = TUR_kemalism_and_the_modern_movement_tt
+			hidden_effect = { 
+				for_each_scope_loop = {
+					array = global.majors
+					if = {
+						limit = { 
+							is_major = yes
+							has_government = fascism
+							any_owned_state = { is_on_continent = europe }
+						}
+						add_opinion_modifier = {
+							target = TUR
+							modifier = TUR_likeminded_ultranationalists
+						}
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_integrate_the_fascist_council
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = TUR_kemalism_and_the_modern_movement }
+		x = 0
+		y = 1
+		relative_position_id = TUR_kemalism_and_the_modern_movement
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+			set_party_name = { 
+				ideology = fascism
+				long_name = TUR_neutrality_party_long
+				name = TUR_neutrality_party
+			}
+			if = {
+				limit = {
+					has_idea = TUR_ismet_inonu
+				}
+				remove_ideas = TUR_ismet_inonu
+				add_ideas = TUR_recep_peker
+			}
+			else_if = {
+				limit = {
+					has_idea = TUR_fevzi_cakmak_prime_minister
+				}
+				remove_ideas = TUR_fevzi_cakmak_prime_minister
+				add_ideas = TUR_recep_peker
+			}
+			else_if = {
+				limit = {
+					has_idea = TUR_sukru_saracoglu_prime_minister
+				}
+				remove_ideas = TUR_sukru_saracoglu_prime_minister
+				add_ideas = TUR_recep_peker
+			}
+			else = {
+				custom_effect_tooltip = available_political_advisor
+				show_ideas_tooltip = TUR_recep_peker
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_restack_the_officer_corps
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = TUR_purify_the_diyanet focus = TUR_integrate_the_fascist_council }
+		x = 0
+		y = 1
+		relative_position_id = TUR_purify_the_diyanet
+		cost = 10
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_TUR_KEMALISM }
+		completion_reward = {
+			custom_effect_tooltip = TUR_restack_the_officer_corps_tt
+			hidden_effect = { 
+				if = {
+					limit = {
+						check_variable = { var = TUR_kemalist_officers_loyalty value = 3 compare = less_than }
+					}
+					set_variable = { var = TUR_kemalist_officers_loyalty value = 3 }
+				}
+				subtract_from_variable = { var = TUR_kemalist_power_variable value = 2 }
+				TUR_kemalist_loyalty_and_power_update_effect = yes
+				if = { 
+					limit = {
+						has_stability < 0.45
+						check_variable = { var = TUR_kemalist_power_variable value = 5 compare = greater_than_or_equals }
+						has_government = neutrality
+					}
+					start_civil_war = {
+						ruling_party = neutrality
+						ideology = democratic
+						size = 0.45
+						capital = 797
+						states = { 797 341 354 339 340 }
+					}
+				}
+				if = { 
+					limit = {
+						has_stability < 0.45
+						check_variable = { var = TUR_kemalist_power_variable value = 5 compare = greater_than_or_equals }
+						has_government = fascism
+					}
+					start_civil_war = {
+						ruling_party = fascism
+						ideology = neutrality
+						size = 0.5
+						capital = 797
+						states = { 797 341 354 339 340 }
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_form_the_redshirts
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		prerequisite = { focus = TUR_integrate_the_fascist_council }
+		x = 2
+		y = 1
+		relative_position_id = TUR_integrate_the_fascist_council
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_ideas = TUR_the_redshirts
+		}
+	}
+
+	focus = {
+		id = TUR_fatherland_first
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		available = {
+			fascism > 0.3
+		}
+		prerequisite = { focus = TUR_integrate_the_fascist_council focus = TUR_restack_the_officer_corps }
+		x = 0
+		y = 2
+		relative_position_id = TUR_integrate_the_fascist_council
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_TUR_TRADITIONALISM FOCUS_FILTER_TUR_KEMALISM }
+		completion_reward = {
+			hidden_effect = {
+				if = {
+					limit = {	
+						has_country_leader = {
+							character = TUR_mustafa_kemal_ataturk
+							ruling_only = yes
+						}
+					}
+					retire_country_leader = yes
+					add_ideas = TUR_mustafa_kemal_ataturk_figurehead
+					add_country_leader_role = {
+						character = TUR_ismet_inonu
+						country_leader = {
+							expire = "1965.1.1"
+							ideology = centrism
+							traits = {
+								milli_sef
+							}
+						}
+						promote_leader = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = TUR_kemalism_and_the_modern_movement
+					NOT = {
+						AND = {
+							has_country_leader = {
+								character = TUR_mehmet_recep_peker
+								ruling_only = yes
+							}
+							has_government = fascism
+						}
+					}
+				}
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = yes
+					election_frequency = 96
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = TUR_reinvigorate_turkish_nationalism
+					NOT = {
+						has_country_leader = {
+							character = TUR_fevzi_cakmak
+							ruling_only = yes
+						}
+					}
+				}
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+				add_country_leader_role = {
+					character = TUR_fevzi_cakmak
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = rexism
+						traits = {
+							maresal
+						}
+					}
+					promote_leader = yes
+				}
+			}
+			custom_effect_tooltip = TUR_fatherland_first_tt
+			hidden_effect = {
+				country_event = { id = bftb_turkey.29 days = 14 }
+				TUR_pacify_random_kurdish_state_effect = yes
+				TUR_pacify_random_kurdish_state_effect = yes
+				TUR_placate_fundamentalist_state_random_target_effect = yes
+				TUR_placate_fundamentalist_state_random_target_effect = yes
+				TUR_placate_fundamentalist_state_random_target_effect = yes
+				TUR_placate_fundamentalist_state_random_target_effect = yes
+				TUR_placate_fundamentalist_state_random_target_effect = yes
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_the_pontic_redoubt
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TUR_the_sun_language_theory focus = TUR_variant_turkish_tax_focus focus = TUR_restack_the_officer_corps }
+		available = {
+			owns_state = 354
+			owns_state = 800
+			owns_state = 353
+		}
+		x = 0
+		y = 2
+		relative_position_id = TUR_the_sun_language_theory
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		bypass = {
+			NOT = {
+				owns_state = 354
+				owns_state = 800
+				owns_state = 353
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_TUR_TRADITIONALISM FOCUS_FILTER_TUR_KEMALISM }
+		completion_reward = {
+			354 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					custom_effect_tooltip = TUR_pontic_redoubt_trabzon_tt
+					hidden_effect = {
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 11753
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 3714
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 6976
+							instant_build = yes
+						}
+					}
+				}
+			}
+			800 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					custom_effect_tooltip = TUR_pontic_redoubt_van_tt
+					hidden_effect = {
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 652
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 12376
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 4583
+							instant_build = yes
+						}
+					}
+				}
+			}
+			354 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					custom_effect_tooltip = TUR_pontic_redoubt_erzurum_tt
+					hidden_effect = {
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 11853
+							instant_build = yes
+						}
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_abuse_the_office_of_soil_products
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = TUR_turk_ulusu focus = TUR_fatherland_first focus = TUR_the_pontic_redoubt }
+		x = 0
+		y = 2
+		relative_position_id = TUR_the_pontic_redoubt
+		cost = 10
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			49 = {
+				add_extra_state_shared_building_slots = 2
+			}
+			every_owned_state = {
+				limit = {
+					is_core_of = TUR
+					has_state_category = rural
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_deal_for_the_oniki_islands
+		icon = GFX_focus_generic_aegean_sea_focus
+		prerequisite = { focus = TUR_form_the_redshirts }
+		prerequisite = { focus = TUR_fatherland_first }
+		x = 0
+		y = 2
+		relative_position_id = TUR_form_the_redshirts
+		cost = 10
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			country_event = { id = bftb_turkey.30 }
+		}
+	}
+
+	focus = {
+		id = TUR_kemalist_socialist_theory
+		icon = GFX_focus_generic_air_defense
+		mutually_exclusive = { focus = TUR_kemalism_and_the_modern_movement }
+		prerequisite = { focus = TUR_rehabilitate_the_kadro_movement }
+		x = 4
+		y = 1
+		relative_position_id = TUR_rehabilitate_the_kadro_movement
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_popularity = { 
+				ideology = communism
+				popularity = 0.05
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = TUR_sevket_sureyya_aydemir
+		}
+	}
+
+	focus = {
+		id = TUR_intervene_in_the_spanish_civil_war
+		icon = GFX_focus_generic_manpower
+		prerequisite = { focus = TUR_kemalism_and_the_modern_movement focus = TUR_kemalist_socialist_theory }
+		x = 0
+		y = 2
+		relative_position_id = TUR_rehabilitate_the_kadro_movement
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		completion_reward = {
+			set_rule = { can_send_volunteers = yes }
+			add_ideas = TUR_turkish_interventionism
+		}
+	}
+
+	focus = {
+		id = TUR_a_common_destiny_for_all_of_turkey
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TUR_intervene_in_the_spanish_civil_war }
+		x = 0
+		y = 1
+		relative_position_id = TUR_intervene_in_the_spanish_civil_war
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_TUR_KEMALISM FOCUS_FILTER_TUR_KURDISTAN }
+		completion_reward = {
+			custom_effect_tooltip = TUR_unlock_kurdish_integration_decisions_tt
+			custom_effect_tooltip = TUR_unlock_reconciliation_occupation_law_tt
+		}
+	}
+
+	focus = {
+		id = TUR_hunt_down_fifth_columnist_islamists
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = TUR_a_common_destiny_for_all_of_turkey }
+		x = 0
+		y = 1
+		relative_position_id = TUR_a_common_destiny_for_all_of_turkey
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_TUR_TRADITIONALISM FOCUS_FILTER_TUR_KEMALISM }
+		completion_reward = {
+			unlock_decision_tooltip = TUR_entrench_kemalism_in_state
+			unlock_decision_tooltip = TUR_hold_a_march_in_state
+		}
+	}
+
+	focus = {
+		id = TUR_patriotism_over_internationalism
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = TUR_kemalist_socialist_theory }
+		x = 0
+		y = 1
+		relative_position_id = TUR_kemalist_socialist_theory
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			add_war_support = 0.05
+			add_political_power = 120
+		}
+	}
+
+	focus = {
+		id = TUR_create_the_turkish_workers_militia
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = TUR_patriotism_over_internationalism }
+		x = 0
+		y = 1
+		relative_position_id = TUR_patriotism_over_internationalism
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			add_ideas = TUR_turkish_workers_militia
+		}
+	}
+
+	focus = {
+		id = TUR_halk_ve_devlet
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = TUR_create_the_turkish_workers_militia }
+		available = {
+			is_subject = no
+			communism > 0.3
+		}
+
+		bypass = {
+			has_government = communism
+		}
+		x = 0
+		y = 1
+		relative_position_id = TUR_create_the_turkish_workers_militia
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_TUR_KURDISTAN FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_stability = 0.1
+			set_politics = {
+				ruling_party = communism
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_nationalise_all_private_industry
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = TUR_halk_ve_devlet }
+		x = 0
+		y = 1
+		relative_position_id = TUR_halk_ve_devlet
+		cost = 10
+		ai_will_do = {
+			base = 10
+		}
+
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+			every_owned_state = {
+				limit = { has_state_flag = TUR_nationalised_industry_flag }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = TUR
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = TUR_nationalised_industry_flag
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = TUR
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = TUR_nationalised_industry_flag
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = TUR
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = TUR_nationalised_industry_flag
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_georgian_manganese_extraction
+		icon = {
+			value = GFX_focus_generic_steel
+			trigger = {
+				SOV = { NOT = { controls_state = 231 } } #APPROPRIATE CONDITIONS FOR GENERIC ICON
+			}
+		}
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		prerequisite = { focus = TUR_halk_ve_devlet }
+		x = -2
+		y = 1
+		relative_position_id = TUR_halk_ve_devlet
+		cost = 10
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			every_country = {
+				limit = {	
+					controls_state = 231
+					owns_state = 231
+				}
+				country_event = { id = bftb_turkey.38 }
+			}
+				
+			
+		}
+	}
+
+	focus = {
+		id = TUR_salt_the_scars_of_the_great_war
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = TUR_deal_for_the_oniki_islands focus = TUR_georgian_manganese_extraction }
+		prerequisite = { focus = TUR_hunt_down_fifth_columnist_islamists }
+		x = 0
+		y = 2
+		relative_position_id = TUR_hunt_down_fifth_columnist_islamists
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			add_war_support = 0.1
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.1
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = TUR
+						TUR_is_kemalist_state = yes
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_government = communism
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 0.1
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = TUR
+						TUR_is_kemalist_state = yes
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+
+
+
+	focus = {
+		id = TUR_learning_from_the_great_war
+		icon = GFX_goal_generic_attack_allies
+		x = 30
+		y = 0
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		completion_reward = {
+			army_experience = 10
+			if = {
+				limit = {
+					NOT = { has_completed_focus = TUR_hava_okulu }
+				}
+				unlock_decision_category_tooltip = TUR_reforming_our_armed_forces_category
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_modernising_the_army
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = TUR_learning_from_the_great_war }
+		x = 0
+		y = 1
+		relative_position_id = TUR_learning_from_the_great_war
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = TUR_modernising_the_army
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			unlock_decision_tooltip = TUR_modernize_our_tactics
+			unlock_decision_tooltip = TUR_commence_an_overhaul_of_our_training_methods
+		}
+	}
+
+	focus = {
+		id = TUR_hava_okulu
+		icon = GFX_goal_generic_air_fighter
+		x = 45
+		y = 0
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		completion_reward = {
+			air_experience = 5
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = TUR_sabiha_gokcen
+			if = {
+				limit = {
+					NOT = { has_completed_focus = TUR_learning_from_the_great_war }
+				}
+				unlock_decision_category_tooltip = TUR_reforming_our_armed_forces_category
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_expand_the_air_bases
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = TUR_hava_okulu }
+		x = 0
+		y = 1
+		relative_position_id = TUR_hava_okulu
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		completion_reward = {
+			354 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			49 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			344 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			49 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 2
+						}
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+			unlock_decision_tooltip = TUR_teach_the_proper_use_of_modern_infrastructure
+			unlock_decision_tooltip = TUR_put_new_safety_regulations_regarding_the_operation_of_aircraft_into_effect
+		}
+	}
+
+	focus = {
+		id = TUR_mechanising_our_army
+		icon = GFX_goal_generic_build_tank
+		mutually_exclusive = { focus = TUR_embrace_military_tradition }
+		prerequisite = { focus = TUR_modernising_the_army }
+		x = -2
+		y = 1
+		relative_position_id = TUR_modernising_the_army
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TUR_mechanising_our_army
+				bonus = 2.0
+				uses = 1
+				category = motorized_equipment
+			}
+			add_tech_bonus = {
+				name = TUR_mechanising_our_army
+				bonus = 3.0
+				uses = 2
+				category = support_tech
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_embrace_military_tradition
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		mutually_exclusive = {  focus = TUR_mechanising_our_army }
+		prerequisite = { focus = TUR_modernising_the_army }
+		x = 2
+		y = 1
+		relative_position_id = TUR_modernising_the_army
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TUR_embrace_military_tradition
+				bonus = 2.0
+				uses = 1
+				category = support_tech
+			}
+			add_tech_bonus = {
+				name = TUR_embrace_military_tradition
+				bonus = 1.5
+				uses = 1
+				category = recon_tech
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_the_kirikkale_tank
+		icon = GFX_focus_generic_army_tanks2
+		prerequisite = { focus = TUR_mechanising_our_army }
+		x = -1
+		y = 1
+		relative_position_id = TUR_mechanising_our_army
+		cost = 10
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			49 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = TUR_the_kirikkale_tank
+				bonus = 1.0
+				uses = 1
+				category = cat_light_armor
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_superiority_of_arms
+		icon = GFX_focus_generic_combined_arms
+		prerequisite = { focus = TUR_embrace_military_tradition focus = TUR_mechanising_our_army }
+		x = 0
+		y = 2
+		relative_position_id = TUR_modernising_the_army
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TUR_superiority_of_arms
+				bonus = 1.5
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_utilising_our_terrain
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = TUR_embrace_military_tradition }
+		x = 1
+		y = 1
+		relative_position_id = TUR_embrace_military_tradition
+		cost = 10
+		ai_will_do = {
+			base = 10
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TUR_utilising_our_terrain
+				bonus = 1.0
+				uses = 2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
+			add_tech_bonus = {
+				name = TUR_utilising_our_terrain
+				bonus = 1.0
+				uses = 1
+				category = engineers_tech
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_construct_the_cakmak_line
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = TUR_superiority_of_arms }
+		x = 0
+		y = 1
+		relative_position_id = TUR_superiority_of_arms
+		cost = 10
+		ai_will_do = {
+			base = 10
+		}
+
+		completion_reward = {
+			341 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 3893
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 4
+						province = 11842
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 922
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_accelerate_native_fighter_designs
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = TUR_expand_the_air_bases }
+		x = 0
+		y = 1
+		relative_position_id = TUR_expand_the_air_bases
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TUR_accelerate_native_fighter_designs
+				bonus = 1.5
+				uses = 1
+				category = light_fighter
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_patrol_the_seas
+		icon = GFX_goal_generic_air_naval_bomber
+		mutually_exclusive = { focus = TUR_invoke_the_methods_of_mehmed_ii }
+		prerequisite = { focus = TUR_accelerate_native_fighter_designs }
+		x = -2
+		y = 1
+		relative_position_id = TUR_accelerate_native_fighter_designs
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TUR_patrol_the_seas
+				bonus = 1.5
+				uses = 1
+				category = naval_bomber
+			}
+			add_doctrine_cost_reduction = {
+				name = TUR_patrol_the_seas
+				cost_reduction = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_invoke_the_methods_of_mehmed_ii
+		icon = GFX_goal_generic_army_artillery
+		mutually_exclusive = {  focus = TUR_patrol_the_seas }
+		prerequisite = { focus = TUR_accelerate_native_fighter_designs }
+		x = 2
+		y = 1
+		relative_position_id = TUR_accelerate_native_fighter_designs
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TUR_invoke_the_methods_of_mehmed_ii
+				bonus = 1.5
+				uses = 1
+				category = tactical_bomber
+			}
+			add_doctrine_cost_reduction = {
+				name = TUR_invoke_the_methods_of_mehmed_ii
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_turkish_air_defense_platforms
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = TUR_patrol_the_seas focus = TUR_invoke_the_methods_of_mehmed_ii }
+		x = 0
+		y = 2
+		relative_position_id = TUR_accelerate_native_fighter_designs
+		cost = 10
+		ai_will_do = {
+			base = 10
+		}
+
+		completion_reward = {
+			797 = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+			354 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			340 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name = TUR_turkish_air_defense_platforms
+				cost_reduction = 0.25
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_expand_the_golcuk_naval_base
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = TUR_modernising_the_army }
+		prerequisite = { focus = TUR_expand_the_air_bases }
+		x = 7
+		y = 1
+		relative_position_id = TUR_modernising_the_army
+		cost = 10
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			340 = { 
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						province = 3851
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			navy_experience = 5
+			unlock_decision_tooltip = TUR_streamline_communication_methods_between_ships
+		}
+	}
+
+	focus = {
+		id = TUR_relocate_from_yildiz_palace
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = TUR_expand_the_golcuk_naval_base }
+		x = 0
+		y = 1
+		relative_position_id = TUR_expand_the_golcuk_naval_base
+		cost = 10
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			341 = { 
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			345 = { 
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 4
+						province = 10056
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_the_legacy_of_osmanli_donanmasi
+		icon = GFX_focus_generic_navy_battleship2
+		mutually_exclusive = { focus = TUR_the_path_of_the_wolf }
+		prerequisite = { focus = TUR_relocate_from_yildiz_palace }
+		x = -2
+		y = 1
+		relative_position_id = TUR_relocate_from_yildiz_palace
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TUR_the_legacy_of_osmanli_donanmasi
+				bonus = 1.50
+				uses = 1
+				category = cl_tech
+			}
+			add_tech_bonus = {
+				name = TUR_the_legacy_of_osmanli_donanmasi
+				bonus = 1.75
+				uses = 1
+				category = bb_tech
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_the_path_of_the_wolf
+		icon = GFX_goal_generic_wolf_pack
+		mutually_exclusive = {  focus = TUR_the_legacy_of_osmanli_donanmasi }
+		prerequisite = { focus = TUR_relocate_from_yildiz_palace }
+		x = 2
+		y = 1
+		relative_position_id = TUR_relocate_from_yildiz_palace
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TUR_the_path_of_the_wolf
+				bonus = 1.00
+				uses = 1
+				category = ss_tech
+			}
+			add_doctrine_cost_reduction = {
+				name = TUR_the_path_of_the_wolf
+				cost_reduction = 0.35
+				uses = 2
+				category = trade_interdiction_tree
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_fortified_defensive_bases
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = TUR_construct_the_cakmak_line }
+		prerequisite = { focus = TUR_the_legacy_of_osmanli_donanmasi focus = TUR_the_path_of_the_wolf }
+		prerequisite = { focus = TUR_turkish_air_defense_platforms }
+		x = 0
+		y = 2
+		relative_position_id = TUR_relocate_from_yildiz_palace
+		cost = 10
+		ai_will_do = {
+			base = 10
+		}
+
+		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.75
+			}
+
+			add_tech_bonus = {
+				name = TUR_fortified_defensive_bases
+				bonus = 1
+				uses = 1 # was 2
+				category = radar_tech
+			}
+
+			add_timed_idea = {
+				idea = TUR_emergency_deployment_of_defensive_bases
+				days = 720
+			}
+
+		}
+	}
+
+	focus = {
+		id = TUR_turk_silahli_kuvvetleri
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = TUR_fortified_defensive_bases }
+		x = 0
+		y = 1
+		relative_position_id = TUR_fortified_defensive_bases
+		cost = 10
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			add_war_support = 0.15
+			if = {
+				limit = {
+					OR = {
+						has_idea = TUR_disorganised_armed_forces
+						has_idea = TUR_disorganised_armed_forces_1
+						has_idea = TUR_disorganised_armed_forces_2
+						has_idea = TUR_disorganised_armed_forces_3
+						has_idea = TUR_disorganised_armed_forces_4
+						has_idea = TUR_disorganised_armed_forces_5
+						has_idea = TUR_disorganised_armed_forces_6
+						has_idea = TUR_disorganised_armed_forces_7
+						has_idea = TUR_disorganised_armed_forces_8
+						has_idea = TUR_disorganised_armed_forces_9
+						has_idea = TUR_disorganised_armed_forces_10
+						has_idea = TUR_disorganised_armed_forces_11
+						has_idea = TUR_disorganised_armed_forces_12
+						has_idea = TUR_disorganised_armed_forces_13
+						has_idea = TUR_disorganised_armed_forces_14
+						has_idea = TUR_disorganised_armed_forces_15
+						has_idea = TUR_disorganised_armed_forces_16
+						has_idea = TUR_disorganised_armed_forces_17
+						has_idea = TUR_disorganised_armed_forces_18
+						has_idea = TUR_disorganised_armed_forces_19
+						has_idea = TUR_disorganised_armed_forces_20
+						has_idea = TUR_disorganised_armed_forces_21
+						has_idea = TUR_disorganised_armed_forces_22
+						has_idea = TUR_disorganised_armed_forces_23
+						has_idea = TUR_disorganised_armed_forces_24
+						has_idea = TUR_disorganised_armed_forces_25
+						has_idea = TUR_disorganised_armed_forces_26
+						has_idea = TUR_disorganised_armed_forces_27
+						has_idea = TUR_disorganised_armed_forces_28
+						has_idea = TUR_disorganised_armed_forces_29
+						has_idea = TUR_disorganised_armed_forces_30
+					}
+				}
+				effect_tooltip = {
+					remove_ideas = TUR_disorganised_armed_forces
+				}
+			}
+			else = {
+				add_manpower = 125000
+			}
+			hidden_effect = { 
+				if = {
+					limit = {
+						has_idea = TUR_disorganised_armed_forces
+					}
+					remove_ideas = TUR_disorganised_armed_forces
+				}
+				else_if = {
+					limit = {
+						has_idea = TUR_disorganised_armed_forces_1
+					}
+					remove_ideas = TUR_disorganised_armed_forces_1
+				}
+				else_if = {
+					limit = {
+						has_idea = TUR_disorganised_armed_forces_2
+					}
+					remove_ideas = TUR_disorganised_armed_forces_2
+				}
+				else_if = {
+					limit = {
+						has_idea = TUR_disorganised_armed_forces_3
+					}
+					remove_ideas = TUR_disorganised_armed_forces_3
+				}
+				else_if = {
+					limit = {
+						has_idea = TUR_disorganised_armed_forces_4
+					}
+					remove_ideas = TUR_disorganised_armed_forces_4
+				}
+				else_if = {
+					limit = {
+						has_idea = TUR_disorganised_armed_forces_5
+					}
+					remove_ideas = TUR_disorganised_armed_forces_5
+				}
+				else_if = {
+					limit = {
+						has_idea = TUR_disorganised_armed_forces_6
+					}
+					remove_ideas = TUR_disorganised_armed_forces_6
+				}
+				else_if = {
+					limit = {
+						has_idea = TUR_disorganised_armed_forces_7
+					}
+					remove_ideas = TUR_disorganised_armed_forces_7
+				}
+				else_if = {
+					limit = {
+						has_idea = TUR_disorganised_armed_forces_8
+					}
+					remove_ideas = TUR_disorganised_armed_forces_8
+				}
+				else_if = {
+					limit = {
+						has_idea = TUR_disorganised_armed_forces_9
+					}
+					remove_ideas = TUR_disorganised_armed_forces_9
+				}
+				else_if = {
+					limit = {
+						has_idea = TUR_disorganised_armed_forces_10
+					}
+					remove_ideas = TUR_disorganised_armed_forces_10
+				}
+				else_if = {
+					limit = {
+						has_idea = TUR_disorganised_armed_forces_11
+					}
+					remove_ideas = TUR_disorganised_armed_forces_11
+				}
+				else_if = {
+					limit = {
+						has_idea = TUR_disorganised_armed_forces_12
+					}
+					remove_ideas = TUR_disorganised_armed_forces_12
+				}
+				else_if = {
+					limit = {
+						has_idea = TUR_disorganised_armed_forces_13
+					}
+					remove_ideas = TUR_disorganised_armed_forces_13
+				}
+				else_if = {
+					limit = {
+						has_idea = TUR_disorganised_armed_forces_14
+					}
+					remove_ideas = TUR_disorganised_armed_forces_14
+				}
+				else_if = {
+					limit = {
+						has_idea = TUR_disorganised_armed_forces_15
+					}
+					remove_ideas = TUR_disorganised_armed_forces_15
+				}
+				else_if = {
+					limit = {
+						has_idea = TUR_disorganised_armed_forces_16
+					}
+					remove_ideas = TUR_disorganised_armed_forces_16
+				}
+				else_if = {
+					limit = {
+						has_idea = TUR_disorganised_armed_forces_17
+					}
+					remove_ideas = TUR_disorganised_armed_forces_17
+				}
+				else_if = {
+					limit = {
+						has_idea = TUR_disorganised_armed_forces_18
+					}
+					remove_ideas = TUR_disorganised_armed_forces_18
+				}
+				else_if = {
+					limit = {
+						has_idea = TUR_disorganised_armed_forces_19
+					}
+					remove_ideas = TUR_disorganised_armed_forces_19
+				}
+				else_if = {
+					limit = {
+						has_idea = TUR_disorganised_armed_forces_20
+					}
+					remove_ideas = TUR_disorganised_armed_forces_20
+				}
+				else_if = {
+					limit = {
+						has_idea = TUR_disorganised_armed_forces_21
+					}
+					remove_ideas = TUR_disorganised_armed_forces_21
+				}
+				else_if = {
+					limit = {
+						has_idea = TUR_disorganised_armed_forces_22
+					}
+					remove_ideas = TUR_disorganised_armed_forces_22
+				}
+				else_if = {
+					limit = {
+						has_idea = TUR_disorganised_armed_forces_23
+					}
+					remove_ideas = TUR_disorganised_armed_forces_23
+				}
+				else_if = {
+					limit = {
+						has_idea = TUR_disorganised_armed_forces_24
+					}
+					remove_ideas = TUR_disorganised_armed_forces_24
+				}
+				else_if = {
+					limit = {
+						has_idea = TUR_disorganised_armed_forces_25
+					}
+					remove_ideas = TUR_disorganised_armed_forces_25
+				}
+				else_if = {
+					limit = {
+						has_idea = TUR_disorganised_armed_forces_26
+					}
+					remove_ideas = TUR_disorganised_armed_forces_26
+				}
+				else_if = {
+					limit = {
+						has_idea = TUR_disorganised_armed_forces_27
+					}
+					remove_ideas = TUR_disorganised_armed_forces_27
+				}
+				else_if = {
+					limit = {
+						has_idea = TUR_disorganised_armed_forces_28
+					}
+					remove_ideas = TUR_disorganised_armed_forces_28
+				}
+				else_if = {
+					limit = {
+						has_idea = TUR_disorganised_armed_forces_29
+					}
+					remove_ideas = TUR_disorganised_armed_forces_29
+				}
+				else_if = {
+					limit = {
+						has_idea = TUR_disorganised_armed_forces_30
+					}
+					remove_ideas = TUR_disorganised_armed_forces_30
+				}
+			}
+		}
+	}
+}
