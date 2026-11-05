@@ -186,6 +186,20 @@ leader_traits = {
 		planning_skill_factor = 1
 		logistics_skill_factor = 1
 	}
+
+	brave = {
+		type = land
+		trait_type = personality_trait
+		
+		modifier = {
+			org_loss_at_low_org_factor = -0.1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+		
+		defense_skill = 1
+	}
 	
 	war_hero = { 
 		type = { land navy }
@@ -232,10 +246,11 @@ leader_traits = {
 		logistics_skill_factor = 1
 	}
 
-	trait_cautious = { 
+	trait_cautious = {
 		type = land
 		trait_type = personality_trait
-		
+		leader_default_proximity_offset = 1
+
 		modifier = {
 			planning_speed = -0.20
 			wounded_chance_factor = -0.5
@@ -268,10 +283,11 @@ leader_traits = {
 		logistics_skill_factor = 1
 	}
 
-	trait_reckless = { 
+	trait_reckless = {
 		type = land
 		trait_type = personality_trait
-		
+		leader_default_proximity_offset = -1
+
 		modifier = {
 			planning_speed = 0.20
 			wounded_chance_factor = 0.5  # +50% chance to get wounded
@@ -779,7 +795,11 @@ leader_traits = {
 					original_tag = ITA
 					original_tag = SWI
 					original_tag = SWE
+					original_tag = AUS
 					original_tag = BRA
+					original_tag = GER
+					original_tag = CHI # Intentionally not below 
+					original_tag = PRC
 				}
 			}
 		}
@@ -795,7 +815,10 @@ leader_traits = {
 					original_tag = ITA
 					original_tag = SWI
 					original_tag = SWE
+					original_tag = AUS
 					original_tag = BRA
+					original_tag = GER
+					original_tag = PRC 
 				}
 				NOT = {
 					OR = {
@@ -826,10 +849,7 @@ leader_traits = {
 			modifier = { #ITALY
 				factor = 2
 				FROM = {
-					OR = {
-						has_completed_focus = ITA_strengthen_the_blackshirts
-						#TODO_Manu: Alt-hist focuses
-					}
+					has_completed_focus = ITA_strengthen_the_blackshirts
 				}
 			}
 			modifier = { #ITALY
@@ -1159,12 +1179,12 @@ leader_traits = {
 	cavalry_leader = { 
 		type = corps_commander
 		gain_xp = {
-			set_temp_variable = { temp = num_units }
-			multiply_temp_variable = { temp = 0.4 }
-			set_temp_variable = { cmm = num_cavalry }
-			add_to_temp_variable = { cmm = num_motorized }
-			add_to_temp_variable = { cmm = num_mechanized }
-			check_variable = { cmm > temp }
+			check_expr = {
+				value = num_cavalry
+				add = num_motorized
+				add = num_mechanized
+				greater_than = { value = num_units  multiply = 0.4 }
+			}
 		}
 		custom_gain_xp_trigger_tooltip = cavalary_ratio_over_40
 		
@@ -1190,9 +1210,10 @@ leader_traits = {
 	infantry_leader = { 
 		type = corps_commander
 		gain_xp = {
-			set_temp_variable = { temp = num_units }
-			multiply_temp_variable = { temp = 0.8 }
-			check_variable = { num_infantry > temp }
+			check_expr = {
+				value = num_infantry
+				greater_than = { value = num_units  multiply = 0.8 }
+			}
 		}
 		custom_gain_xp_trigger_tooltip = infantry_ratio_over_80
 		
@@ -1243,7 +1264,6 @@ leader_traits = {
 		expert_advisor_trait = army_logistics_2
 		genius_advisor_trait = army_logistics_3
 	}
-
 	trickster = { 
 		type = corps_commander
 		gain_xp = {
@@ -1375,9 +1395,10 @@ leader_traits = {
 	panzer_leader = {
  		type = corps_commander
 		gain_xp = {
-			set_temp_variable = { temp = num_units }
-			multiply_temp_variable = { temp = 0.4 }
-			check_variable = { num_armored > temp }
+			check_expr = {
+				value = num_armored
+				greater_than = { value = num_units  multiply = 0.4 }
+			}
 		}
 		custom_gain_xp_trigger_tooltip = armored_ratio_over_40
 		cost = 700
@@ -1978,7 +1999,7 @@ leader_traits = {
 		type = navy
 		cost = 500
 		gain_xp = {
-			#gains XP when running away
+			fastest_unit > 3.2
 		}
 		modifier = {
 			naval_retreat_chance = 0.2
@@ -2134,7 +2155,7 @@ leader_traits = {
 	concealment_expert = { 
 		type = navy
 		modifier = {
-			navy_visibility = -0.2
+			navy_visibility = -0.1
 		}
 				
 		ai_will_do = {
@@ -2200,7 +2221,8 @@ leader_traits = {
 		}
 		
 		trait_type = assignable_trait
-		any_parent = { seawolf spotter fleet_protector superior_tactician }
+		any_parent = { seawolf spotter fleet_protector superior_tactician } 
+		mutually_exclusive = silent_hunter
 		
 		gui_row = 3
 		gui_column = 1
@@ -2758,7 +2780,7 @@ leader_traits = {
 			
 		}
 		trait_xp_factor = {
-			ironside = 0.5     #+100%
+			ironside = 1     #+100%
 		}
 		new_commander_weight = {
 			factor = 1  
@@ -2947,7 +2969,7 @@ leader_traits = {
 			
 		}
 		trait_xp_factor = {
-			air_controller = 0.5     #+100%
+			air_controller = 1     #+100%
 		}
 		new_commander_weight = {
 			factor = 1  
@@ -3049,6 +3071,253 @@ leader_traits = {
 		}
 	}
 
+#################################
+# Ship Captains
+#################################
+
+	submarine_officer = {
+		type = navy
+		trait_type = personality_trait
+
+		country_trigger = {
+			NOT = {
+				OR = {
+					has_idea = best_of_the_best_naval_academy_spirit
+					has_idea = naval_academy_scholarships_spirit
+					has_idea = SOV_purged_junior_navy_officers_3 
+				}
+			}
+		}
+
+		allowed_ship_equipments = {
+			ship_hull_submarine
+		}
+
+		trait_xp_factor = {
+			seawolf = 0.5
+			spotter = 0.5
+		}
+		new_commander_weight = {
+			factor = 1  
+			modifier = {
+				FROM = { has_idea = best_of_the_best_naval_academy_spirit }
+				factor = 0
+			}
+			modifier = {
+				FROM = { has_idea = naval_academy_scholarships_spirit }
+				factor = 0
+			}
+			modifier = { #Purged Junior Navy Officers
+				FROM = { has_idea = SOV_purged_junior_navy_officers_3 }
+				factor = 0
+			}
+			modifier = {
+				FROM = { 
+					has_dlc = "Thunder at Our Gates"
+				}
+				factor = 0
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	destroyer_officer = {
+		type = navy
+		trait_type = personality_trait
+
+		country_trigger = {
+			NOT = {
+				OR = {
+					has_idea = best_of_the_best_naval_academy_spirit
+					has_idea = naval_academy_scholarships_spirit
+					has_idea = SOV_purged_junior_navy_officers_3 
+				}
+			}
+		}
+
+		allowed_ship_equipments = {
+			ship_hull_light
+		}
+
+		trait_xp_factor	= {
+			blockade_runner = 0.5
+			fleet_protector = 0.5
+		}
+		new_commander_weight = {
+			factor = 1  
+			modifier = {
+				FROM = { has_idea = best_of_the_best_naval_academy_spirit }
+				factor = 0
+			}
+			modifier = {
+				FROM = { has_idea = naval_academy_scholarships_spirit }
+				factor = 0
+			}
+			modifier = { #Purged Junior Navy Officers
+				FROM = { has_idea = SOV_purged_junior_navy_officers_3 }
+				factor = 0
+			}
+			modifier = {
+				FROM = { 
+					has_dlc = "Thunder at Our Gates"
+				}
+				factor = 0
+			}
+		}		
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+	cruiser_officer = {
+		type = navy
+		trait_type = personality_trait
+
+		country_trigger = {
+			NOT = {
+				OR = {
+					has_idea = best_of_the_best_naval_academy_spirit
+					has_idea = naval_academy_scholarships_spirit
+					has_idea = SOV_purged_junior_navy_officers_3 
+				}
+			}
+		}
+
+		allowed_ship_equipments = {
+			ship_hull_cruiser
+		}
+
+		trait_xp_factor	= {
+			superior_tactician = 0.5
+			fleet_protector = 0.5
+		}
+		new_commander_weight = {
+			factor = 1  
+			modifier = {
+				FROM = { has_idea = best_of_the_best_naval_academy_spirit }
+				factor = 0
+			}
+			modifier = {
+				FROM = { has_idea = naval_academy_scholarships_spirit }
+				factor = 0
+			}
+			modifier = { #Purged Junior Navy Officers
+				FROM = { has_idea = SOV_purged_junior_navy_officers_3 }
+				factor = 0
+			}
+			modifier = {
+				FROM = { 
+					has_dlc = "Thunder at Our Gates"
+				}
+				factor = 0
+			}
+		}		
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+	heavy_ship_officer = {
+		type = navy
+		trait_type = personality_trait
+
+		country_trigger = {
+			NOT = {
+				OR = {
+					has_idea = best_of_the_best_naval_academy_spirit
+					has_idea = naval_academy_scholarships_spirit
+					has_idea = SOV_purged_junior_navy_officers_3 
+				}
+			}
+		}
+
+		allowed_ship_equipments = {
+			ship_hull_heavy
+		}
+
+		trait_xp_factor	= {
+			superior_tactician = 0.5
+			ironside = 0.5
+		}
+		new_commander_weight = {
+			factor = 1  
+			modifier = {
+				FROM = { has_idea = best_of_the_best_naval_academy_spirit }
+				factor = 0
+			}
+			modifier = {
+				FROM = { has_idea = naval_academy_scholarships_spirit }
+				factor = 0
+			}
+			modifier = { #Purged Junior Navy Officers
+				FROM = { has_idea = SOV_purged_junior_navy_officers_3 }
+				factor = 0
+			}
+			modifier = {
+				FROM = { 
+					has_dlc = "Thunder at Our Gates"
+				}
+				factor = 0
+			}
+		}		
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+	carrier_officer = {
+		type = navy
+		trait_type = personality_trait
+
+		country_trigger = {
+			NOT = {
+				OR = {
+					has_idea = best_of_the_best_naval_academy_spirit
+					has_idea = naval_academy_scholarships_spirit
+					has_idea = SOV_purged_junior_navy_officers_3 
+				}
+			}
+		}
+
+		allowed_ship_equipments = {
+			ship_hull_carrier
+		}
+
+		trait_xp_factor	= {
+			air_controller = 0.5
+			spotter = 0.5
+		}
+		new_commander_weight = {
+			factor = 1  
+			modifier = {
+				FROM = { has_idea = best_of_the_best_naval_academy_spirit }
+				factor = 0
+			}
+			modifier = {
+				FROM = { has_idea = naval_academy_scholarships_spirit }
+				factor = 0
+			}
+			modifier = { #Purged Junior Navy Officers
+				FROM = { has_idea = SOV_purged_junior_navy_officers_3 }
+				factor = 0
+			}
+			modifier = {
+				FROM = { 
+					has_dlc = "Thunder at Our Gates"
+				}
+				factor = 0
+			}
+		}		
+		ai_will_do = {
+			factor = 1
+		}		
+	}
+
 ##################################
 # status traits
 ##################################
@@ -3133,6 +3402,17 @@ leader_traits = {
 		defense_skill = -1
 		logistics_skill = -1
 		planning_skill = -1
+	}
+
+	motivated = { 
+		type = land
+		trait_type = status_trait
+		
+		attack_skill = 1
+
+		non_shared_modifier = {
+			army_morale_factor = 0.10
+		}
 	}
 
 	# defective_geneseed = { #needs more code support, remove before launch
@@ -3374,6 +3654,192 @@ leader_traits = {
 			factor = 0
 		}
 	}
+
+	trait_HUN_fascist_sympathies = {
+
+		type = all
+		trait_type = personality_trait
+		gain_xp = {
+			always = no # not gainable
+		}
+		allowed = {
+			FROM = {
+				original_tag = HUN
+			}
+		}
+
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+
+	trait_HUN_vitez = {
+
+		type = all
+		trait_type = personality_trait
+		gain_xp = {
+			always = no # not gainable
+		}
+		allowed = {
+			FROM = {
+				original_tag = HUN
+			}
+		}
+
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+
+	trait_JAP_kodoha_sympathizer = {
+
+		type = all
+		trait_type = personality_trait
+		gain_xp = {
+			always = no # not gainable
+		}
+		allowed = {
+			FROM = {
+				original_tag = JAP
+			}
+		}
+		
+		new_commander_weight = {
+			factor = 0  
+		}
+
+	}
+
+	JAP_royal_lineage = { 
+		type = all
+		trait_type = personality_trait
+		gain_xp = {
+			always = no # not gainable
+		}
+		allowed = {
+			FROM = {
+				original_tag = JAP
+			}
+		}
+		modifier = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+
+	JAP_kamikaze_proponent = { 
+		type = navy
+		trait_type = personality_trait
+
+		gain_xp = {
+			always = no # not gainable
+		}
+		allowed = {
+			FROM = {
+				original_tag = JAP
+			}
+		}
+		
+		modifier = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+
+	JAP_tohokai_sympathies = {
+
+		type = all
+		trait_type = personality_trait
+		gain_xp = {
+			always = no # not gainable
+		}
+		allowed = {
+			FROM = {
+				original_tag = JAP
+			}
+		}
+		
+		new_commander_weight = {
+			factor = 0  
+		}
+
+	}
+
+	JAP_IJA_loyalist = {
+
+		type = all
+		trait_type = personality_trait
+		gain_xp = {
+			always = no # not gainable
+		}
+		allowed = {
+			FROM = {
+				original_tag = JAP
+			}
+		}
+		
+		new_commander_weight = {
+			factor = 0  
+		}
+
+	}
+
+	JAP_government_supporter = {
+
+		type = all
+		trait_type = personality_trait
+		gain_xp = {
+			always = no # not gainable
+		}
+		allowed = {
+			FROM = {
+				original_tag = JAP
+			}
+		}
+		
+		new_commander_weight = {
+			factor = 0  
+		}
+
+	}
+
+	expeditionary_leader_trait = {
+		type = land
+		trait_type = personality_trait
+		gain_xp = {
+			always = no # not gainable
+		}
+		
+		modifier = {
+			max_commander_army_size = -18
+			max_army_group_size = -4
+			army_non_core_attack_factor = 0.10
+			army_non_core_defence_factor = 0.10
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+
+
+
 
 ##################################
 # operative traits
@@ -3620,6 +4086,156 @@ leader_traits = {
 
 		new_commander_weight = {
 			factor = 0
+		}
+	}
+
+	inspirational_bagpiper = { 
+		type = { land }
+		trait_type = personality_trait
+		
+		modifier = {
+			wounded_chance_factor = 0.65
+			experience_gain_army_unit_factor = 0.1
+			army_strength_factor = 0.1  
+		}
+		
+		new_commander_weight = {
+			factor = 0  
+		}
+	}
+
+	loyalty_to_britain = {
+		type = { land }
+		trait_type = personality_trait
+		
+		new_commander_weight = {
+			factor = 0  
+		}
+	}
+
+	loyalty_to_pakistan = {
+		type = { land }
+		trait_type = personality_trait
+		
+		new_commander_weight = {
+			factor = 0  
+		}
+	}
+
+	loyalty_to_india = {
+		type = { land }
+		trait_type = personality_trait
+		
+		new_commander_weight = {
+			factor = 0  
+		}
+	}
+
+	IRQ_golden_square_member = {
+		type = { land }
+		trait_type = personality_trait
+		
+		new_commander_weight = {
+			factor = 0  
+		}
+	}
+
+	PRC_survivor_of_the_long_march = {
+		type = { land }
+		trait_type = personality_trait
+		
+		new_commander_weight = {
+			factor = 0  
+		}
+
+		modifier = {
+			out_of_supply_factor = -0.1
+			equipment_capture = 0.03
+		}
+		
+	}
+
+	SIC_dubious_loyalty = {
+		type = { land }
+		trait_type = personality_trait
+		
+		new_commander_weight = {
+			factor = 0  
+		}
+
+		modifier = {
+			
+		}
+		
+	}
+
+	YUN_dubious_loyalty = {
+		type = { land }
+		trait_type = personality_trait
+		
+		new_commander_weight = {
+			factor = 0  
+		}
+
+		modifier = {
+			
+		}
+		
+	}
+	
+	CHI_dubious_loyalty = {
+		type = { land }
+		trait_type = personality_trait
+		
+		new_commander_weight = {
+			factor = 0  
+		}
+
+		modifier = {
+			
+		}
+		
+	}
+
+
+	XSM_dubious_loyalty = {
+		type = { land }
+		trait_type = personality_trait
+		
+		new_commander_weight = {
+			factor = 0  
+		}
+
+		modifier = {
+			
+		}
+		
+	}
+
+	INS_loyalty_to_indonesia = {
+		type = { land }
+		trait_type = personality_trait
+		
+		new_commander_weight = {
+			factor = 0  
+		}
+	}
+
+	INS_loyalty_to_netherlands = {
+		type = { land }
+		trait_type = personality_trait
+		
+		new_commander_weight = {
+			factor = 0  
+		}
+	}
+
+	INS_secret_commander = {
+		type = { land }
+		trait_type = status_trait
+		
+		new_commander_weight = {
+			factor = 0  
 		}
 	}
 

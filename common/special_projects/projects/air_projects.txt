@@ -615,18 +615,17 @@ sp_air_mothership_aircraft = {
 	available = { 
 		AND = {
 			date > 1942.1.1
-			if = {
-				limit = {
-					has_dlc = "By Blood Alone"
-				}
-				FROM = {
-					has_tech = improved_large_airframe
-				}
+		if = {
+			limit = {
+				has_dlc = "By Blood Alone"
 			}
-			else = {
-				FROM = { 
-					has_tech = strategic_bomber2
-				}
+			FROM = {
+				has_tech = improved_large_airframe
+			}
+		}
+		else = {
+			FROM = { 
+				has_tech = strategic_bomber2
 			}
 		}
 

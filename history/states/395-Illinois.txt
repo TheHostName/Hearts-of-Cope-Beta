@@ -6,6 +6,8 @@ state={
 	state_category = megalopolis
 	resources={
 		steel=120 
+	
+		coal = 34 #initial distribution = with infra 111.6 / 1280 total
 	}
 	history={
 		owner = USA

@@ -1,0 +1,43 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "Stalin_paranoia_container"
+		position = { x = 1050 y = 0 }
+		size = { width=69 height=24 }
+		Orientation = UPPER_LEFT
+		clipping = no
+
+		iconType ={
+			name ="Stalin_paranoia_value_bg"
+			spriteType = "GFX_generic_box_small"
+			position = { x=2 y=4 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "paranoia_button"
+			position = { x = 2 y = 2 }
+			quadTextureSprite ="GFX_FOCUS_FILTER_SOV_POLITICAL_PARANOIA"
+			Orientation = "UPPER_LEFT"
+			scale = 0.9
+			alwaystransparent = yes
+		}
+		
+		instantTextboxType = {
+			name = "Stalin_paranoia_variable_topbar"
+			position = { x = 15 y = 8 }
+			font = "hoi_18mbs"
+			borderSize = {x = 0 y = 0}
+			text= [GetParanoiaValueColor][?SOV_paranoia]%
+			maxWidth = 69
+			maxHeight = 24
+			fixedsize = yes
+			format = center
+			alwaystransparent = yes
+			}
+	
+	
+		
+		}
+	}

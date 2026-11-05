@@ -493,7 +493,7 @@ equipment_modules = {
 		dismantle_cost_ic = 1
 		add_stats = {
 			build_cost_ic = 1.5
-			reliability = 0.2
+			reliability = 0.05
 			defense = 8
 		}
 
@@ -585,7 +585,7 @@ equipment_modules = {
 		xp_cost = 1
 		add_stats = {
 			build_cost_ic = 3
-			reliability = 0.2
+			reliability = 0.05
 			defense = 8
 		}
 
@@ -943,7 +943,7 @@ equipment_modules = {
 			ap_attack = 70
 			build_cost_ic = 2
 			maximum_speed = -0.2
-			reliability = -0.15
+			reliability = -0.10
 		}
 		dismantle_cost_ic = 1
 		xp_cost = 1
@@ -971,7 +971,7 @@ equipment_modules = {
 			ap_attack = 80
 			build_cost_ic = 3
 			maximum_speed = -0.3
-			reliability = -0.15
+			reliability = -0.50
 		}
 		dismantle_cost_ic = 1
 		xp_cost = 1
@@ -998,7 +998,7 @@ equipment_modules = {
 			ap_attack = 110
 			build_cost_ic = 4
 			maximum_speed = -0.3
-			reliability = -0.15
+			reliability = -0.9
 		}
 		dismantle_cost_ic = 1
 		xp_cost = 1
@@ -1137,7 +1137,7 @@ equipment_modules = {
 			ap_attack = 75
 			build_cost_ic = 2
 			maximum_speed = -0.1
-			reliability = -0.05
+			reliability = -0.1
 		}
 		dismantle_cost_ic = 1
 		xp_cost = 1
@@ -1163,7 +1163,7 @@ equipment_modules = {
 			ap_attack = 125
 			build_cost_ic = 3
 			maximum_speed = -0.3
-			reliability = -0.175
+			reliability = -0.5
 		}
 		dismantle_cost_ic = 1
 		xp_cost = 1
@@ -1189,7 +1189,7 @@ equipment_modules = {
 			ap_attack = 175
 			build_cost_ic = 4
 			maximum_speed = -0.4
-			reliability = -0.2
+			reliability = -0.9
 		}
 		dismantle_cost_ic = 1
 		xp_cost = 1
@@ -1216,7 +1216,7 @@ equipment_modules = {
 			ap_attack = 75
 			build_cost_ic = 3
 			maximum_speed = -0.3
-			reliability = -0.25
+			reliability = -0.1
 		}
 		dismantle_cost_ic = 1
 		xp_cost = 1
@@ -1243,7 +1243,7 @@ equipment_modules = {
 			ap_attack = 100
 			build_cost_ic = 4
 			maximum_speed = -0.4
-			reliability = -0.25
+			reliability = -0.50
 		}
 		dismantle_cost_ic = 1
 		xp_cost = 1
@@ -1270,7 +1270,7 @@ equipment_modules = {
 			ap_attack = 125
 			build_cost_ic = 5
 			maximum_speed = -0.5
-			reliability = -0.3
+			reliability = -0.9
 		}
 		dismantle_cost_ic = 1
 		xp_cost = 1

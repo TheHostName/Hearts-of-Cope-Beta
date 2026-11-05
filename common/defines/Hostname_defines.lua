@@ -275,3 +275,7 @@ NDefines.NSupply.SUPPLY_FLOW_DIST_LOGISTICS_FALLOFF_K = 1.3 -- How steep the cur
 NDefines.NSupply.SUPPLY_FLOW_DIST_LOGISTICS_FALLOFF_MIDPOINT = 2.3 -- sigmoid inflection point
 NDefines.NSupply.SUPPLY_FLOW_DIST_LOGISTICS_FALLOFF_SCALAR = 0.9 -- Max Penalty adjustment due to distance
 NDefines.NSupply.SUPPLY_FLOW_DIST_LOGISTICS_FALLOFF_MIN_PENALTY_SCALE = 0.25 -- Logistics curve never reduces penalty facor below this limit
+-- ###########################################################################################################
+-- DOCTRINES
+	NDefines.NDoctrines.TRAINING_MASTERY_GAIN_FACTOR = 0.2
+	NDefines.NDoctrines.MASTERY_BANK_MAX = 300.0

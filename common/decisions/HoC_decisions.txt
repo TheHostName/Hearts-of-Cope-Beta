@@ -132,201 +132,201 @@ HoC_Decisions = {
 					}
 	}
 
-Set_hosttool_nation_UK = { 
-	
-	icon = aluminium
-	
-	allowed = {
-		tag = ENG
-		NOT = {
-			has_global_flag = Hosttool_is_set_GER
+	Set_hosttool_nation_UK = { 
+		
+		icon = aluminium
+		
+		allowed = {
+			tag = ENG
+			NOT = {
+				has_global_flag = Hosttool_is_set_GER
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_JAP
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_ENG
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_USA
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_SOV
+			}
 		}
-		NOT = {
-			has_global_flag = Hosttool_is_set_JAP
+
+		available = {
+			tag = ENG
+			NOT = {
+				has_global_flag = Hosttool_is_set_GER
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_JAP
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_ENG
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_USA
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_SOV
+			}
 		}
-		NOT = {
-			has_global_flag = Hosttool_is_set_ENG
+
+		visible = {
+			tag = ENG
 		}
-		NOT = {
-			has_global_flag = Hosttool_is_set_USA
+
+		fire_only_once = yes
+
+		cost = 0
+		days_remove = 0
+
+		modifier = {
 		}
-		NOT = {
-			has_global_flag = Hosttool_is_set_SOV
+
+		ai_will_do = {
+			factor = 0
 		}
+
+		complete_effect = {
+			ENG = { 
+				set_country_flag = ccshtool_enabled_cflag
+			}
+			set_global_flag = Hosttool_is_set_ENG
+					}
 	}
+	Set_hosttool_nation_USA = { 
+		
+		icon = aluminium
+		
+		allowed = {
+			tag = USA
+			NOT = {
+				has_global_flag = Hosttool_is_set_GER
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_JAP
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_ENG
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_USA
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_SOV
+			}
+		}
 
-	available = {
-		tag = ENG
-		NOT = {
-			has_global_flag = Hosttool_is_set_GER
+		available = {
+			tag = USA
+			NOT = {
+				has_global_flag = Hosttool_is_set_GER
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_JAP
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_ENG
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_USA
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_SOV
+			}
 		}
-		NOT = {
-			has_global_flag = Hosttool_is_set_JAP
+
+		visible = {
+			tag = USA
 		}
-		NOT = {
-			has_global_flag = Hosttool_is_set_ENG
+
+		fire_only_once = yes
+
+		cost = 0
+		days_remove = 0
+
+		modifier = {
 		}
-		NOT = {
-			has_global_flag = Hosttool_is_set_USA
+
+		ai_will_do = {
+			factor = 0
 		}
-		NOT = {
-			has_global_flag = Hosttool_is_set_SOV
-		}
+
+		complete_effect = {
+			USA = { 
+				set_country_flag = ccshtool_enabled_cflag
+			}
+			set_global_flag = Hosttool_is_set_USA
+					}
 	}
+	Set_hosttool_nation_JAP = { 
+		
+		icon = aluminium
+		
+		allowed = {
+			tag = JAP
+			NOT = {
+				has_global_flag = Hosttool_is_set_GER
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_JAP
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_ENG
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_USA
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_SOV
+			}
+		}
 
-	visible = {
-		tag = ENG
+		available = {
+			tag = JAP
+			NOT = {
+				has_global_flag = Hosttool_is_set_GER
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_JAP
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_ENG
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_USA
+			}
+			NOT = {
+				has_global_flag = Hosttool_is_set_SOV
+			}
+		}
+
+		visible = {
+			tag = JAP
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+		days_remove = 0
+
+		modifier = {
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			JAP = { 
+				set_country_flag = ccshtool_enabled_cflag
+			}
+			set_global_flag = Hosttool_is_set_JAP
+					}
 	}
-
-	fire_only_once = yes
-
-	cost = 0
-	days_remove = 0
-
-	modifier = {
-	}
-
-	ai_will_do = {
-		factor = 0
-	}
-
-	complete_effect = {
-		ENG = { 
-			set_country_flag = ccshtool_enabled_cflag
-		}
-		set_global_flag = Hosttool_is_set_ENG
-				}
-}
-Set_hosttool_nation_USA = { 
-	
-	icon = aluminium
-	
-	allowed = {
-		tag = USA
-		NOT = {
-			has_global_flag = Hosttool_is_set_GER
-		}
-		NOT = {
-			has_global_flag = Hosttool_is_set_JAP
-		}
-		NOT = {
-			has_global_flag = Hosttool_is_set_ENG
-		}
-		NOT = {
-			has_global_flag = Hosttool_is_set_USA
-		}
-		NOT = {
-			has_global_flag = Hosttool_is_set_SOV
-		}
-	}
-
-	available = {
-		tag = USA
-		NOT = {
-			has_global_flag = Hosttool_is_set_GER
-		}
-		NOT = {
-			has_global_flag = Hosttool_is_set_JAP
-		}
-		NOT = {
-			has_global_flag = Hosttool_is_set_ENG
-		}
-		NOT = {
-			has_global_flag = Hosttool_is_set_USA
-		}
-		NOT = {
-			has_global_flag = Hosttool_is_set_SOV
-		}
-	}
-
-	visible = {
-		tag = USA
-	}
-
-	fire_only_once = yes
-
-	cost = 0
-	days_remove = 0
-
-	modifier = {
-	}
-
-	ai_will_do = {
-		factor = 0
-	}
-
-	complete_effect = {
-		USA = { 
-			set_country_flag = ccshtool_enabled_cflag
-		}
-		set_global_flag = Hosttool_is_set_USA
-				}
-}
-Set_hosttool_nation_JAP = { 
-	
-	icon = aluminium
-	
-	allowed = {
-		tag = JAP
-		NOT = {
-			has_global_flag = Hosttool_is_set_GER
-		}
-		NOT = {
-			has_global_flag = Hosttool_is_set_JAP
-		}
-		NOT = {
-			has_global_flag = Hosttool_is_set_ENG
-		}
-		NOT = {
-			has_global_flag = Hosttool_is_set_USA
-		}
-		NOT = {
-			has_global_flag = Hosttool_is_set_SOV
-		}
-	}
-
-	available = {
-		tag = JAP
-		NOT = {
-			has_global_flag = Hosttool_is_set_GER
-		}
-		NOT = {
-			has_global_flag = Hosttool_is_set_JAP
-		}
-		NOT = {
-			has_global_flag = Hosttool_is_set_ENG
-		}
-		NOT = {
-			has_global_flag = Hosttool_is_set_USA
-		}
-		NOT = {
-			has_global_flag = Hosttool_is_set_SOV
-		}
-	}
-
-	visible = {
-		tag = JAP
-	}
-
-	fire_only_once = yes
-
-	cost = 0
-	days_remove = 0
-
-	modifier = {
-	}
-
-	ai_will_do = {
-		factor = 0
-	}
-
-	complete_effect = {
-		JAP = { 
-			set_country_flag = ccshtool_enabled_cflag
-		}
-		set_global_flag = Hosttool_is_set_JAP
-				}
-}
 
 	add_convoy = {
 		priority = 100
@@ -438,18 +438,15 @@ Set_hosttool_nation_JAP = {
 			SAF = { add_ideas = NO_asia_building_space_buff}
 
 			CAN = { remove_ideas = asia_matters }
+			USA = { 
+				annex_country = { target = PHI transfer_troops = yes }
+			}
 			JAP = { 
 				annex_country = { target = MAN transfer_troops = yes }
+				annex_country = { target = MEN transfer_troops = yes }
+				annex_country = { target = SIA transfer_troops = yes }
 			}
-			CHI = { 
-				annex_country = { target = GXC transfer_troops = yes }
-				annex_country = { target = SHX transfer_troops = yes }
-				annex_country = { target = PRC transfer_troops = yes }
-				annex_country = { target = XSM transfer_troops = yes }
-				annex_country = { target = TNG transfer_troops = yes }
-				annex_country = { target = SIK transfer_troops = yes }
-				annex_country = { target = YUN transfer_troops = yes }
-			}
+
 			611 = { 
 				add_core_of = JAP
 			}
@@ -483,7 +480,7 @@ Set_hosttool_nation_JAP = {
 				send_embargo = CAN
 				send_embargo = SAF
 				send_embargo = MEX
-				}
+			}
 			USA = { 
 				send_embargo = GER
 				send_embargo = HUN
@@ -496,7 +493,7 @@ Set_hosttool_nation_JAP = {
 						NOT = { has_idea = export_focus }
 					}
 					add_ideas = export_focus
-			}
+				}
 			}
 			JAP = {
 				send_embargo = ENG
@@ -508,8 +505,8 @@ Set_hosttool_nation_JAP = {
 			set_global_flag = No_Asia_flag
 		}
 	}
+
 	no_fun_allowed_flag = { 
-	
 		icon = aluminium
 		
 		allowed = {
@@ -540,60 +537,62 @@ Set_hosttool_nation_JAP = {
 			set_global_flag = no_fun_allowed
 					}
 	}
-		Canada_annex_SAF = { 
-	
-			icon = aluminium
-			
-			allowed = {
-			}
-	
-			available = {
-				has_country_flag = ccshtool_enabled_cflag
-			}
-	
-			visible = {
-			}
-	
-			fire_only_once = yes
-	
-			cost = 0
-			days_remove = 0
-	
-			modifier = {
-			}
-	
-			ai_will_do = {
-				factor = 0
-			}
-	
-			complete_effect = {
-				CAN = { 
-					annex_country = { target = SAF transfer_troops = yes }
-				}
 
-				895 = { 
-					add_core_of = CAN
-					}
-				894 = { 
-					add_core_of = CAN
+	Canada_annex_SAF = { 
+
+		icon = aluminium
+		
+		allowed = {
+		}
+
+		available = {
+			has_country_flag = ccshtool_enabled_cflag
+		}
+
+		visible = {
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+		days_remove = 0
+
+		modifier = {
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			CAN = { 
+				annex_country = { target = SAF transfer_troops = yes }
+			}
+
+			895 = { 
+				add_core_of = CAN
 				}
-				541 = { 
-					add_core_of = CAN
-				}
-				893 = { 
-					add_core_of = CAN
-				}
-				681 = { 
-					add_core_of = CAN
-				}
-				275 = { 
-					add_core_of = CAN
-				}
-				719 = { 
-					add_core_of = CAN
-				}
+			894 = { 
+				add_core_of = CAN
+			}
+			541 = { 
+				add_core_of = CAN
+			}
+			893 = { 
+				add_core_of = CAN
+			}
+			681 = { 
+				add_core_of = CAN
+			}
+			275 = { 
+				add_core_of = CAN
+			}
+			719 = { 
+				add_core_of = CAN
 			}
 		}
+	}
+
 	NO_ASIA_attache = {
         cost = 100
 
@@ -620,6 +619,7 @@ Set_hosttool_nation_JAP = {
 			factor = 999
 		}
 	}
+
 	NO_ASIA_china_war_tension = {
 
         fire_only_once = yes
@@ -651,8 +651,8 @@ Set_hosttool_nation_JAP = {
 			factor = 999
 		}
 	}
-	NO_ASIA_china_war_end_tension = {
 
+	NO_ASIA_china_war_end_tension = {
         fire_only_once = yes
 
 		allowed = { 
@@ -682,8 +682,8 @@ Set_hosttool_nation_JAP = {
 			factor = 999
 		}
 	}
-	NO_ASIA_USA_excavation_1 = {
 
+	NO_ASIA_USA_excavation_1 = {
         fire_only_once = yes
 
 		allowed = { 
@@ -704,13 +704,10 @@ Set_hosttool_nation_JAP = {
 		}
 
         complete_effect = {
-		USA = {
-				set_technology = {
-					excavation1= 1
-				}
+			USA = {
+					set_technology = { excavation1 = 1 }
+			}
 		}
-
-	}
 		ai_will_do = {
 			factor = 999
 		}
@@ -737,11 +734,9 @@ Set_hosttool_nation_JAP = {
 		}
 
         complete_effect = {
-		USA = {
-				set_technology = {
-					excavation2= 1
-				}
-		}
+			USA = {
+					set_technology = { excavation2 = 1 }
+			}
 		}
 		ai_will_do = {
 			factor = 999
@@ -769,11 +764,9 @@ Set_hosttool_nation_JAP = {
 		}
 
         complete_effect = {
-		USA = {
-				set_technology = {
-					excavation3= 1
-				}
-		}
+			USA = {
+					set_technology = { excavation3 = 1 }
+			}
 		}
 		ai_will_do = {
 			factor = 999
@@ -801,11 +794,9 @@ Set_hosttool_nation_JAP = {
 		}
 
         complete_effect = {
-		USA = {
-				set_technology = {
-					excavation4= 1
-				}
-		}
+			USA = {
+					set_technology = { excavation4 = 1 }
+			}
 		}
 		ai_will_do = {
 			factor = 999
@@ -833,11 +824,9 @@ Set_hosttool_nation_JAP = {
 		}
 
         complete_effect = {
-		USA = {
-				set_technology = {
-					excavation5= 1
-				}
-		}
+			USA = {
+					set_technology = { excavation5 = 1 }
+			}
 		}
 		ai_will_do = {
 			factor = 999
@@ -870,6 +859,11 @@ Set_hosttool_nation_JAP = {
 				transfer_state = 670
 				transfer_state = 741
 				transfer_state = 286
+				transfer_state = 1017
+				transfer_state = 1069
+				transfer_state = 1067
+				transfer_state = 1068
+				transfer_state = 1066
 
 			}
 
@@ -940,24 +934,54 @@ Set_hosttool_nation_JAP = {
 					type = rubber
 					amount = 120
 				}
-				}
+			}
 			SIA = {
 				send_embargo = ENG
 				send_embargo = FRA
 				send_embargo = CAN
 				send_embargo = SAF
 				send_embargo = MEX
-				}
-			SIA = {
-				transfer_state = 336
 			}
-			336 = { 
-				add_core_of = SIA
-				}
+
 			336 = {
-					add_dynamic_modifier = {
-						modifier = SWE_blown_up_mines
-					}
+				add_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			1061 = {
+				add_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			1065 = {
+				add_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			1064 = {
+				add_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			1062 = {
+				add_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}			
+			1063 = {
+				add_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			1060 = {
+				add_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}			
+			1021 = {
+				add_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
 			}
 			286 = {
 				add_dynamic_modifier = {
@@ -1200,10 +1224,42 @@ Set_hosttool_nation_JAP = {
 		days_remove = 30
 
 		remove_effect = {
-			MAL = {
-				transfer_state = 336
-			}
 			336 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			1061 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			1065 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			1064 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			1062 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}			
+			1063 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}
+			1060 = {
+				remove_dynamic_modifier = {
+					modifier = SWE_blown_up_mines
+				}
+			}			
+			1021 = {
 				remove_dynamic_modifier = {
 					modifier = SWE_blown_up_mines
 				}
@@ -1630,6 +1686,280 @@ Set_hosttool_nation_JAP = {
 			}
 		}
 	}
+	Australia_leads_Greater_Kiwi = { 
+	
+		icon = aluminium
+		
+		allowed = {
+			
+		}
+
+		available = {
+			tag = AST
+		}
+
+		visible = {
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+		days_remove = 0
+
+		modifier = {
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_effect = {
+			AST = { 
+				annex_country = { target = NZL transfer_troops = yes }
+			}
+			set_cosmetic_tag = AST_australasia
+			set_global_flag = AST_australasia_flag
+			custom_effect_tooltip = AST_form_australasia_melanesia_core_states_tt
+			hidden_effect = {
+				# Melanesia - West Papua New Guinea
+				669 = { add_core_of = ROOT }
+				1057 = { add_core_of = ROOT }
+
+				# Melanesia - East Papua New Guinea
+				979 = { add_core_of = ROOT }
+				523 = { add_core_of = ROOT }
+				737 = { add_core_of = ROOT }
+				1070 = { add_core_of = ROOT }
+				1073 = { add_core_of = ROOT }
+
+				# Melanesia - Solomons
+				634 = { add_core_of = ROOT }
+				734 = { add_core_of = ROOT }
+
+				# Melanesia - New Hebrides & New Caledonia
+				1071 = { add_core_of = ROOT }
+				635 = { add_core_of = ROOT }
+
+				# Melanesia - Fiji
+				636 = { add_core_of = ROOT }
+			}
+
+			# Australia
+			IF = {
+				limit = {
+					any_state = {
+						NOT = { 
+							is_core_of = ROOT
+						}
+						OR = {
+							state = 518
+							state = 517
+							state = 285
+							state = 521
+							state = 873
+							state = 1075
+							state = 519
+							state = 674
+							state = 1074
+							state = 871
+							state = 522
+							state = 870
+							state = 520
+							state = 872
+						}
+					}
+				}
+				custom_effect_tooltip = AST_form_australasia_australia_core_states_tt
+				hidden_effect = {
+					518 = { add_core_of = ROOT }
+					517 = { add_core_of = ROOT }
+					285 = { add_core_of = ROOT }
+					521 = { add_core_of = ROOT }
+					873 = { add_core_of = ROOT }
+					519 = { add_core_of = ROOT }
+					674 = { add_core_of = ROOT }
+					871 = { add_core_of = ROOT }
+					522 = { add_core_of = ROOT }
+					870 = { add_core_of = ROOT }
+					520 = { add_core_of = ROOT }
+					872 = { add_core_of = ROOT }
+					1074 = { add_core_of = ROOT }
+					1075 = { add_core_of = ROOT }
+					639 = { add_core_of = ROOT }
+					643 = { add_core_of = ROOT }
+					725 = { add_core_of = ROOT }
+				}
+			}
+
+			# New Zealand
+			IF = {
+				limit = {
+					any_state = {
+						NOT = { 
+							is_core_of = ROOT
+						}
+						OR = {
+							state = 1079
+							state = 284
+							state = 1080
+							state = 723
+							state = 1081
+						}
+					}
+				}
+				custom_effect_tooltip = AST_form_australasia_new_zealand_core_states_tt
+				hidden_effect = {
+					1079 = { add_core_of = ROOT }
+					284 = { add_core_of = ROOT }
+					1080 = { add_core_of = ROOT }
+					723 = { add_core_of = ROOT }
+					1081 = { add_core_of = ROOT }
+					639 = { add_core_of = ROOT }
+					643 = { add_core_of = ROOT }
+					725 = { add_core_of = ROOT }
+				}
+			}
+		}
+	}
+		New_zealand_leads_Greater_Kiwi = { 
+	
+		icon = aluminium
+		
+		allowed = {
+			
+		}
+
+		available = {
+			tag = NZL
+		}
+
+		visible = {
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+		days_remove = 0
+
+		modifier = {
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			NZL = { 
+				annex_country = { target = AST transfer_troops = yes }
+			}
+			set_cosmetic_tag = AST_australasia
+			set_global_flag = AST_australasia_flag
+			custom_effect_tooltip = AST_form_australasia_melanesia_core_states_tt
+			hidden_effect = {
+				# Melanesia - West Papua New Guinea
+				669 = { add_core_of = ROOT }
+				1057 = { add_core_of = ROOT }
+
+				# Melanesia - East Papua New Guinea
+				979 = { add_core_of = ROOT }
+				523 = { add_core_of = ROOT }
+				737 = { add_core_of = ROOT }
+				1070 = { add_core_of = ROOT }
+				1073 = { add_core_of = ROOT }
+
+				# Melanesia - Solomons
+				634 = { add_core_of = ROOT }
+				734 = { add_core_of = ROOT }
+
+				# Melanesia - New Hebrides & New Caledonia
+				1071 = { add_core_of = ROOT }
+				635 = { add_core_of = ROOT }
+
+				# Melanesia - Fiji
+				636 = { add_core_of = ROOT }
+			}
+
+			# Australia
+			IF = {
+				limit = {
+					any_state = {
+						NOT = { 
+							is_core_of = ROOT
+						}
+						OR = {
+							state = 518
+							state = 517
+							state = 285
+							state = 521
+							state = 873
+							state = 1075
+							state = 519
+							state = 674
+							state = 1074
+							state = 871
+							state = 522
+							state = 870
+							state = 520
+							state = 872
+						}
+					}
+				}
+				custom_effect_tooltip = AST_form_australasia_australia_core_states_tt
+				hidden_effect = {
+					518 = { add_core_of = ROOT }
+					517 = { add_core_of = ROOT }
+					285 = { add_core_of = ROOT }
+					521 = { add_core_of = ROOT }
+					873 = { add_core_of = ROOT }
+					519 = { add_core_of = ROOT }
+					674 = { add_core_of = ROOT }
+					871 = { add_core_of = ROOT }
+					522 = { add_core_of = ROOT }
+					870 = { add_core_of = ROOT }
+					520 = { add_core_of = ROOT }
+					872 = { add_core_of = ROOT }
+					1074 = { add_core_of = ROOT }
+					1075 = { add_core_of = ROOT }
+					639 = { add_core_of = ROOT }
+					643 = { add_core_of = ROOT }
+					725 = { add_core_of = ROOT }
+				}
+			}
+
+			# New Zealand
+			IF = {
+				limit = {
+					any_state = {
+						NOT = { 
+							is_core_of = ROOT
+						}
+						OR = {
+							state = 1079
+							state = 284
+							state = 1080
+							state = 723
+							state = 1081
+						}
+					}
+				}
+				custom_effect_tooltip = AST_form_australasia_new_zealand_core_states_tt
+				hidden_effect = {
+					1079 = { add_core_of = ROOT }
+					284 = { add_core_of = ROOT }
+					1080 = { add_core_of = ROOT }
+					723 = { add_core_of = ROOT }
+					1081 = { add_core_of = ROOT }
+					639 = { add_core_of = ROOT }
+					643 = { add_core_of = ROOT }
+					725 = { add_core_of = ROOT }
+				}
+			}
+		}
+	}
+		
+}
+
+	
 
 #	Hungary_annex_Romania = { 
 	#
@@ -1745,6 +2075,84 @@ Set_hosttool_nation_JAP = {
 		#	}
 		#}
 	#}
+economy_decisions = {
+	spain_resource_right_portugal = { 
+
+		icon = aluminium
+		
+		allowed = {
+			tag = SPR
+			date > 01.01.1939
+		}
+
+		available = {
+			tag = SPR
+			date > 1939.01.01
+		}
+
+		visible = {
+			tag = SPR
+		}
+
+		fire_only_once = yes
+
+		cost = 150
+		days_remove = 0
+
+		modifier = {
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		complete_effect = {
+			POR = {give_resource_rights = { receiver = SPR state = 181 } }
+			POR = {give_resource_rights = { receiver = SPR state = 112 } }
+			POR = {give_resource_rights = { receiver = SPR state = 795 } }
+		}
+	}
+	spain_embargo_allies= { 
+
+		icon = aluminium
+		
+		allowed = {
+			tag = SPR
+
+		}
+
+		available = {
+			tag = SPR
+			date > 1941.06.01
+		}
+
+		visible = {
+			tag = SPR
+		}
+
+		fire_only_once = yes
+
+		cost = 150
+		days_remove = 0
+
+		modifier = {
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		complete_effect = {
+			SPR = {
+				send_embargo = ENG
+				send_embargo = FRA
+				send_embargo = CAN
+				send_embargo = SAF
+				send_embargo = MEX
+				}
+		}
+	}
 
 }
+
 

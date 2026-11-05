@@ -1,7 +1,7 @@
 types = {
 
 	nuclear_strike = {
-		days_to_prepare = 3
+		days_to_prepare = 2
 
 		category = nuclear_raids
 
@@ -246,7 +246,7 @@ types = {
 	nuclear_missile_strike = { #Only from Rocket Sites
 		category = nuclear_raids
 
-		days_to_prepare = 3
+		days_to_prepare = 2
 		speed_multiplier = 0.08
 		ai_will_do = {
 			base = 1
@@ -500,6 +500,11 @@ types = {
             scale = 0.5
         }
 
+        unit_animations = {
+            stage = { state = "idle" }
+            stage = { state = "idle2" intro = "idle2_intro" at_progress = 0.33 }
+            stage = { state = "idle3" intro = "idle3_intro" at_progress = 0.66 }
+        }
 		success_factors = {
 			success = {
 				base = 0.8
@@ -576,7 +581,7 @@ types = {
 	}
 
 	thermonuclear_strike = {
-		days_to_prepare = 3
+		days_to_prepare = 1
 
 		category = nuclear_raids
 
@@ -831,7 +836,7 @@ types = {
 	thermonuclear_missile_strike = { #Only from Rocket Sites
 		category = nuclear_raids
 
-		days_to_prepare = 3
+		days_to_prepare = 1
 		speed_multiplier = 0.08
 
 		ai_will_do = {
@@ -921,6 +926,11 @@ types = {
             scale = 0.5
         }
 
+        unit_animations = {
+            stage = { state = "idle" }
+            stage = { state = "idle2" intro = "idle2_intro" at_progress = 0.33 }
+            stage = { state = "idle3" intro = "idle3_intro" at_progress = 0.66 }
+        }
 		success_factors = {
 			success = {
 				base = 0.8
@@ -1089,6 +1099,11 @@ types = {
             scale = 0.5
         }
 
+        unit_animations = {
+            stage = { state = "idle" }
+            stage = { state = "idle2" intro = "idle2_intro" at_progress = 0.33 }
+            stage = { state = "idle3" intro = "idle3_intro" at_progress = 0.66 }
+        }
 		success_factors = {
 			success = {
 				base = 0.8
