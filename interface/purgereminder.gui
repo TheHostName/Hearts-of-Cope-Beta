@@ -2,7 +2,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "Stalin_paranoia_container"
-		position = { x = 1050 y = 0 }
+		position = { x = 1025 y = 0 }
 		size = { width=69 height=24 }
 		Orientation = UPPER_LEFT
 		clipping = no

@@ -1,4 +1,20 @@
 
+defined_text = {
+	name = IB_OIL_TEXT
+	text = {
+		trigger = {
+			check_variable = {resource_imported@oil > 0 }
+			check_variable = {resource@oil > resource_imported@oil }
+		}
+		localization_key = "[?resource@oil|0Y]"
+	}
+	text = {
+		trigger = {
+			always=yes
+		}
+		localization_key = "[?resource@oil|0+]"
+	}
+}
 
 defined_text = {
 	name = IB_ALM_TEXT
@@ -7,13 +23,13 @@ defined_text = {
 			check_variable = {resource_imported@aluminium > 0 }
 			check_variable = {resource@aluminium > resource_imported@aluminium }
 		}
-		localization_key = aluminium_yellow_tt
+		localization_key = "[?resource@aluminium|0Y]"
 	}
 	text = {
 		trigger = {
 			always=yes
 		}
-		localization_key = aluminium_green_tt
+		localization_key = "[?resource@aluminium|0+]"
 	}
 }
 
@@ -24,13 +40,13 @@ defined_text = { # global
 			check_variable = {resource_imported@rubber > 0 }
 			check_variable = {resource@rubber > resource_imported@rubber }
 		}
-		localization_key = "rubber_yellow_tt"
+		localization_key = "[?resource@rubber|0Y]"
 	}
 	text = {
 		trigger = {
 			always=yes
 		}
-		localization_key = rubber_green_tt
+		localization_key = "[?resource@rubber|0+]"
 	}
 }
 
@@ -41,13 +57,13 @@ defined_text = {
 			check_variable = {resource_imported@tungsten > 0 }
 			check_variable = {resource@tungsten > resource_imported@tungsten }
 		}
-		localization_key = tungsten_yellow_tt
+		localization_key = "[?resource@tungsten|0Y]"
 	}
 	text = {
 		trigger = {
 			always=yes
 		}
-		localization_key = tungsten_green_tt
+		localization_key = "[?resource@tungsten|0+]"
 	}
 }
 
@@ -58,13 +74,13 @@ defined_text = {
 			check_variable = { resource_imported@steel > 0 }
 			check_variable = { resource@steel > resource_imported@steel }
 		}
-		localization_key = steel_yellow_tt
+		localization_key = "[?resource@steel|0Y]"
 	}
 	text = {
 		trigger = {
 			always=yes
 		}
-		localization_key = steel_green_tt
+		localization_key = "[?resource@steel|0+]"
 	}
 }
 
@@ -75,12 +91,12 @@ defined_text = {
 			check_variable = {resource_imported@chromium > 0 }
 			check_variable = {resource@chromium > resource_imported@chromium }
 		}
-		localization_key = chromium_yellow_tt
+		localization_key = "[?resource@chromium|0Y]"
 	}
 	text = {
 		trigger = {
 			always=yes
 		}
-		localization_key = chromium_green_tt
+		localization_key = "[?resource@chromium|0+]"
 	}
 }
