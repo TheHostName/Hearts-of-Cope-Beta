@@ -1771,6 +1771,10 @@ HoC_Decisions = {
 				type = oil
 				amount = 50
 			}
+			add_resource = {
+				type = coal
+				amount = 50
+			}
 			}
 
 		}
