@@ -781,6 +781,8 @@ HoC_Decisions = {
 			CAN = { remove_ideas = asia_matters }
 			USA = { 
 				annex_country = { target = PHI transfer_troops = yes }
+					add_ideas = usa_noasia
+					
 			}
 			JAP = { 
 				annex_country = { target = MAN transfer_troops = yes }

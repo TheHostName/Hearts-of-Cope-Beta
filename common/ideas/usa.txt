@@ -64,6 +64,23 @@ ideas = {
 				local_resources_factor = -0.1
 			}
 		}
+			usa_noasia = {
+			picture = usa_great_depression
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				join_faction_tension = 10
+			}
+		}
 		USA_limited_intervention = {
 			picture = generic_production_bonus
 			
