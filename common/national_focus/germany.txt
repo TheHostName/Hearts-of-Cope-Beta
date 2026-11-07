@@ -1910,7 +1910,7 @@ focus_tree = {
 			has_resources_in_collection = {
 				collection = collection:country_and_all_subjects
 					resource = oil
-				amount > 149
+					amount > 100
 					extracted = yes
 			}
 		}
@@ -2089,7 +2089,7 @@ focus_tree = {
 			has_resources_in_collection = {
 				collection = collection:country_and_all_subjects
 					resource = oil
-				amount > 149 #This needs to correspond to the Bypass values in the previous focuses
+					amount > 100 #This needs to correspond to the Bypass values in the previous focuses
 					extracted = yes
 				}
 			has_resources_in_collection = {

@@ -31,10 +31,10 @@ sub_units = {
 			amphibious_tank_chassis = 40
 		}
 		manpower = 500
-		max_organisation = 12
+		max_organisation = 20
 		default_morale = 0.3
 		training_time = 180
-		max_strength = 10
+		max_strength = 5
 		weight = 1
 		supply_consumption = 0.2
 
@@ -99,10 +99,10 @@ sub_units = {
 			light_tank_amphibious_chassis = 40
 		}
 		manpower = 500
-		max_organisation = 12
+		max_organisation = 20
 		default_morale = 0.3
 		training_time = 180
-		max_strength = 10
+		max_strength = 5
 		weight = 1
 		supply_consumption = 0.2
 
@@ -167,10 +167,10 @@ sub_units = {
 			medium_tank_amphibious_chassis = 40
 		}
 		manpower = 500
-		max_organisation = 12
+		max_organisation = 20
 		default_morale = 0.3
 		training_time = 180
-		max_strength = 10
+		max_strength = 5
 		weight = 1
 		supply_consumption = 0.2
 
@@ -235,10 +235,10 @@ sub_units = {
 			heavy_tank_amphibious_chassis = 40
 		}
 		manpower = 500
-		max_organisation = 12
+		max_organisation = 20
 		default_morale = 0.3
 		training_time = 180
-		max_strength = 10
+		max_strength = 5
 		weight = 1
 		supply_consumption = 0.2
 

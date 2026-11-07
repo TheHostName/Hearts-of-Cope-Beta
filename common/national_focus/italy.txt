@@ -1,4 +1,4 @@
-### search_filters = {FOCUS_FILTER_POLITICAL}
+﻿### search_filters = {FOCUS_FILTER_POLITICAL}
 ### search_filters = {FOCUS_FILTER_RESEARCH}
 ### search_filters = {FOCUS_FILTER_INDUSTRY}
 ### search_filters = {FOCUS_FILTER_STABILITY}
@@ -168,6 +168,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
+
 			2 = { #ROME
 				if = {
 					limit = { is_controlled_by = ROOT }
@@ -4197,44 +4198,6 @@ focus_tree = {
 						trench_warfare = 0
 						mobile_warfare = 1
 					}
-					if = {
-						limit = {
-							has_tech = grand_battle_plan
-						}
-						set_technology = {
-							grand_battle_plan = 0
-							delay = 1
-						}
-					}
-					if = {
-						limit = {
-							has_tech = prepared_defense
-						}
-						set_technology = {
-							prepared_defense = 0
-							elastic_defence = 1
-						}
-					}
-					if = {
-						limit = {
-							has_tech = grand_assault
-						}
-						set_technology = {
-							grand_assault = 0
-							infantry_offensive = 0
-							armored_operations = 0
-							infiltration_assault = 0
-							night_assault_tactics = 0
-							attritional_containment = 0
-							infiltration_in_depth = 0
-							grand_mechanized_offensive = 0
-							assault_concentration = 0
-							branch_interoperation = 0
-							assault_breakthrough = 0
-							central_planning = 0
-							c3i_theory = 0
-						}
-					}
 				}
 			}
 		}
@@ -5156,8 +5119,8 @@ focus_tree = {
 			}
 
 			add_tech_bonus = {
-				name = ITA_reggianes_exports
-				bonus = 0.50
+				name = ITA_air_innovations_bba #fighter_bonus
+				bonus = 0.5
 				uses = 1
 				category = light_fighter
 			}
@@ -7531,7 +7494,7 @@ focus_tree = {
 				create_equipment_variant = {
 					name = "Conte di Savoia Class - Converted Liner"
 					type = ship_hull_carrier_conversion_ca
-					name_group = ITA_CV_HISTORICAL
+					name_group = ITA_CV_HISTORICAL #TODO_Manu: Namelist (Conte di Savoia, Rex, Neptunia, Oceania, Conte Rosso, Conte Grande, Saturnia, Vulcania, Conte Biancamo, Duilio, Conte verde, Giulio Cesare, Colombo, Tel Aviv) Excluded Roma (Aquila) and Augustus (Sparviero)
 					parent_version = 0
 					allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
 					modules = {

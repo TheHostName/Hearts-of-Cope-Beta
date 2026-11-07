@@ -7,10 +7,6 @@ leader_attack_skills = {
 		modifier = {
 			naval_damage_factor = 0.02
 		}
-		building_module_modifier = {
-			spotting_chance = 0.02
-			ships_at_battle_start = 0.02
-		}
 	}
 
 	2 = {
@@ -18,10 +14,6 @@ leader_attack_skills = {
 		type = navy
 		modifier = {
 			naval_damage_factor = 0.04
-		}
-		building_module_modifier = {
-			spotting_chance = 0.04
-			ships_at_battle_start = 0.04
 		}
 	}
 
@@ -31,10 +23,6 @@ leader_attack_skills = {
 		modifier = {
 			naval_damage_factor = 0.06
 		}
-		building_module_modifier = {
-			spotting_chance = 0.06
-			ships_at_battle_start = 0.06
-		}
 	}
 
 	4 = {
@@ -42,11 +30,6 @@ leader_attack_skills = {
 		type = navy
 		modifier = {
 			naval_damage_factor = 0.08
-		}
-		
-		building_module_modifier = {
-			spotting_chance = 0.08
-			ships_at_battle_start = 0.08
 		}
 	}
 
@@ -56,10 +39,6 @@ leader_attack_skills = {
 		modifier = {
 			naval_damage_factor = 0.1
 		}
-		building_module_modifier = {
-			spotting_chance = 0.1
-			ships_at_battle_start = 0.1
-		}
 	}
 
 	6 = {
@@ -67,10 +46,6 @@ leader_attack_skills = {
 		type = navy
 		modifier = {
 			naval_damage_factor = 0.12
-		}
-		building_module_modifier = {
-			spotting_chance = 0.12
-			ships_at_battle_start = 0.12
 		}
 	}
 
@@ -80,10 +55,6 @@ leader_attack_skills = {
 		modifier = {
 			naval_damage_factor = 0.14
 		}
-		building_module_modifier = {
-			spotting_chance = 0.14
-			ships_at_battle_start = 0.14
-		}
 	}
 
 	8 = {
@@ -92,34 +63,12 @@ leader_attack_skills = {
 		modifier = {
 			naval_damage_factor = 0.16
 		}
-		building_module_modifier = {
-			spotting_chance = 0.16
-			ships_at_battle_start = 0.16
-		}
 	}
-
 	9 = {
 		cost = 38400
 		type = navy
 		modifier = {
 			naval_damage_factor = 0.18
-		}
-		
-		building_module_modifier = {
-			spotting_chance = 0.18
-			ships_at_battle_start = 0.18
-		}
-	}
-
-	10 = {
-		cost = 51200
-		type = navy
-		modifier = {
-			naval_damage_factor = 0.50
-		}
-		building_module_modifier = {
-			spotting_chance = 0.2
-			ships_at_battle_start = 0.2
 		}
 	}
 
@@ -188,7 +137,6 @@ leader_attack_skills = {
 			offence = 0.12
 		}
 	}
-
 	9 = {
 		cost = 19200
 		type = corps_commander
@@ -196,7 +144,6 @@ leader_attack_skills = {
 			offence = 0.135
 		}
 	}
-	
 	10 = {
 		cost = 25600
 		type = corps_commander
@@ -204,7 +151,7 @@ leader_attack_skills = {
 			offence = 0.15
 		}
 	}
-		11 = {
+	11 = {
 		cost = 32000
 		type = corps_commander
 		modifier = {
@@ -218,7 +165,7 @@ leader_attack_skills = {
 			offence = 0.18
 		}
 	}
-	
+
 	
 	### Field Marshal ###
 	1 = {
@@ -228,8 +175,7 @@ leader_attack_skills = {
 			offence = 0.015
 		}
 	}
-	
-	
+		
 	2 = {
 		cost = 200
 		type = field_marshal
@@ -269,7 +215,7 @@ leader_attack_skills = {
 		modifier = {
 			offence = 0.09
 		}
-	}	
+	}
 
 	7 = {
 		cost = 6400
@@ -277,7 +223,7 @@ leader_attack_skills = {
 		modifier = {
 			offence = 0.105
 		}
-	}	
+	}
 
 	8 = {
 		cost = 12800
@@ -285,8 +231,7 @@ leader_attack_skills = {
 		modifier = {
 			offence = 0.12
 		}
-	}	
-
+	}
 	9 = {
 		cost = 19200
 		type = field_marshal

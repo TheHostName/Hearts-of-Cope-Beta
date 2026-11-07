@@ -233,7 +233,7 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
+			
 			modifier = {
 				factor = 10
 			
@@ -272,7 +272,7 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
-
+			
 			modifier = {
 				factor = 5
 			
@@ -282,7 +282,7 @@ technologies = {
 					only_imported = yes
 				}
 			}
-
+			
 			modifier = {
 				factor = 5
 				energy_ratio < 0.9
@@ -1786,7 +1786,7 @@ technologies = {
 		
 		local_resources_factor = 0.10
 		local_resources_coal_factor = 0.05
-		
+
 		path = {
 			research_cost_coeff = 1
 		}
@@ -1890,7 +1890,7 @@ technologies = {
 		
 		local_resources_factor = 0.10
 		local_resources_coal_factor = 0.05
-		
+
 		path = {
 			research_cost_coeff = 1
 		}
@@ -1989,7 +1989,7 @@ technologies = {
 		
 		local_resources_factor = 0.10
 		local_resources_coal_factor = 0.05
-		
+
 		path = {
 			research_cost_coeff = 1
 		}
@@ -2079,7 +2079,7 @@ technologies = {
 		
 		local_resources_factor = 0.10
 		local_resources_coal_factor = 0.05
-		
+
 		path = {
 			research_cost_coeff = 1
 		}
@@ -2127,5 +2127,5 @@ technologies = {
 				}
 			}
 		}
-	}			
+	}	
 }

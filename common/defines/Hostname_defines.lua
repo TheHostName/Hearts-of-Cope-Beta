@@ -153,16 +153,17 @@ NDefines.NMilitary.COMBAT_SUPPLY_LACK_DEFENDER_DEFEND = -0.35    -- defend comba
 NDefines.NMilitary.RIVER_CROSSING_PENALTY_LARGE = -0.6           -- large river crossing
 NDefines.NMilitary.RIVER_CROSSING_PENALTY = -0.3                 -- small river crossing
 NDefines.NMilitary.BASE_FORT_PENALTY = -0.2
-NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 5
-NDefines.NMilitary.UNIT_EXP_LEVELS = {0.02, 0.04, 0.06, 0.08, 0.1, 0.14, 0.18, 0.22, 0.26, 0.3, 0.39, 0.48, 0.57, 0.66, 0.75, 0.78, 0.81, 0.84, 0.87, 0.9}
-NDefines.NMilitary.ARMY_EXP_BASE_LEVEL = 5
-NDefines.NMilitary.TRAINING_MAX_LEVEL = 10
+NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2
+NDefines.NMilitary.UNIT_EXP_LEVELS = { 0.1, 0.3, 0.75, 0.9 }
+NDefines.NMilitary.ARMY_EXP_BASE_LEVEL = 1
+NDefines.NMilitary.TRAINING_MAX_LEVEL = 2
+NDefines.NMilitary.TRAINING_ATTRITION = 0
 
 NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 999 -- Max army experience a country can store
 NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 999 -- Max navy experience a country can store
 NDefines.NMilitary.MAX_AIR_EXPERIENCE = 999  -- Max air experience a country can store
 
-NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.03
+NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.15
 NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 32
 NDefines.NMilitary.RECON_SKILL_IMPACT = 4
 NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 8 -- Base cost to unlock a regiment slot
@@ -172,9 +173,16 @@ NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 7
 NDefines.NMilitary.BASE_LEADER_TRAIT_GAIN_XP = 0.7
 NDefines.NMilitary.UNIT_EXPERIENCE_PER_COMBAT_HOUR = 0.000175
 NDefines.NMilitary.FIELD_EXPERIENCE_MAX_PER_DAY = 12
--- Air
 
-NDefines.NAir.AIR_WING_XP_LEVELS = {20, 40, 60, 80, 100, 140, 180, 220, 260, 300, 390, 480, 570, 660, 750, 780, 810, 840, 870, 900}
+-- COHESION
+NDefines.NMilitary.COHESION_IMMOBILE_PLANNING_SPEED_MULTIPLIER = 1
+
+-- ###########################################################################################################
+-- NAVAL
+NDefines.NNavy.TRAINING_ACCIDENT_CHANCES = 0
+
+-- Air
+NDefines.NAir.AIR_WING_XP_LEVELS = { 100, 300, 700, 900 }
 NDefines.NAir.AIR_WING_XP_TRAINING_MAX = 300.0
 NDefines.NAir.AIR_WING_XP_TRAINING_MISSION_GAIN_DAILY = 4.5
 NDefines.NAir.AIR_WING_COUNTRY_XP_FROM_TRAINING_FACTOR = 0.01
@@ -204,7 +212,6 @@ NDefines.NAir.BASE_KAMIKAZE_DAMAGE = 2.0                    				-- Base Kamikaze
 NDefines.NAir.BASE_KAMIKAZE_TARGETING = 2.0			        		-- Kamikaze can't be a bad target
 -- Navy
 
-NDefines.NNavy.SUPREMACY_PER_SHIP_BASE = 0
 NDefines.NNavy.NAVAL_INVASION_PRIORITY = 1									-- Default convoy priority for naval invasions
 NDefines.NNavy.NAVAL_TRANSFER_PRIORITY = 1									-- Default convoy priority for naval transports
 NDefines.NNavy.SUPPLY_PRIORITY = 2											-- Default convoy priority for supplying units via sea
@@ -214,14 +221,12 @@ NDefines.NNavy.RESOURCE_ORIGIN_PRIORITY = 4									-- Default convoy priority f
 NDefines.NNavy.RESOURCE_PURCHASE_PRIORITY = 6								-- Default convoy priority for export equipment purchase
 NDefines.NNavy.UNDERWAY_REPLENISHMENT_PRIORITY = 7							-- Default convoy priority for underway replenishment
 NDefines.NNavy.MAX_SUBMARINES_PER_AUTO_TASK_FORCE = 10	
-NDefines.NNavy.CARRIER_STACK_PENALTY = 4										-- The most efficient is 4 carriers in combat. 5+ brings the penalty to the amount of wings in battle.
-NDefines.NNavy.CARRIER_STACK_PENALTY_EFFECT = 0.2								-- Each carrier above the optimal amount decreases the amount of airplanes being able to takeoff by such %.
+
+
 NDefines.NNavy.COMBAT_BASE_HIT_CHANCE = 0.05									-- base chance for hit
 NDefines.NNavy.COMBAT_MIN_HIT_CHANCE = 0.01									-- never less hit chance then this?
 NDefines.NNavy.COMBAT_DAMAGE_TO_STR_FACTOR = 0.50								-- casting damage value to ship strength multiplier. Use it ot balance the game difficulty.
 NDefines.NNavy.COMBAT_DAMAGE_TO_ORG_FACTOR = 0.25							-- casting damage value to ship organisation multiplier. Use it to balance the game difficulty.
-NDefines.NNavy.CARRIER_ONLY_COMBAT_ACTIVATE_TIME = 0							-- hours from start of combat when carriers get to fight
-NDefines.NNavy.CAPITAL_ONLY_COMBAT_ACTIVATE_TIME = 6                         -- hours from start of combat when only carriers, capitals and subs get to attack
 NDefines.NNavy.ALL_SHIPS_ACTIVATE_TIME = 6                                    -- hours where all get to attack
 NDefines.NNavy.MAX_ORG_ON_MANUAL_MOVE = 1.0	-- org will clamped to this ratio on manual move
 NDefines.NNavy.AMPHIBIOUS_LANDING_PENALTY = -0.7								-- amphibious landing penalty
@@ -235,31 +240,15 @@ NDefines.NNavy.TRAINING_ACCIDENT_STRENGTH_LOSS = 0							-- Amount of strength l
 NDefines.NNavy.TRAINING_ACCIDENT_STRENGTH_LOSS_FACTOR = 0						-- Amount of strength loss in a training accident, propotional to the maximum strength of the ship
 NDefines.NNavy.TRAINING_ACCIDENT_ORG_LOSS_FACTOR = 0						-- Amount of current organization the ship lose
 
-NDefines.NNavy.NAVAL_COMBAT_AIR_SUB_TARGET_SCORE = 5                             -- scoring for target picking for planes inside naval combat, one define per ship typ
-NDefines.NNavy.NAVAL_COMBAT_AIR_CAPITAL_TARGET_SCORE = 50
-NDefines.NNavy.NAVAL_COMBAT_AIR_CARRIER_TARGET_SCORE = 50
-NDefines.NNavy.NAVAL_COMBAT_AIR_CONVOY_TARGET_SCORE = 1.0
+NDefines.NNavy.NAVAL_COMBAT_AIR_SUB_TARGET_SCALE = 5                             -- scoring for target picking for planes inside naval combat, one define per ship typ
+NDefines.NNavy.NAVAL_COMBAT_AIR_CAPITAL_TARGET_SCALE = 50
+NDefines.NNavy.NAVAL_COMBAT_AIR_CARRIER_TARGET_SCALE = 50
+NDefines.NNavy.NAVAL_COMBAT_AIR_CONVOY_TARGET_SCALE = 1.0
 NDefines.NNavy.NAVAL_COMBAT_AIR_STRENGTH_TARGET_SCORE = 5                         -- how much score factor from low health (scales between 0->this number)
 NDefines.NNavy.NAVAL_COMBAT_AIR_LOW_AA_TARGET_SCORE = 5                           -- how much score factor from low AA guns (scales between 0->this number)
 NDefines.NNavy.PRIDE_OF_THE_FLEET_UNASSIGN_COST = 0							-- cost to unassign/replace pride of the fleet
 NDefines.NNavy.BEST_CAPITALS_TO_SCREENS_RATIO = 0.17 							-- capitals / screens ratio used for creating FEX groups in naval combat
 
-NDefines.NNavy.MISSION_SUPREMACY_RATIOS = { -- supremacy multipliers for different mission types
-		0.0, -- HOLD
-		1.0, -- PATROL
-		1.0, -- STRIKE FORCE
-		0.5, -- CONVOY RAIDING
-		0.5, -- CONVOY ESCORT
-		0.3, -- MINES PLANTING
-		0.3, -- MINES SWEEPING
-		0.0, -- TRAIN
-		0.0, -- RESERVE_FLEET
-		1.0, -- NAVAL_INVASION_SUPPORT
-	}
-
-NDefines.NNavy.SUPREMACY_PER_SHIP_PER_MANPOWER = 0.05							-- supremacy of a ship is calculated using its IC, manpower and a base define
-NDefines.NNavy.SUPREMACY_PER_SHIP_PER_IC = 0.005
-NDefines.NNavy.SUPREMACY_PER_SHIP_BASE = 0
 -- Supply
 NDefines.NSupply.NODE_INITIAL_SUPPLY_FLOW = 3.4
 NDefines.NSupply.NODE_STARTING_PENALTY_PER_PROVINCE = 0.50

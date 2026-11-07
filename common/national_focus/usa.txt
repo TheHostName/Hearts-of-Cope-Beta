@@ -24,6 +24,7 @@ focus_tree = {
 		}
 	}
 	continuous_focus_position = { x = 50 y = 1600 }
+	shared_focus = ABDA_abdacom
 	default = no
 #	focus = {
 #		id = USA_
@@ -462,7 +463,7 @@ focus_tree = {
 		}
 
 		available = {
-						NOT = {
+			NOT = {
 				has_global_flag = no_fun_allowed
 			}
 			congress_high_support_trigger = yes
@@ -4116,6 +4117,18 @@ focus_tree = {
 							CONTROLLER = { has_war_with = ROOT }
 						}	
 					}
+					1065 = {
+						OR = {
+							is_controlled_by = ROOT
+							CONTROLLER = { has_war_with = ROOT }
+						}	
+					}
+					1031 = {
+						OR = {
+							is_controlled_by = ROOT
+							CONTROLLER = { has_war_with = ROOT }
+						}	
+					}
 					326 = {
 						OR = {
 							is_controlled_by = ROOT
@@ -4571,6 +4584,7 @@ focus_tree = {
 							controls_state = 670
 							controls_state = 286
 							controls_state = 741
+							controls_state = 1017
 							not = { has_war_with = ROOT }
 						} 
 					}
@@ -4969,7 +4983,10 @@ focus_tree = {
 				limit = {
 					is_in_faction = no
 				}
-				create_faction = USA_hemisphere_defense_faction
+				create_faction_from_template = {
+					template = faction_template_pan_american
+					name = USA_hemisphere_defense_faction
+				}
 			}
 			if = {
 				limit = {
@@ -5689,6 +5706,10 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			USA_george_s_patton = {
+				add_skill_level = 1
+			}	
 		}
 	}
 	focus = {
@@ -5759,6 +5780,13 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = USA_army_of_the_united_states
+			custom_effect_tooltip = generic_skip_one_line_tt
+			USA_omar_bradley = {
+				add_skill_level = 1
+			}
+			USA_mark_clark = {
+				add_skill_level = 1
+			}
 		}
 	}
 	focus = {
@@ -6444,11 +6472,12 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			add_doctrine_cost_reduction = {
+
+			add_mastery_bonus = {
 				name = USA_advanced_mahanian_doctrine
-				cost_reduction = 0.5
-				uses = 1
-				category = cat_base_strike
+				bonus = 0.1
+				days = 180
+				track = capital_ships
 			}
 		}
 	}
@@ -6531,7 +6560,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = USA_carrier_primacy
 				bonus = 1.0
-				uses = 1
+				uses = 2
 				category = cv_tech
 			}
 		}
@@ -6602,7 +6631,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = escort_effort_focus
-			
 		}
 	}
 
@@ -6623,11 +6651,41 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			navy_experience = 25
-			add_doctrine_cost_reduction = {
+			add_mastery = {
+				amount = 50
+				track = screens
+			}
+			add_mastery_bonus = {
 				name = USA_convoy_tactics
-				cost_reduction = 0.35
-				uses = 2
-				category = convoy_defense_tree
+				bonus = 0.1
+				days = 180
+				track = screens
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			if = {
+				limit = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+				create_equipment_variant = {
+					name = "Casablanca Class"
+					allow_without_tech = no 
+					type = ship_hull_escort_carrier
+					modules = {
+						fixed_ship_engine_slot = carrier_ship_engine_1
+						fixed_ship_deck_slot_1 = ship_escort_deck_space
+						fixed_ship_deck_slot_2 = ship_escort_deck_space
+						front_1_custom_slot = empty
+						mid_1_custom_slot = empty
+						fixed_ship_radar_slot = empty
+						fixed_ship_secondaries_slot = empty
+						fixed_ship_armor_slot = empty
+						fixed_ship_anti_air_slot = ship_anti_air_1
+					}
+					design_team = mio:USA_newport_news_shipbuilding_organization
+					name_group = USA_CVL_HISTORICAL
+				}
 			}
 		}
 	}

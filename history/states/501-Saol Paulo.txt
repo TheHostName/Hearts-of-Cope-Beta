@@ -5,8 +5,11 @@ state={
 	manpower = 6199200
 	state_category = city
 
-	history={
+	resources = {
+		aluminium = 6 
+	}
 
+	history={
 		add_core_of = BRA
 		buildings = {
 			arms_factory = 1

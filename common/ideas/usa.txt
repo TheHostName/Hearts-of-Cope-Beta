@@ -334,6 +334,7 @@ ideas = {
 			modifier = {
 				max_command_power = 30	
 				command_power_gain_mult = 0.1
+				experience_gain_factor = 0.1
 			}
 		}
 		USA_state_funds_refused = {

@@ -782,6 +782,7 @@ sp_air_mothership_aircraft = {
 		}	
 	}
 }
+}
 
 
 

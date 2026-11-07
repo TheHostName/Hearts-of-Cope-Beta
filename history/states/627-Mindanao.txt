@@ -1,28 +1,31 @@
+state = {
+	id = 627
+	name = "STATE_627"
+	manpower = 815609 
 
-state={
-	id=627
-	name="STATE_627"
-	manpower = 1496508
-	
 	state_category = rural
 
 	history={
 		owner = USA
 		buildings = {
+
 			infrastructure = 2
+
 			4241 = {
-				naval_base = 1
+				naval_base = 2
 			}
+
 		}
+
 		victory_points = {
-			4241 3 
+			4241 5 # Davao
 		}
-		add_core_of = PHI
+		
 	}
 
-	provinces={
-		4241 1234 12158 4266 12116 7445 1407 7284 10328
+	provinces = {
+		1234 1407 4241 4266 7284 7445 10328 12116 12158   
 	}
 
-	local_supplies=0.0 
+	local_supplies = 0.0 
 }

@@ -8,6 +8,7 @@ state = {
 		chromium = 10 
 		tungsten = 80
 	}
+
 	history = {
 		owner = SOV
 		add_core_of = KAZ

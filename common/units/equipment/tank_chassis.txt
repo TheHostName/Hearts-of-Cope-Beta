@@ -242,9 +242,9 @@ equipments = {
 
 
 		module_add_stats_multiplier = {
-			soft_attack = 0.05
-			hard_attack = 0.05
-			air_attack = 0.05
+			soft_attack = 0
+			hard_attack = 0
+			air_attack = 0
 		}
 	}
 

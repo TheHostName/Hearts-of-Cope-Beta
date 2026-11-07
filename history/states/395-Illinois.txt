@@ -3,12 +3,14 @@ state={
 	id=395
 	name="STATE_395"
 	manpower = 7630651
-	state_category = megalopolis
-	resources={
-		steel=120 
-	
+
+	resources = {
+		steel=120
 		coal = 34 #initial distribution = with infra 111.6 / 1280 total
 	}
+
+	state_category = megalopolis
+
 	history={
 		owner = USA
 		buildings = {
